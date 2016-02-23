@@ -231,7 +231,7 @@ header {
 }
 .screenshot img {
 }
-.dark {
+.dark, #newsletter.dark {
   background: #4CB8C4;
   background: -webkit-linear-gradient(to right, #4CB8C4 , #3CD3AD);
   background: linear-gradient(to right, #4CB8C4 , #3CD3AD);
@@ -565,5 +565,46 @@ header {
 	#newsletter form button {
 	margin-top: 10px;
 	}
+}
 
+.mc-field-group {
+  margin: 10px;
+}
+
+.mc-field-group input {
+  color: #777;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+div.container #mc_embed_signup div.mce_inline_error {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 350px;
+  background-color: #d9534f;
+}
+
+#mce-success-response {
+  width: 350px;
+  font-size: 1.25em;
+  margin: 15px auto;
+}
+
+#newsletter .subhead {
+  font-size: 1.25em;
+}
+
+.download #newsletter {
+  height: 80vh;
+  min-height: 500px;
+}
+
+body.download {
+  background-color: #34495e;
+}
+
+img.pantheon {
+  position: relative;
+  top: 40px;
 }

@@ -1,0 +1,17 @@
+{
+  "name": "kalabox.io",
+  "version": "1.0.0",
+  "description": "Main kalabox site.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Kalabox, Inc",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.7.7",
+    "formidable": "^1.0.17",
+    "request": "^2.69.0"
+  }
+}

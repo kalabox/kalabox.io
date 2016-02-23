@@ -1,0 +1,23 @@
+{
+  "name": "kalabox.io",
+  "description": "Main kalabox site.",
+  "main": "server.js",
+  "authors": [
+    "Kalabox",
+    "Inc"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "http://www.kalabox.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.1"
+  }
+}
