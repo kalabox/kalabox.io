@@ -203,9 +203,11 @@ header {
 }
 .icn {
   width: 44px;
+  float: left;
+  margin-right: 1em;
 }
 .icntitle {
-	font-size: 28px;
+	font-size: 2em;
 	font-weight: 300;
 	line-height: 38px;
 	text-align: left;
@@ -215,43 +217,35 @@ header {
 	text-align: left;
 	line-height: 1.6;
   font-size: 1.25em;
+  font-weight: 300;
 }
-.iconbox > a {
-	height: 126px;
-	left: 50%;
-	margin: -63px 0 0 -63px;
-	position: absolute;
-	text-indent: -9999px;
-	top: 50%;
-	-webkit-transition: all .3s ease-out!important;
-	-moz-transition: all .3s ease-out!important;
-	-ms-transition: all .3s ease-out!important;
-	-o-transition: all .3s ease-out!important;
-	transition: all .3s ease-out!important;
-	width: 126px;
+.ss-left img {
+  left: -100%;
+  position: relative;
 }
-.icn-1 {
-	background-image: url('../img/install.png');
-  background-size: 126px;
-}
-.icn-1:hover {
-	background-position: center bottom;
-}
-.icn-2 {
-	background-image: url('../img/pull.png');
-  background-size: 126px;
-}
-.icn-2:hover {
-	background-position: center bottom;
-}
-.icn-3 {
-	background-image: url('../img/develop.png');
-  background-size: 126px;
+.ss-right {
 
 }
-.icn-3:hover {
-	background-position: center bottom;
+.screenshot-description {
+  margin-top: 25%;
 }
+.screenshot img {
+}
+.dark {
+  background: #4CB8C4;
+  background: -webkit-linear-gradient(to right, #4CB8C4 , #3CD3AD);
+  background: linear-gradient(to right, #4CB8C4 , #3CD3AD);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 50px 0px;
+  color: white;
+}
+div.dark a {
+  color: white;
+}
+
 .icons_left, .icons_right {
 	float:left;
 	width: 55px;
