@@ -17,6 +17,7 @@ body {
 	background-color: #fff;
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
+  overflow-x: hidden;
 }
 
 a.navbar-brand {
@@ -229,8 +230,7 @@ header {
 .screenshot-description {
   margin-top: 25%;
 }
-.screenshot img {
-}
+
 .dark, #newsletter.dark {
   background: #4CB8C4;
   background: -webkit-linear-gradient(to right, #4CB8C4 , #3CD3AD);
@@ -501,6 +501,14 @@ header {
 	padding-left: 0;
 }
 
+  .screenshot img {
+    width: 100%;
+    margin: auto;
+  }
+  .ss-left img {
+    display: none;
+  }
+
 }
 @media only screen and (device-width: 990px){
 	.intro-well {
@@ -512,6 +520,10 @@ header {
 	.features-left {
 		padding-top: 10px;
 	}
+  .screenshot img {
+    width: 100%;
+    margin: auto;
+  }
 
 }
 @media all and (width: 768px) {
@@ -559,12 +571,18 @@ header {
 	.icnp {
 	padding-bottom: 20px;
 	}
+  .screenshot img {
+    width: inherit;
+  }
 }
 
 @media only screen and (max-width : 340px) {
 	#newsletter form button {
-	margin-top: 10px;
+	  margin-top: 10px;
 	}
+}
+
+@media only screen and (width : 340px) {
 }
 
 .mc-field-group {
