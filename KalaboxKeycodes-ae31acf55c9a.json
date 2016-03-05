@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "kalaboxkeycodes",
+  "private_key_id": "ae31acf55c9a4c654750378fb18fff7f38980606",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCSWgDSlFAJUlhX\nSOs2ps8RNX2Mtf7IOFWCq8kDB88jJtEQDI1iRrpYKwEtCdLil+T41ky3K03wk+4t\nMRYNrkMHoXrPHm5N/QaJ8VbMvB8OWTKle/cfwQbu9k2ZGC4qQpCvSoONvS16B7oN\nLiGS17xAe/M/qqhN84SgUUdxuscJdDeXCGcyb87nQHxhqQmaV0hJKQO1Gek8X6BG\n/efW8mxx9Kju5u+PBhiEfTKcgktF8xzF12qYGRb8EC2d0WaP8MR3DWPsQZ13EjJb\n7xq85DS2YTflNeiggVYn6BghYoR/LS3XHvhjpdoQqjfdCPezJqSVSuHpMd4d+zbD\n/+fa4q83AgMBAAECggEABKfyYMCxLyq8fsJmIU37RnviK6jamzoXllmqwnrsHx0s\nB4uur9K6OPXdSraGTAkzEquWszkgeKfsKunl3reNkF+VzaMVNUv4ekkATvEpN8ak\nstkXyp3Uf6O8YkN/rH6DpeAEAW1kVf6K78Jo9QgCCDcpTPw78Ibv0D3lvPuJO4a3\niygx7vUf5UONkGGYaCXRdlMNnZfZH5Z3G9RcCSfr/u+l3rrUehjQSrD5lQTHsykZ\nJs3Exv95Wm5U+/tpRypZQFm3lmx1zv67/29igv0rnCriOeZooVuysFEpq18g7s5N\nxkHD6xtuOk6u5OTVmIFdLtyU8tsq6mhmSlb0xp09MQKBgQDiAwsutN/ML71V/Co3\nDAJBd1Gw8q8A4vVA0dOhVKJskJ0ysEQ83fpKVGVdKhk+Vi86OOdGTpTekSM5MLoS\nqyv/eNfaqwtOCxGzKLf4BYtD2j6MZx7P+cDQ6RFeqt2lNZzDdIckDt25QRN8d5Pt\nM8p6DEYRJmzhzyQic984gs59SQKBgQClxSJKJv6IQXbFKVARkxfOcgIPBv7k+wv9\nr+uM7CfUzSBbTyAIZvkYSTsJ4CH+lBJtTlRCpJb2ftra2VYJijOXHAyI3n1fU967\nln+0x9bXZxBTuul6qOv6vusbn24exgkpXV624RQWxmQfBjY9SZYoTCXd96yUfJlb\nb4eP14ZIfwKBgBxOZUgkPyNDl2L9ggwC5QVt/D09J83knvLPVMIP54fRVN7UVLeK\n1Z4Zk9hnPWIhSSjxl4Wmsd5uLwsqnyNXbNtCN0abxX6wxDa8Es5tY1PMMalEAQfr\nL8r6ZcKFg9z9KfUQ0xwhAIQDMn2UPGKo6eL/Roc/WMOvPcdS29IoD9SBAoGALAwT\nrmxqGb57VqxBkEnre3mjvmZ3eFSUvRXvmwRtGQhgXqLJujHSYnei7l7V6ZViyBSW\nIxck3d6bPKefSu2kA7T6R6wG2Duq5WF6EYlANwA1wGnb/DHCcmAkjLRySE8KxCkB\nL8ri0aJpnCzEYMia055YOYDEJLhu73LVLI1yKvUCgYBSd9Ce5LWxJzkd7URquc5o\n/tWZ8ppuklL4VrRA+3E7CDUrJg4FtiwffQgDyHcl/Kozfsr2PVoo4BZikqSRSvos\nF/Q9YZg/Yh/pE9uvC5hF+uvqCIOZ3AOSgsS2O5vuCfkS+bdP56WcNkIj51WOVx8c\ntoq/RH1frWdyWGygDLqd3Q==\n-----END PRIVATE KEY-----\n",
+  "client_email": "kalaboxgoogle@kalaboxkeycodes.iam.gserviceaccount.com",
+  "client_id": "104808113375320841524",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/kalaboxgoogle%40kalaboxkeycodes.iam.gserviceaccount.com"
+}
