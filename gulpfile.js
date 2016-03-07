@@ -31,18 +31,18 @@ gulp.task('sass', function(){
 
 
 // create task
+gulp.task('css', function(){
+  gulp.src(css)
+    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
+    .pipe(concat('main.css'))
+    .pipe(gulp.dest('public/css'))
+});
+
 gulp.task('cssMin', function(){
   gulp.src(css)
     .pipe(minifyCSS())
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
     .pipe(concat('main.min.css'))
-    .pipe(gulp.dest('public/css'))
-});
-
-gulp.task('css', function(){
-  gulp.src(css)
-    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
-    .pipe(concat('main.css'))
     .pipe(gulp.dest('public/css'))
 });
 
@@ -58,3 +58,7 @@ gulp.task('jsMin', function(){
     .pipe(concat('main.min.js'))
     .pipe(gulp.dest('public/js'))
 });
+
+gulp.watch('js/**/*.js', ['jsMin']);
+gulp.watch('scss/**/*.scss', ['cssMin']);
+
