@@ -1,0 +1,83 @@
+#testimonials {
+  padding-bottom: 100px;
+  h1 {
+    margin: 0;
+    padding-bottom: 35px;
+    display: block;
+    clear: both;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+    font-weight: 300;
+    color: #222;
+  }
+  h2 {
+    margin: 0;
+    padding-bottom: 35px;
+    display: block;
+    clear: both;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    font-weight: 300;
+    color: #222;
+  }
+  h3 {
+    display: block;
+    clear: both;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    font-weight: 300;
+  }
+}
+
+.blue {
+  color: #0386c9 !important;
+}
+
+.client_profile {
+  float: left;
+  text-align: center;
+}
+
+.client_profile_pic {
+  border-radius: 50%;
+  border: 2px solid #f5f5f5;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 200px;
+}
+
+.client_profile {
+  h5 {
+    font-size: 18px;
+    color: #49b5e7;
+    margin: 0 0 0 0;
+  }
+  span {
+    display: block;
+    font-size: 16px;
+    color: #888888;
+  }
+}
+
+.client_profile_pic img {
+  border-radius: 50%;
+  border: 3px solid #f5f5f5;
+}
+
+.client_profile.flt {
+  float: right;
+  float: right;
+}
+
+.quote_section {
+  width: 600px;
+  background: #f9f9f9;
+  position: relative;
+  padding: 40px 30px;
+  float: left;
+  margin: 35px 0 0 30px;
+}

@@ -1,0 +1,33 @@
+.mc-field-group {
+  margin: 10px;
+  input {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+div.container #mc_embed_signup div.mce_inline_error {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 350px;
+  background-color: #d9534f;
+}
+
+#mce-success-response {
+  width: 350px;
+  font-size: 1.25em;
+  margin: 15px auto;
+}
+
+body.download {
+  background-color: #34495e;
+
+  #newsletter {
+    height: 80vh;
+    min-height: 750px;
+    .subhead {
+      font-size: 1.25em;
+    }
+  }
+}

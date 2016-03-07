@@ -1,0 +1,77 @@
+
+body {
+  font-size: 13px;
+  color: #222;
+  background-color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+a.navbar-brand {
+  background-image: url('../img/kalabox-logo.png');
+}
+
+.doc-loader {
+  position: fixed; 
+  left: 0; 
+  top: 0; 
+  width: 100%; 
+  height: 100%; 
+  overflow: visible;
+  background: #ffffff url('../img/loading.gif') no-repeat center center;
+  z-index: 100000;
+  td {
+    vertical-align: middle;
+    text-align: center;
+    background-color: #fff;
+  }
+}
+
+header {
+  z-index: 1000;
+  position: relative;
+  width: 100%;
+  padding-top: 50px;
+}
+
+.social-links {
+  float: right;
+
+  li {
+    float: left;
+    display: inline-block;
+    padding-left:10px;
+    padding-top: 20px;
+  }
+  a li {
+    color: #ffffff;
+    font-size: 18px;
+    -webkit-transition: color 0.2s;
+    -moz-transition: color 0.2s;
+    transition: color 0.2s;
+    &:hover {
+      text-decoration: none;
+      color: #222222;
+    }
+  }
+}
+
+.centered {
+    text-align:center;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+   }
+}
+
+.logo {
+  width: 140px;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
