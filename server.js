@@ -4,17 +4,16 @@ var app = express();
 var fs = require('fs');
 var formidable = require("formidable");
 var util = require('util');
+var path = require('path');
 var request = require('request');
 var GoogleSpreadsheet = require("google-spreadsheet");
 var my_sheet = new GoogleSpreadsheet('1qzFyijCriIZcHqk-JuMg2lxL4fyMLRZybBPPZq2ECuM');
 var creds = require('./KalaboxKeycodes-ae31acf55c9a.json');
 var _ = require('lodash');
-var sass = require('node-sass');
 
 // App configuration
 app.set('view engine', 'twig');
 app.set('views', './views');
-app.use(sass.middleware({ src: __dirname + '/public' }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.post('/form', function (req, res) {
@@ -62,7 +61,7 @@ function processAllFieldsOfTheForm(req, res) {
 
   form.parse(req, function (err, fields, files) {
     // Get keycode and pass to /alpha-downloads
-    request('/alpha-downloads?' + fields.keycode);
+    res.redirect('/alpha-downloads?keycode=' + fields.keycode);
   });
 }
 

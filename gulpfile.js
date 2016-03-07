@@ -7,17 +7,19 @@ var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var vendorDir = 'bower_components/';
 var css = [
-  'css/**/*.css',
   vendorDir + 'font-awesome/css/font-awesome.min.css',
   vendorDir + 'nivo-lightbox/nivo-lightbox.css',
   vendorDir + 'owl/owl-carousel/owl.carousel.css',
-  vendorDir + 'owl/owl-carousel/owl.theme.css' 
+  vendorDir + 'owl/owl-carousel/owl.theme.css',
+  'css/animate.css',
+  'css/main.css',
+  'css/bootstrap-theme.css'
 ];
 var js = [
   'js/custom.js',
-  vendorDir + 'jquery/dist/jquery.min.js',
+  vendorDir + 'jquery/public/jquery.min.js',
   vendorDir + 'bootstrap-sass/assets/javascripts/bootstrap.min.js',
-  vendorDir + 'wow/dist/wow.min.js',
+  vendorDir + 'wow/public/wow.min.js',
   vendorDir + 'nivo-lightbox/nivo-lightbox.min.js',
   vendorDir + 'owl/owl-carousel/owl.carousel.min.js'
 ];
@@ -34,25 +36,25 @@ gulp.task('cssMin', function(){
     .pipe(minifyCSS())
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
     .pipe(concat('main.min.css'))
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('public/css'))
 });
 
 gulp.task('css', function(){
   gulp.src(css)
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
     .pipe(concat('main.css'))
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('public/css'))
 });
 
 gulp.task('js', function(){
   gulp.src(js)
     .pipe(concat('main.js'))
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest('public/js'))
 });
 
 gulp.task('jsMin', function(){
   gulp.src(js)
     .pipe(uglify())
     .pipe(concat('main.min.js'))
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest('public/js'))
 });
