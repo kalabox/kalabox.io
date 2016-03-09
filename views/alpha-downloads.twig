@@ -8,38 +8,20 @@
         <h1>Begin your journey to faster local development...</h1>
         <div class="row">
           <div class="col-xs-12">
-            {% if 'Mac' in platform %}
-              <a class="btn btn-primary" href="">
-                <h3>Download Kalabox</h3>
-                <div class="os-desc">
-                  <i class="fa fa-apple"></i> <span>Mac OS X 10.10+</span>
-                </div>
-              </a>
-              <ul class="alt-downloads">
-                <li>
-                  <a href="">
-                    <i class="fa fa-windows"></i> <span>Windows 8+</span>
-                  </a>
-                </li>
-              </ul>
-            {% endif %}
-            {% if 'Windows' in platform %}
-              <a class="btn btn-primary" href="">
-                <div>Download Kalabox</div>
-                <i class="fa fa-windows"></i> <span>Windows 8+</span>
-              </a>
-              <ul>
-                <li>
-                  <a href="">
-                    <i class="fa fa-apple"></i> <span>Mac OS X 10.10+</span>
-                  </a>
-                </li>
-              </ul>
-            {% endif %}
-            {% if 'Ubuntu' in platform %}
-              <i class="fa fa-linux primary"></i>
-              <h2>Download for Linux</h2>
-            {% endif %}
+            <a class="btn btn-primary" href="http://gui.kalabox.io/KalaboxInstaller.pkg">
+              <h3>Download Kalabox</h3>
+              <div class="os-desc">
+                <i class="fa fa-apple"></i> <span>Mac OS X 10.10+</span>
+              </div>
+            </a>
+            <ul class="alt-downloads">
+              <li>
+                <i class="fa fa-windows"></i> <span>Windows 7+ Coming Soon</span>
+              </li>
+              <li>
+                <i class="fa fa-linux"></i> <span>Debian/Ubuntu Coming Soon</span>
+              </li>
+            </ul>
           </div>
         </div>
         <div class="row install-steps">
