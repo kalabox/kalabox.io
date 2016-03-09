@@ -3,18 +3,64 @@
   {% include 'head.twig' %}
   <body class="download">
     {% include 'header.twig' %}
-    <section id="features">
-      <h1>Alpha Downloads</h1>
-      <p>Platform: {{platform}}</p>
-      {% if 'Mac' in platform %}
-        <h2>Download for Mac OS X</h2>
-      {% endif %}
-      {% if 'Windows' in platform %}
-        <h2>Download for Windows</h2>
-      {% endif %}
-      {% if 'Ubuntu' in platform %}
-        <h2>Download for Linux</h2>
-      {% endif %}
+    <section id="downloads">
+      <div class="container wow animated fadeInDown">
+        <h1>Begin your journey to faster local development...</h1>
+        <div class="row">
+          <div class="col-xs-12">
+            {% if 'Mac' in platform %}
+              <a class="btn btn-primary" href="">
+                <h3>Download Kalabox</h3>
+                <div class="os-desc">
+                  <i class="fa fa-apple"></i> <span>Mac OS X 10.10+</span>
+                </div>
+              </a>
+              <ul class="alt-downloads">
+                <li>
+                  <a href="">
+                    <i class="fa fa-windows"></i> <span>Windows 8+</span>
+                  </a>
+                </li>
+              </ul>
+            {% endif %}
+            {% if 'Windows' in platform %}
+              <a class="btn btn-primary" href="">
+                <div>Download Kalabox</div>
+                <i class="fa fa-windows"></i> <span>Windows 8+</span>
+              </a>
+              <ul>
+                <li>
+                  <a href="">
+                    <i class="fa fa-apple"></i> <span>Mac OS X 10.10+</span>
+                  </a>
+                </li>
+              </ul>
+            {% endif %}
+            {% if 'Ubuntu' in platform %}
+              <i class="fa fa-linux primary"></i>
+              <h2>Download for Linux</h2>
+            {% endif %}
+          </div>
+        </div>
+        <div class="row install-steps">
+          <div class="col-xs-4">
+            <img src="img/download.png">
+            <h2>1. Download</h2>
+            <p>Pick the correct version of Kalabox above.</p>
+          </div>
+          <div class="col-xs-4">
+            <img src="img/trash.png">
+            <h2>2. Uninstall Existing Kalabox</h2>
+            <p>Double-click the included "uninstall" file. Only necessary if you've installed Kalabox CLI or helped test earlier versions of the new Kalabox.</p>
+
+          </div>
+          <div class="col-xs-4">
+            <img src="img/install.png">
+            <h2>3. Run Installer</h2>
+            <p>Run the installer. Once complete, Kalabox will be in your normal applications directory.</p>
+          </div>
+        </div>
+      </div>
     </section>
     {% include 'footer.twig' %}
   </body>

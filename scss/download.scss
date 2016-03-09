@@ -20,16 +20,59 @@ div.container #mc_embed_signup div.mce_inline_error {
   margin: 15px auto;
 }
 
-body.download {
+body.gateway {
   background-color: #34495e;
 
-  #keycode-gateway{
+  #keycode-gateway {
     height: 80vh;
     min-height: 750px;
     text-align: center;
     padding-top: 0px;
     .subhead {
       font-size: 1.25em;
+    }
+  }
+}
+
+body.download {
+  text-align: center;
+  #downloads {
+    padding-top: 50px;
+  }
+  h1 {
+    padding-bottom: 40px;
+  }
+  h3 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+  }
+  .alt-downloads {
+    list-style: none;
+    margin: 5px 0px 0px 0px;
+    padding: 0px;
+    a:hover {
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+  .os-desc {
+    font-size: .9em;
+  }
+  .fa.primary {
+    font-size: 6em;
+    text-align: center;
+    display: block;
+  }
+  .install-steps {
+    margin: 80px 0px;
+    img {
+      margin-bottom: 5px;
+      height: 90px;
+    }
+    h2 {
+      padding-bottom: 5px;
     }
   }
 }

@@ -10195,12 +10195,12 @@ header {
   padding-top: 40px;
 }
 
-#features {
+section {
   width: 100%;
   background-color: #fff;
   padding-top: 80px;
 }
-#features h1 {
+section h1 {
   margin: 0;
   padding-bottom: 10px;
   display: block;
@@ -10211,7 +10211,7 @@ header {
   font-weight: 300;
   color: #222;
 }
-#features h2 {
+section h2 {
   margin: 0;
   padding-bottom: 70px;
   display: block;
@@ -10611,17 +10611,60 @@ div.container #mc_embed_signup div.mce_inline_error {
   margin: 15px auto;
 }
 
-body.download {
+body.gateway {
   background-color: #34495e;
 }
-body.download #keycode-gateway {
+body.gateway #keycode-gateway {
   height: 80vh;
   min-height: 750px;
   text-align: center;
   padding-top: 0px;
 }
-body.download #keycode-gateway .subhead {
+body.gateway #keycode-gateway .subhead {
   font-size: 1.25em;
+}
+
+body.download {
+  text-align: center;
+}
+body.download #downloads {
+  padding-top: 50px;
+}
+body.download h1 {
+  padding-bottom: 40px;
+}
+body.download h3 {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+}
+body.download .alt-downloads {
+  list-style: none;
+  margin: 5px 0px 0px 0px;
+  padding: 0px;
+}
+body.download .alt-downloads a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+body.download .os-desc {
+  font-size: .9em;
+}
+body.download .fa.primary {
+  font-size: 6em;
+  text-align: center;
+  display: block;
+}
+body.download .install-steps {
+  margin: 80px 0px;
+}
+body.download .install-steps img {
+  margin-bottom: 5px;
+  height: 90px;
+}
+body.download .install-steps h2 {
+  padding-bottom: 5px;
 }
 
 /* ========== DOWNLOAD ========== */
