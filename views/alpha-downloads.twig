@@ -2,9 +2,19 @@
 <html lang="en"> 
   {% include 'head.twig' %}
   <body class="download">
-    <section id="newsletter" class="dark">
+    {% include 'header.twig' %}
+    <section id="features">
       <h1>Alpha Downloads</h1>
       <p>Platform: {{platform}}</p>
+      {% if 'Mac' in platform %}
+        <h2>Download for Mac OS X</h2>
+      {% endif %}
+      {% if 'Windows' in platform %}
+        <h2>Download for Windows</h2>
+      {% endif %}
+      {% if 'Ubuntu' in platform %}
+        <h2>Download for Linux</h2>
+      {% endif %}
     </section>
     {% include 'footer.twig' %}
   </body>

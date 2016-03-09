@@ -31,19 +31,19 @@ gulp.task('sass', function(){
 
 
 // create task
-gulp.task('css', function(){
+gulp.task('css', ['sass'], function(){
   gulp.src(css)
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
     .pipe(concat('main.css'))
     .pipe(gulp.dest('public/css'))
 });
 
-gulp.task('cssMin', function(){
-  gulp.src(css)
+gulp.task('cssMin', ['sass'], function(){
+  return gulp.src(css)
     .pipe(minifyCSS())
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
     .pipe(concat('main.min.css'))
-    .pipe(gulp.dest('public/css'))
+    .pipe(gulp.dest('public/css'));
 });
 
 gulp.task('js', function(){
@@ -53,12 +53,16 @@ gulp.task('js', function(){
 });
 
 gulp.task('jsMin', function(){
-  gulp.src(js)
+  return gulp.src(js)
     .pipe(uglify())
     .pipe(concat('main.min.js'))
-    .pipe(gulp.dest('public/js'))
+    .pipe(gulp.dest('public/js'));
 });
 
-gulp.watch('js/**/*.js', ['jsMin']);
-gulp.watch('scss/**/*.scss', ['cssMin']);
+gulp.task('watch', function() {
+  gulp.watch('js/**/*.js', ['jsMin']);
+  gulp.watch('scss/**/*.scss', ['cssMin']);
+})
 
+gulp.task('build', ['cssMin', 'jsMin']);
+gulp.task('default', ['build']);

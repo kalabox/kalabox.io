@@ -33,7 +33,11 @@ app.get('/alpha-downloads', downloads);
 
 function downloads(req, res) {
   var page = '';
+  var os = '';
   if (!_.isEmpty(req.query.keycode) && /^(?:korobka|eske)-\w{6}$/.test(req.query.keycode)) {
+    var useragent = require('useragent');
+    var agent = useragent.lookup(req.headers['user-agent']);
+    var os = agent.os.toString();
     page = 'alpha-downloads.twig';
     saveSpreadsheet(req.query.keycode);
   } else {
@@ -41,7 +45,7 @@ function downloads(req, res) {
   }
 
   res.render(page, {
-    platform: 'Mac'
+    platform: os
   });
 };
 
