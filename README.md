@@ -1,9 +1,22 @@
 # kalabox.io
 
-Right now this is a temporary hot-mess.
+Right now this is a hot-mess which is gaining some order.
 
-Ugliness:
-- Completely static without any generator.
-- Unused node components except for bower, which is only used to load in jQuery (which is included twice in different versions)
+We're using...
 
-Great sadness here right now, but we'll get things moving along.
+- Express to server files
+- Twig as templating engine
+- SASS as css precompiler
+- Gulp to concat/minify
+
+To run...
+1. Clone repo
+2. npm install && bower install
+3. npm start
+
+To push to production:
+1. git remote add production pirog@104.237.158.155:main-site
+2. git push production master
+
+This will push code to a bare repo, which in turn deploys it to the webroot. Note you'll need the appropriate ssh key to push the code.
+
