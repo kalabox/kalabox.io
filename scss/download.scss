@@ -39,6 +39,9 @@ body.download {
   #downloads {
     padding-top: 50px;
   }
+  a.btn-primary:active, a.btn-primary:visited {
+    background-color: #d9534f;
+  }
   h1 {
     padding-bottom: 40px;
   }

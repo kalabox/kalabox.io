@@ -10630,6 +10630,9 @@ body.download {
 body.download #downloads {
   padding-top: 50px;
 }
+body.download a.btn-primary:active, body.download a.btn-primary:visited {
+  background-color: #d9534f;
+}
 body.download h1 {
   padding-bottom: 40px;
 }
