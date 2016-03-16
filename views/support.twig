@@ -3,6 +3,9 @@
   {% include 'head.twig' %}
   <body class="download">
     {% include 'header.twig' %}
+    {% if msg %}
+      <div class="alert alert-success" role="alert">{{ msg }}</div>
+    {% endif %}
     <section id="pricing" class="blue-grey darken-3">
       <div class="section pt-section" data-name="Pricing">
         <div class="container">
@@ -27,7 +30,7 @@
                   <li>Workflow enhancements saving hours</li>
                 </ul>
 
-                <button type="button" class="waves-effect waves-light btn blue-grey darken-2 center">Sign Up</button>
+                <button type="button" class="waves-effect waves-light btn blue-grey darken-2 center" data-toggle="modal" data-target="#emailModal">Sign Up</button>
 
               </div>
               <div class="divider4"></div>
@@ -47,7 +50,7 @@
                   <li>Team onboarding and training</li>
                 </ul>
 
-                <button type="button" class="waves-effect waves-light btn blue-grey darken-2 center">Sign Up</button>
+                <button type="button" class="waves-effect waves-light btn blue-grey darken-2 center" data-toggle="modal" data-target="#emailModal">Sign Up</button>
 
               </div>
               <div class="divider4"></div>
@@ -66,7 +69,7 @@
                   <li>Real-time support</li>
                 </ul>
 
-                <button type="button" class="waves-effect waves-light btn red center">Sign Up</button>
+                <button type="button" class="waves-effect waves-light btn blue-grey darken-2 center" data-toggle="modal" data-target="#emailModal">Sign Up</button>
 
               </div>
               <div class="divider4"></div>
@@ -76,5 +79,6 @@
       </div>
     </section>
     {% include 'footer.twig' %}
+    {% include 'email-modal.twig' %}
   </body>
 </html>
