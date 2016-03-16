@@ -1,0 +1,49 @@
+section#pricing {
+  padding: 80px 0 90px 0;
+  .plain {
+    background: #f2f2f2;
+    color: #333;
+  }
+  .pricing {
+    padding: 20px 20px 30px 20px;
+    min-height: 300px;
+    /* width: 262px; */
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid #f2f2f2;
+    font-size: 13px;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    -ms-transition: all 0.35s ease-in-out;
+    ul {
+      text-align: center;
+      margin: 36px 0 36px 0;
+      padding: 0;
+      li {
+        border-top: 1px solid #ccc;
+        line-height: 2.5em;
+        &:last-child {
+          border-bottom: 1px solid #ccc;
+        }
+      }
+    }
+  }
+  .proposal {
+    background: #fff;
+    color: #de3627;
+  }
+  .price-number {
+    font-size: 60px;
+    font-weight: 700;
+  }
+  .price-plan {
+    font-size: 24px;
+  }
+  h2 {
+    margin-top: 0;
+    margin-right: 0;
+    padding-left: 20px;
+  }
+}

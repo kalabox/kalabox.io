@@ -28,6 +28,7 @@ app.post('/form', function (req, res) {
 });
 
 app.get('/', function (req, res) {res.render('home.twig');});
+app.get('/support', function (req, res) {res.render('support.twig');});
 app.get('/download.html', function (req, res) {res.render('download.twig');});
 app.get('/alpha-downloads', downloads);
 
