@@ -17,12 +17,12 @@ var css = [
   'css/bootstrap-theme.css'
 ];
 var js = [
-  'js/custom.js',
-  vendorDir + 'jquery/public/jquery.min.js',
+  vendorDir + 'jquery/dist/jquery.min.js',
   vendorDir + 'bootstrap-sass/assets/javascripts/bootstrap.min.js',
-  vendorDir + 'wow/public/wow.min.js',
+  vendorDir + 'wow/dist/wow.min.js',
   vendorDir + 'nivo-lightbox/nivo-lightbox.min.js',
-  vendorDir + 'owl/owl-carousel/owl.carousel.min.js'
+  vendorDir + 'owl/owl-carousel/owl.carousel.min.js',
+  'js/custom.js',
 ];
 
 gulp.task('sass', function(){
