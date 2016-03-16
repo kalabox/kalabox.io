@@ -1,4 +1,5 @@
 var gulp    = require('gulp');
+var server = require('gulp-express');
 var sass    = require('gulp-ruby-sass');
 var concat = require('gulp-concat');
 var minifyCSS = require('gulp-minify-css');
@@ -63,6 +64,18 @@ gulp.task('watch', function() {
   gulp.watch('js/**/*.js', ['jsMin']);
   gulp.watch('scss/**/*.scss', ['cssMin']);
 })
+
+gulp.task('server', function () {
+    // Start the server at the beginning of the task 
+    server.run(['server.js']);
+ 
+    // Restart the server when file changes 
+    gulp.watch(['views/**/*.twig'], [server.run]);
+    gulp.watch('js/**/*.js', ['jsMin']);
+    gulp.watch('scss/**/*.scss', ['cssMin']);
+    gulp.watch(['images/**/*'], server.notify);
+    gulp.watch(['server.js'], [server.run]);
+});
 
 gulp.task('build', ['cssMin', 'jsMin']);
 gulp.task('default', ['build']);
