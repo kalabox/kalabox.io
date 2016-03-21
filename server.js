@@ -32,6 +32,7 @@ app.get('/', function (req, res) {res.render('home.twig');});
 app.get('/support', function (req, res) {res.render('support.twig', req.query);});
 app.get('/download.html', function (req, res) {res.render('download.twig');});
 app.get('/alpha-downloads', downloads);
+app.get('/alpha-download', downloads);
 app.post('/support/email', emailSubmission);
 
 function emailSubmission(req, res) {
