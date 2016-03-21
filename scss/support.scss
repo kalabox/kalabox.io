@@ -1,3 +1,9 @@
+.social-links {
+  a li.social-links-text {
+    font-size: 1em;
+  }
+}
+
 .support {
   h2 {
     text-align: left;
@@ -73,6 +79,8 @@
     }
   }
   footer {
+    text-align: center;
+    h2 { text-align: center; }
     ul {
       list-style: none;
       a {
