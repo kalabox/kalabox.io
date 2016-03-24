@@ -12,6 +12,7 @@
   "dependencies": {
     "bower": "^1.7.7",
     "express": "^4.13.4",
+    "express-force-domain": "0.0.6",
     "formidable": "^1.0.17",
     "google-spreadsheet": "^1.1.4",
     "lodash": "^4.6.1",

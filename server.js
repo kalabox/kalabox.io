@@ -16,6 +16,7 @@ var _ = require('lodash');
 app.set('view engine', 'twig');
 app.set('views', './views');
 app.use(express.static(path.join(__dirname, 'public')));
+app.use( require('express-force-domain')('http://www.kalabox.io') );
 
 app.post('/form', function (req, res) {
   // @todo: parse by download URL as well.
