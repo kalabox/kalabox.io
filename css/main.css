@@ -10670,6 +10670,10 @@ body.download .install-steps h2 {
   padding-bottom: 5px;
 }
 
+ul {
+  list-style: none;
+}
+
 /* ========== DOWNLOAD ========== */
 #download {
   padding: 80px 40px;
@@ -10701,4 +10705,153 @@ footer p {
 .footer-heart {
   color: #C0392B;
   margin: 3px;
+}
+
+.social-links a li.social-links-text {
+  font-size: 1em;
+}
+
+.support h2 {
+  text-align: left;
+  padding-bottom: .3em;
+}
+.support .search {
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+.support .btn {
+  border-radius: 0px;
+  transition: none;
+  text-shadow: none;
+  color: #fff;
+  text-transform: none;
+  border: none;
+  background-image: none;
+  background-color: #34495E;
+  padding: 8px 10px;
+}
+.support .btn:hover {
+  background-position: 0px;
+}
+.support .btn-primary {
+  background-color: #d9534f;
+  border-radius: 0px;
+  background-image: none;
+}
+.support .hc-search-input input.special {
+  border-radius: 0px;
+  box-shadow: none;
+  width: 99%;
+  border: 1px solid #eee;
+}
+.support .search-container {
+  margin-bottom: 20px;
+}
+.support .help-options {
+  text-align: center;
+}
+.support .help-options .btn-primary {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 20px;
+}
+.support .help-options .primary-options a {
+  display: block;
+}
+.support .help-options .secondary-options {
+  margin-bottom: 30px;
+}
+.support .solutions-home, .support .search-results {
+  padding-top: 0px;
+  padding-bottom: 35px;
+  margin-top: -45px;
+}
+.support .solutions-home a:hover, .support .search-results a:hover {
+  text-decoration: none;
+}
+.support .solutions-home h1, .support .search-results h1 {
+  font-weight: 200;
+  font-size: 1.9em;
+  text-align: left;
+}
+.support .solutions-home .articles ul, .support .search-results .articles ul {
+  list-style: none;
+}
+.support .solutions-home .articles ul li, .support .search-results .articles ul li {
+  text-indent: 5px;
+}
+.support footer {
+  text-align: center;
+}
+.support footer h2 {
+  text-align: center;
+}
+.support footer ul {
+  list-style: none;
+}
+.support footer ul a {
+  color: #eee;
+}
+
+.support-pricing .alert {
+  text-align: center;
+}
+
+section#pricing {
+  padding: 80px 0 90px 0;
+}
+section#pricing .plain {
+  background: #f2f2f2;
+  color: #333;
+}
+section#pricing .pricing {
+  padding: 20px 20px 30px 20px;
+  min-height: 300px;
+  /* width: 262px; */
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid #f2f2f2;
+  font-size: 13px;
+  transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+}
+section#pricing .pricing ul {
+  text-align: center;
+  margin: 36px 0 36px 0;
+  padding: 0;
+}
+section#pricing .pricing ul li {
+  border-top: 1px solid #ccc;
+  line-height: 2.5em;
+}
+section#pricing .pricing ul li:last-child {
+  border-bottom: 1px solid #ccc;
+}
+section#pricing .proposal {
+  background: #fff;
+  color: #de3627;
+}
+section#pricing .price-number {
+  font-size: 60px;
+  font-weight: 700;
+}
+section#pricing .price-plan {
+  font-size: 24px;
+}
+section#pricing h2 {
+  margin-top: 0;
+  margin-right: 0;
+  padding-left: 20px;
+}
+
+#emailModal {
+  text-align: center;
+}
+#emailModal input {
+  border: solid #eee 1px;
+  margin-bottom: 10px;
 }
