@@ -14,9 +14,11 @@ To run...
 2. npm install && bower install
 3. npm start
 
-To push to production:
-1. git remote add production pirog@104.237.158.155:main-site
-2. git push production master
 
-This will push code to a bare repo, which in turn deploys it to the webroot. Note you'll need the appropriate ssh key to push the code.
+To deploy...
+1. docker build -t reynoldsalec/kalabox.io .
+2. docker push reynoldsalec/kalabox.io
+3. Log in to docker cloud and redeploy the kalaboxio containers.
+
+
 
