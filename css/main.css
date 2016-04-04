@@ -10674,32 +10674,56 @@ ul {
   list-style: none;
 }
 
-/* ========== DOWNLOAD ========== */
-#download {
+/* ========== SPONSORS ========== */
+#sponsors {
   padding: 80px 40px;
 }
-#download h3 {
+#sponsors h3 {
   padding-bottom: 30px;
   font-size: 24px;
   line-height: 34px;
   font-weight: 300;
 }
-
-img.pantheon {
+#sponsors img {
   position: relative;
-  top: 40px;
+}
+#sponsors img.kalamuna {
+  width: 190px;
 }
 
 /* ========== FOOTER ========== */
 footer {
   background: #34495e;
-  color: #fff;
+  color: #eeeeee;
   padding: 70px 0;
-  text-align: center;
+}
+footer h4 {
+  color: #fff;
 }
 footer p {
   font-size: 15px;
   line-height: 20px;
+}
+footer a {
+  color: #ddd;
+}
+footer a:hover {
+  color: #eeeeee;
+  text-decoration: none;
+}
+footer img.img-responsive {
+  max-height: 2.2em;
+}
+footer ul {
+  padding-left: 0px;
+}
+footer .footer-logo {
+  max-height: 80px;
+  margin-top: 15px;
+}
+footer .footer-copyright {
+  margin-top: 2.2em;
+  text-align: center;
 }
 
 .footer-heart {

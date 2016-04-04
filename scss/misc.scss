@@ -2,9 +2,9 @@ ul {
   list-style: none;
 }
 
-/* ========== DOWNLOAD ========== */
+/* ========== SPONSORS ========== */
 
-#download {
+#sponsors {
   padding: 80px 40px;
   h3 {
     padding-bottom: 30px;
@@ -12,23 +12,49 @@ ul {
     line-height: 34px;
     font-weight: 300;
   }
+  img {
+    position: relative;
+  }
+  img.kalamuna {
+    width: 190px;
+  }
 }
 
-img.pantheon {
-  position: relative;
-  top: 40px;
-}
 
 /* ========== FOOTER ========== */
 
 footer {
   background: #34495e;
-  color: #fff;
+  color: $gray-lighter;
   padding: 70px 0;
-  text-align: center;
+  h4 {
+    color: #fff;
+  }
   p {
     font-size: 15px;
     line-height: 20px;
+  }
+  a {
+    color: #ddd;
+    &:hover {
+      color: $gray-lighter;
+      text-decoration: none;
+    }
+  }
+  img.img-responsive {
+    max-height: 2.2em;
+  }
+  ul {
+    padding-left: 0px;
+  }
+  .footer-logo {
+    max-height: 80px;
+    margin-top: 15px;
+  }
+
+  .footer-copyright {
+    margin-top: 2.2em;
+    text-align: center;
   }
 }
 
