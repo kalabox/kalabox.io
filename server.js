@@ -11,12 +11,17 @@ var GoogleSpreadsheet = require("google-spreadsheet");
 var my_sheet = new GoogleSpreadsheet('10VBH9y5Y8y5jpJmxjny_RQ8IVRyReHlDcIKmT1pDbOk');
 var creds = require('./KalaboxKeycodes-ae31acf55c9a.json');
 var _ = require('lodash');
+var port = 80;
 
 // App configuration
 app.set('view engine', 'twig');
 app.set('views', './views');
 app.use(express.static(path.join(__dirname, 'public')));
-app.use( require('express-force-domain')('http://www.kalabox.io') );
+if (app.get('env') === 'development') {  
+  port = 8080;
+} else {
+  app.use( require('express-force-domain')('http://www.kalabox.io') );
+}
 
 app.post('/form', function (req, res) {
   // @todo: parse by download URL as well.
@@ -113,4 +118,4 @@ function processAllFieldsOfTheForm(req, res) {
   });
 }
 
-app.listen(80);
+app.listen(port);
