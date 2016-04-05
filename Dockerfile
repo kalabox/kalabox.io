@@ -9,7 +9,7 @@ RUN mv /app/node_modules /node_modules
 
 ADD . /app
 
-ENV PORT 80
+ENV NODE_ENV=production
 EXPOSE 80
 
 CMD ["node", "server.js"]

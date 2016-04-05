@@ -17,7 +17,7 @@ var port = 80;
 app.set('view engine', 'twig');
 app.set('views', './views');
 app.use(express.static(path.join(__dirname, 'public')));
-if (app.get('env') === 'development') {  
+if (app.get('env') === 'development') {
   port = 8080;
 } else {
   app.use( require('express-force-domain')('http://www.kalabox.io') );
@@ -36,7 +36,8 @@ app.post('/form', function (req, res) {
 
 app.get('/', function (req, res) {res.render('home.twig');});
 app.get('/support', function (req, res) {res.render('support.twig', req.query);});
-app.get('/download.html', function (req, res) {res.render('download.twig');});
+app.get('/download.html', function (req, res) {res.redirect(301, '/download');});
+app.get('/download', function (req, res) {res.render('download.twig');});
 app.get('/alpha-downloads', downloads);
 app.get('/alpha-download', downloads);
 app.post('/support/email', emailSubmission);
