@@ -85,9 +85,11 @@ function downloads(req, res) {
   var page = '';
   var os = '';
   if (!_.isEmpty(req.query.keycode) && /^(?:korobka|eske)-\w{6}$/.test(req.query.keycode)) {
+    // Get OS
     var useragent = require('useragent');
     var agent = useragent.lookup(req.headers['user-agent']);
     var os = agent.os.toString();
+
     page = 'alpha-downloads.twig';
     saveSpreadsheet(req.query.keycode);
   } else {
