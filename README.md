@@ -16,9 +16,24 @@ To run...
 
 
 To deploy...
-1. docker build -t reynoldsalec/kalabox.io .
-2. docker push reynoldsalec/kalabox.io
-3. Log in to docker cloud and redeploy the kalaboxio containers.
+1. Build the image
 
+```
+docker build -t reynoldsalec/kalabox.io .
+```
+
+2. Push to Docker Hub
+
+```
+docker push reynoldsalec/kalabox.io
+```
+
+3. Log in to Docker Cloud and redeploy the kalaboxio containers.
+
+To test locally...
+
+```
+docker run -p 8080:80 reynoldsalec/kalabox.io
+```
 
 
