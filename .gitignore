@@ -5,4 +5,5 @@ npm-debug*
 dist
 public/css
 public/js
+nimbletoken.txt
 
