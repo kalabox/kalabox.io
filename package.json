@@ -10,17 +10,21 @@
   "author": "Kalabox, Inc",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.3.5",
     "bower": "^1.7.7",
     "express": "^4.13.4",
     "express-force-domain": "0.0.6",
     "formidable": "^1.0.17",
     "google-spreadsheet": "^1.1.4",
+    "jsonfile": "^2.3.0",
     "lodash": "^4.6.1",
+    "node-nimble-api": "0.0.6",
     "request": "^2.69.0",
     "twig": "^0.8.8",
     "useragent": "^2.1.8"
   },
   "devDependencies": {
+    "body-parser": "^1.15.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
@@ -29,7 +33,6 @@
     "gulp-rename": "^1.2.2",
     "gulp-ruby-sass": "^2.0.6",
     "gulp-uglify": "^1.5.3",
-    "node-nimble-api": "0.0.6",
     "reload": "^0.7.0"
   }
 }

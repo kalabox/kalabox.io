@@ -5,6 +5,7 @@ var path = require('path');
 var nimble = require('./controllers/nimble');
 var download = require('./controllers/download');
 var support = require('./controllers/support');
+var contact = require('./controllers/contact');
 var port = 80;
 
 // App configuration.
@@ -22,6 +23,7 @@ app.get('/', function (req, res) {res.render('home.twig');});
 app.use('/nimble-crm', nimble);
 app.use('/download', download);
 app.use('/support', support)
+app.use('/contact', contact)
 
 // Redirects.
 app.get('/download.html', function (req, res) {res.redirect(301, '/download');});

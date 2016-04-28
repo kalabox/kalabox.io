@@ -1,34 +1,61 @@
-// Init wrapper
-var nimble = new Nimble({
-    appId: '59fhxr68p7ydnpux2yz35ko7awbx2fv52dzq4',
-    appSecret: '6syf4joh6vtpzv013ur'
-});
+var express = require('express');
+var app = express();
+var fs = require('fs');
+var nimble = require('./nimble');
 
+/**
+ * Given a user's email, update an existing record with that email if it
+ * exists OR create a new record.
+ * 
+ * @param  string email 
+ * @param  json   body  Request details.
+ * @return response      
+ */
+exports.updateByEmail = function(email, body) {
+  this.find(email).then(function(result) {
+    var existingContacts = result.resources;
+    if (existingContacts) {
+      console.log('existing', existingContacts);
+      var id = existingContacts[0].id;
+      return this.update(id, body);
+    } else {
+      return this.create(body);
+    }
+  });
+}
 
-// Init wrapper
-var nimble = new Nimble({
-    appId: 'your_app_id',
-    appSecret: 'your_app_secret'
-});
+exports.create = function(body) {
+  return nimble.createContact(body, function(error, result, response) {
+    if (error) {
+      console.log(error);
+      return "ERROR" + JSON.stringify(error);
+    } else {
+      console.log(result);
+      return result;
+    }
+  });
+}
 
+exports.find = function(email) {
+  return nimble.findContacts(email).then(function(error, result, response) {
+    if (error) {
+      console.log(error);
+      return "ERROR" + JSON.stringify(error);
+    } else {
+      console.log('These are your contacts \n', result.resources);
+      return result.resources;
+    }
+  });
+}
 
-app.get('/nimble/authorization', function(req, res) {
-    res.redirect(nimble.getAuthorizationUrl({redirect_uri: 'your_redirect_uri'}));
-});
-
-
-// You must make sure that the wrapper is using for requesting the access token the SAME
-// redirect_uri provided for getAuthorizationUrl, either by using the same wrapper or by
-// providing the redirect_uri in the wrapper constructor if you are using a new object for requestToken.
-
-app.get('/nimble/authorization_callback', function(req, res) {
-  if(!req.query.error) {
-    nimble.requestToken(req.query.code, function(err, access_token, refresh_token, result) {
-      res.send('You are now authenticated! -> ' + access_token);
-    });
-  } else {
-    res.send('Error authenticating!!! -> ' + err);
-  }
-});
-
-exports.create = function()
+exports.update = function(id, body) {
+  return nimble.updateContact(id, body, function(error, result, response) {
+    if (error) {
+      console.log(error);
+      return "ERROR" + JSON.stringify(error);
+    } else {
+      console.log(result);
+      return result;
+    }
+  });
+}
