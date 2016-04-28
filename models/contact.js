@@ -12,7 +12,7 @@ var nimble = require('./nimble');
  * @return response      
  */
 exports.updateByEmail = function(email, body) {
-  this.find(email).then(function(result) {
+  this.find(email, function(result) {
     var existingContacts = result.resources;
     if (existingContacts) {
       console.log('existing', existingContacts);
@@ -36,14 +36,14 @@ exports.create = function(body) {
   });
 }
 
-exports.find = function(email) {
-  return nimble.findContacts(email).then(function(error, result, response) {
+exports.find = function(email, callback) {
+  return nimble.findContacts(email, function(error, result, response) {
     if (error) {
       console.log(error);
-      return "ERROR" + JSON.stringify(error);
+      return callback("ERROR" + JSON.stringify(error));
     } else {
       console.log('These are your contacts \n', result.resources);
-      return result.resources;
+      return callback(result);
     }
   });
 }

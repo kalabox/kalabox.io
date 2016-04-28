@@ -1,50 +1,44 @@
-var Promise = require("bluebird");
 var Nimble = require('node-nimble-api');
-var tokens = require('../nimbletoken.json');
-var nimble = Promise.promisifyAll(new Nimble({
-  appId: '59fhxr68p7ydnpux2yz35ko7awbx2fv52dzq4',
-  appSecret: '6syf4joh6vtpzv013ur',
-  accessToken: tokens.accessToken
-}));
-var jsonfile = Promise.promisifyAll(require('jsonfile'));
+var jsonfile = require('jsonfile');
+var nimble = false;
+var timer = setInterval(function() {
 
+  var tokens = require('../nimbletoken.json');
+  console.log(tokens, nimble);
+  return getNimble().doRefreshToken(tokens.refreshToken, function(err, access_token, refresh_token, result) {
+    console.log(access_token, refresh_token);
+    saveTokens(access_token, refresh_token);
+  });
+}, 5 * 1000);
 
 var getNimble = function() {
-  return nimble.doRefreshTokenAsync(tokens.refreshToken).then(function(access_token, refresh_token, result) {
-    console.log('access_token', access_token);
-    return saveTokens(access_token, refresh_token);
-  }).then(function(){
-    return nimble;
-  });
+  if (!nimble) {
+    var tokens = require('../nimbletoken.json');
+    var properties = {
+      appId: '59fhxr68p7ydnpux2yz35ko7awbx2fv52dzq4',
+      appSecret: '6syf4joh6vtpzv013ur'
+    };
+    if (tokens.accessToken) {
+      properties.accessToken = tokens.accessToken;
+    }
+    var nimble = new Nimble(properties);
+  }
+  return nimble;
 }
 
 var createContact = function(body) {
   console.log('create');
-  return getNimble().then(function(nimble) {
-    return nimble.createContactAsync(body);
-  }).then(function(error, result, response) {
-    return handleResponse(error, result, response);
-  });
+  return getNimble().createContact(body, handleResponse);
 }
 
 var findContacts = function(email) {
   console.log('find');
-  return getNimble().then(function(nimble) {
-    console.log('find1', nimble);
-    return nimble.findByEmailAsync(email, true);
-  }).then(function(error, result, response) {
-    console.log('find2', result);
-    return handleResponse(error, result, response);
-  });
+  return getNimble().findByEmail(email, true, handleResponse);
 }
 
 var updateContact = function(id, body) {
   console.log('update');
-  return getNimble().then(function(nimble) {
-    return nimble.updateContactAsync(searchParameters);
-  }).then(function(error, result, response) {
-    return handleResponse(error, result, response);
-  });
+  return getNimble().updateContact(searchParameters, handleResponse);
 }
 
 var handleResponse = function(error, result, response) {
@@ -61,7 +55,8 @@ var handleResponse = function(error, result, response) {
 
 var saveTokens = function(accessToken, refreshToken) {
   var tokens = {accessToken: accessToken, refreshToken: refreshToken};
-  jsonfile.writeFileAsync('nimbletoken.json', tokens).then(function(error) {
+  console.log(tokens);
+  jsonfile.writeFile('nimbletoken.json', tokens, function(error) {
     if (error) {
       return 'Nimble token couldn\t be written';
     } else {

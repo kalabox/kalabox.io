@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var nimble = require('../models/nimble');
+var nimble = require('../models/nimble').getNimble();
 
 router.get('/authorization', function(req, res) {
   var redirectURI = 'http://www.kalabox.io/nimble-crm/authorized';
