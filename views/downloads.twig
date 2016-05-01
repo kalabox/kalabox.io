@@ -9,7 +9,7 @@
         <div class="row">
           <div class="col-xs-12">
             {% if 'Mac' in platform %}
-              <a class="btn btn-primary" href="http://installer.kalabox.io/kalabox-v0.12.0-alpha.3.dmg">
+              <a class="btn btn-primary" href="/download/latest?email={{ email }}&extension=dmg">
                 <h3>Download Kalabox</h3>
                 <div class="os-desc">
                   <i class="fa fa-apple"></i> <span>Mac OS X 10.10+</span>
@@ -17,35 +17,35 @@
               </a>
             {% endif %}
             {% if 'Windows' in platform %}
-              <a class="btn btn-primary" href="http://installer.kalabox.io/kalabox-v0.12.0-alpha.3.exe">
+              <a class="btn btn-primary" href="/download/latest?email={{ email }}&extension=exe">
                 <div>Download Kalabox</div>
                 <i class="fa fa-windows"></i> <span>Windows 8+</span>
               </a>
             {% endif %}
             {% if 'Ubuntu' in platform %}
-              <a class="btn btn-primary" href="http://installer.kalabox.io/kalabox-v0.12.0-alpha.3.deb">
+              <a class="btn btn-primary" href="/download/latest?email={{ email }}&extension=deb">
                 <div>Download Kalabox</div>
                 <i class="fa fa-windows"></i> <span>Windows 8+</span>
               </a>
             {% endif %}
               <ul class="alt-downloads">
                 <li>
-                  <a href="http://installer.kalabox.io/kalabox-v0.12.0-alpha.3.dmg">
+                  <a href="/download/latest?email={{ email }}&extension=dmg">
                     <i class="fa fa-apple"></i> <span>Mac OS X 10.10+</span>
                   </a>
                 </li>
                 <li>
-                  <a href="http://installer.kalabox.io/kalabox-v0.12.0-alpha.3.exe">
+                  <a href="/download/latest?email={{ email }}&extension=exe">
                     <i class="fa fa-windows"></i> <span>Windows 8+</span>
                   </a>
                 </li>
                 <li>
-                  <a href="http://installer.kalabox.io/kalabox-v0.12.0-alpha.3.deb">
+                  <a href="/download/latest?email={{ email }}&extension=deb">
                     <i class="fa fa-linux"></i> <span>Ubuntu 14.04+</span>
                   </a>
                 </li>
                 <li>
-                  <a href="http://installer.kalabox.io/kalabox-v0.12.0-alpha.3.rpm">
+                  <a href="/download/latest?email={{ email }}&extension=rpm">
                     <i class="fa fa-linux"></i> <span>Fedora 20+</span>
                   </a>
                 </li>
