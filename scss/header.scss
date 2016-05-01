@@ -18,27 +18,7 @@ header {
   width: 100%;
 }
 
-.social-links {
-  float: right;
 
-  li {
-    float: left;
-    display: inline-block;
-    padding-left:10px;
-    padding-top: 20px;
-  }
-  a li {
-    color: #ffffff;
-    font-size: 18px;
-    -webkit-transition: color 0.2s;
-    -moz-transition: color 0.2s;
-    transition: color 0.2s;
-    &:hover {
-      text-decoration: none;
-      color: #222222;
-    }
-  }
-}
 
 .centered {
     text-align:center;
@@ -58,11 +38,55 @@ header {
 
 #header {
   .logo {
-    width: 80px;
-    margin-top: -30px;
+    height: 4em;
+  }
+  .navbar {
+    margin: 0px;
+    .nav-links {
+      li {
+        float: left;
+        display: inline-block;
+        padding-left:10px;
+      }
+      a li, li a{
+        color: #ffffff;
+        -webkit-transition: color 0.2s;
+        -moz-transition: color 0.2s;
+        transition: color 0.2s;
+        &:hover {
+          text-decoration: none;
+          color: #222222;
+        }
+      }
+    }
+    .social-links {
+      li {
+        padding: 15px;
+        vertical-align: middle;
+      }
+      a li {
+        font-size: 1.5em;
+      }
+    }
+    .main-links {
+    }
   }
 }
 
 #header.dark {
   padding: 10px 0px;
+}
+
+#header-cta {
+  background: #000;
+  .brand-name {
+    font-family: 'Lato';
+  }
+  p {
+    color: #A9B1B5;
+    margin: 0px;
+    padding: 1em;
+    a {color: $brand-primary;}
+  }
+
 }
