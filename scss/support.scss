@@ -4,6 +4,19 @@
   }
 }
 
+#support {
+  ul {
+    font-size: 1.25em;
+    font-weight: 100;
+    text-align: center;
+    padding: 10px;
+    li {
+      border-bottom: 1px solid $gray;
+      padding: 5px 0px;
+    }
+  }  
+}
+
 .support {
   h2 {
     text-align: left;
