@@ -10,13 +10,17 @@ var request = require('request');
 var release = 'v0.12.0-alpha.3';
 var contact = require('../models/contact');
 
-router.get('/', function (req, res) {res.render('download-form.twig');});
+router.get('/', function (req, res) {res.render('download-form.twig', req.query);});
 router.get('/alpha', downloads);
 
 
 router.post('/form', function (req, res) {
   var form = new formidable.IncomingForm();
   form.parseAsync(req).then(function (result) {
+    if (!result[0].email || !result[0].firstName || !result[0].lastName) {
+      var msg = 'Please enter your first name, last name, and a valid email.';
+      res.redirect('/download?msg=' + msg);
+    }
     var email = result[0].email;
     var request = {
       "fields": {

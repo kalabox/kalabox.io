@@ -3,6 +3,9 @@
   {% include 'head.twig' %}
   <body class="download">
     {% include 'header.twig' %}
+    {% if msg %}
+      <div class="alert alert-danger" role="alert">{{ msg }}</div>
+    {% endif %}
     <section id="downloads">
       <div class="container wow animated fadeInDown">
         <h1>Begin your journey to faster local development...</h1>

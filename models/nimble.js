@@ -6,13 +6,12 @@ var jsonfile = Promise.promisifyAll(require('jsonfile'));
 var tokenStore = app.get('env') === 'development' ? 'nimbletoken.json' : '/nimble/nimbletoken.json';
 
 var getNimble = function() {
-  var tokens = require('../nimbletoken.json');
   var nimble = Promise.promisifyAll(new Nimble({
     appId: '59fhxr68p7ydnpux2yz35ko7awbx2fv52dzq4',
     appSecret: '6syf4joh6vtpzv013ur',
-    accessToken: tokens.accessToken
+    accessToken: tokenStore.accessToken
   }), {multiArgs: true});
-  return nimble.doRefreshTokenAsync(tokens.refreshToken).then(function(result) {
+  return nimble.doRefreshTokenAsync(tokenStore.refreshToken).then(function(result) {
     return saveTokens(result[0], result[1]);
   }).then(function() {
     return nimble;
