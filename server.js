@@ -27,7 +27,7 @@ app.use('/contact', contact)
 
 // Redirects.
 app.get('/download.html', function (req, res) {res.redirect(301, '/download');});
-app.get('/alpha-download', function (req, res) {res.redirect(301, '/download/alpha');});
-app.get('/alpha-downloads', function (req, res) {res.redirect(301, '/download/alpha');});
+app.get('/alpha-download', function (req, res) {res.redirect(301, '/download');});
+app.get('/alpha-downloads', function (req, res) {res.redirect(301, '/download');});
 
 app.listen(port);

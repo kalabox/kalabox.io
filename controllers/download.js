@@ -7,7 +7,7 @@ var my_sheet = new GoogleSpreadsheet('10VBH9y5Y8y5jpJmxjny_RQ8IVRyReHlDcIKmT1pDb
 var creds = require('../KalaboxKeycodes-ae31acf55c9a.json');
 var _ = require('lodash');
 var request = require('request');
-var release = 'v0.12.0-alpha.3';
+var release = 'v0.12.0-alpha.4';
 var contact = require('../models/contact');
 
 router.get('/', function (req, res) {res.render('download-form.twig', req.query);});
@@ -63,7 +63,9 @@ router.get('/latest', function(req, res) {
     tags: release
   };
   contact.updateByEmail(email, request).then(function() {
-    res.redirect('http://installer.kalabox.io/kalabox-' + release + '.' + extension);
+    var githubUrl = 'https://github.com/kalabox/kalabox/releases/download/' + release
+    + '/kalabox-' + release + '.' + extension;
+    res.redirect(githubUrl);
   })
 });
 
