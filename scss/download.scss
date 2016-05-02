@@ -32,6 +32,21 @@ body.gateway {
       font-size: 1.25em;
     }
   }
+
+  form.form-inline {
+    margin: 40px auto 20px auto;
+    width: 503px;
+    input.input-lg {
+      display: inline-block;
+      border: 2px solid #ccc;
+      width: 250px;
+      margin: 10px 0px;
+    }
+    input#email {
+      display: block;
+      width: 503px;
+    }
+  }
 }
 
 body.download {

@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 if (app.get('env') === 'development') {
   port = 8080;
 } else {
-  // app.use( require('express-force-domain')('http://www.kalabox.io') );
+  app.use( require('express-force-domain')('http://www.kalabox.io') );
 }
 
 // Routing.

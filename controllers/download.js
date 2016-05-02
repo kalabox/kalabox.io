@@ -17,7 +17,6 @@ router.get('/alpha', downloads);
 router.post('/form', function (req, res) {
   var form = new formidable.IncomingForm();
   form.parseAsync(req).then(function (result) {
-    console.log(result);
     var email = result[0].email;
     var request = {
       "fields": {
@@ -36,13 +35,12 @@ router.post('/form', function (req, res) {
       },
       "type" : "person"
     };
-    // Get keycode and pass to /alpha-downloads
+    // Make sure contact exists and pass to download page.
     return contact.updateByEmail(email, request);
   }).then(function(result) {
-    console.log('contact', result);
-    res.redirect('/download/alpha?email=' + email);
+    res.redirect('/download/alpha?email=' + result.fields.email[0].value);
   }).catch(function(error) {
-
+    console.log(error);
   });
 
 });
@@ -51,14 +49,16 @@ router.get('/latest', function(req, res) {
   var email = req.query.email;
   var extension = req.query.extension;
   var request = {
-    tags: [
-      {
-        tag: release
-      }
-    ]
+    fields: {
+      'Latest Version Downloaded': [{
+        value: release,
+        modifier: ''
+      }]
+    },
+    tags: release
   };
   contact.updateByEmail(email, request).then(function() {
-    res.redirect('http://installer.kalabox.io/kalabox-' + release + '.' + os);
+    res.redirect('http://installer.kalabox.io/kalabox-' + release + '.' + extension);
   })
 });
 
@@ -81,7 +81,7 @@ function downloads(req, res) {
   res.render(page, {
     platform: os,
     release: release,
-    email: remail
+    email: email
   });
 };
 

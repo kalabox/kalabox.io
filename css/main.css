@@ -10642,6 +10642,22 @@ body.gateway #keycode-gateway {
 body.gateway #keycode-gateway .subhead {
   font-size: 1.25em;
 }
+body.gateway form.form-inline {
+  margin: 40px auto 20px auto;
+  width: 503px;
+}
+body.gateway form.form-inline input.input-lg, body.gateway form.form-inline .input-group-lg > input.form-control,
+body.gateway form.form-inline .input-group-lg > input.input-group-addon,
+body.gateway form.form-inline .input-group-lg > .input-group-btn > input.btn {
+  display: inline-block;
+  border: 2px solid #ccc;
+  width: 250px;
+  margin: 10px 0px;
+}
+body.gateway form.form-inline input#email {
+  display: block;
+  width: 503px;
+}
 
 body.download {
   text-align: center;

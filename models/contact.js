@@ -38,7 +38,7 @@ exports.create = function(body) {
 
 exports.find = function(email) {
   return nimble.findContacts(email).then(function(result) {
-    console.log('These are your contacts \n', result);
+    console.log('These are your contacts \n', result.resources[0].fields);
     return result.resources[0];
   }).catch(function(error) {
     console.log(error);
@@ -49,7 +49,7 @@ exports.find = function(email) {
 exports.update = function(id, body) {
   return nimble.updateContact(id, body).then(function(result) {
     console.log('update', result);
-    return result[0];
+    return result;
   }).catch(function(error) {
     console.log(error);
     return "ERROR" + JSON.stringify(error);

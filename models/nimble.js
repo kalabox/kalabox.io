@@ -1,6 +1,9 @@
+var express = require('express');
+var app = express();
 var Promise = require("bluebird");
 var Nimble = require('node-nimble-api');
 var jsonfile = Promise.promisifyAll(require('jsonfile'));
+var tokenStore = app.get('env') === 'development' ? 'nimbletoken.json' : '/nimble/nimbletoken.json';
 
 var getNimble = function() {
   var tokens = require('../nimbletoken.json');
@@ -60,7 +63,7 @@ var handleNimbleError = function(error) {
 
 var saveTokens = function(accessToken, refreshToken) {
   var tokens = {accessToken: accessToken, refreshToken: refreshToken};
-  jsonfile.writeFileAsync('nimbletoken.json', tokens).then(function(error) {
+  jsonfile.writeFileAsync(tokenStore, tokens).then(function(error) {
     if (error) {
       return 'Nimble token couldn\t be written';
     } else {
