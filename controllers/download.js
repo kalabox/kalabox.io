@@ -42,6 +42,7 @@ router.post('/form', function (req, res) {
     // Make sure contact exists and pass to download page.
     return contact.updateByEmail(email, request);
   }).then(function(result) {
+    console.log('redirect', result);
     res.redirect('/download/alpha?email=' + result.fields.email[0].value);
   }).catch(function(error) {
     console.log(error);

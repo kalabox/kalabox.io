@@ -39,7 +39,7 @@ docker run -p 8080:80 reynoldsalec/kalabox.io
 
 To activate Nimble integration...
 
-1. Got to /authorization and enter in creds when asked.
+1. Got to /nimble-crm/authorization and enter in creds when asked.
 
-2. This will redirect to /authorized. IF you are on local, you'll probably need to copy
+2. This will redirect to /nimble-crm/authorized. IF you are on local, you'll probably need to copy
 the parameters provided and manually redirect yourself to your localhost domain.

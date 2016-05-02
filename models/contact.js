@@ -1,5 +1,3 @@
-var express = require('express');
-var app = express();
 var fs = require('fs');
 var nimble = require('./nimble');
 var contact = this;
@@ -14,6 +12,7 @@ var contact = this;
  */
 exports.updateByEmail = function(email, body) {
   return contact.find(email).then(function(existingContact) {
+    console.log(existingContact);
     if (existingContact) {
       var id = existingContact.id;
       return contact.update(id, body);
