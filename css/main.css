@@ -10633,6 +10633,12 @@ div.container #mc_embed_signup div.mce_inline_error {
 body.gateway {
   background-color: #34495e;
 }
+body.gateway h1 {
+  margin-top: 2em;
+}
+body.gateway h2 {
+  padding-bottom: 1em;
+}
 body.gateway #keycode-gateway {
   height: 80vh;
   min-height: 750px;
@@ -10643,7 +10649,7 @@ body.gateway #keycode-gateway .subhead {
   font-size: 1.25em;
 }
 body.gateway form.form-inline {
-  margin: 40px auto 20px auto;
+  margin: 1em auto 2em auto;
   width: 503px;
 }
 body.gateway form.form-inline input.input-lg, body.gateway form.form-inline .input-group-lg > input.form-control,
@@ -10657,6 +10663,9 @@ body.gateway form.form-inline .input-group-lg > .input-group-btn > input.btn {
 body.gateway form.form-inline input#email {
   display: block;
   width: 503px;
+}
+body.gateway form.form-inline button {
+  margin-bottom: 1em;
 }
 
 body.download {

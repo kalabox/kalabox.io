@@ -5,18 +5,20 @@
     {% include 'header.twig' %}
     <section id="keycode-gateway">
       <div class="container wow animated fadeInDown">
-        <h3>Download Kalabox Beta</h3>
-        <p>Let us know who you are so we can let you know when new versions of Kalabox come out.</p>
+        <h1>Begin your journey to faster local development...</h1>
+        <h2>This is your first step into a larger world. Speak your name to reveal the treasures within the box.</h2>
         <form class="form-inline" action="/download/form" method="post" enctype="multipart/form-data">
           <input type="text" id="firstName" name="firstName" placeholder="First Name" class="input-lg">
           <input type="text" id="lastName" name="lastName" placeholder="Last Name" class="input-lg">
           <input type="text" id="email" name="email" placeholder="Email" class="input-lg">
           <button type="submit" class="btn btn-primary">Get Kalabox</button>
+          <p>
+            We will only use your email for notifications on new releases and communications regarding
+            Kalabox.
+          </p>
         </form>
       </div>
     </section>
-    <p>*Kalabox will only use your email for notifications on new releases and communications regarding
-      Kalabox.</p>
     {% include 'footer.twig' %}
   </body>
 </html>
