@@ -13,7 +13,7 @@ var contact = this;
 exports.updateByEmail = function(email, body) {
   return contact.find(email).then(function(existingContact) {
     console.log(existingContact);
-    if (existingContact) {
+    if (existingContact && existingContact.id) {
       var id = existingContact.id;
       return contact.update(id, body);
     } else {
