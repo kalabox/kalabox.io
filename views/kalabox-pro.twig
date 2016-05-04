@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include 'head.twig' %}
+  <body class="kalabox-pro">
+  {% include 'header.twig' %}
+  {% if msg %}
+    <div class="alert alert-success" role="alert">{{ msg }}</div>
+  {% endif %}
+  {% include 'pro-intro.twig' %}
+  {% include 'pro-pricing.twig' %}
+  {% include 'pro-features.twig' %}
+  {% include 'footer.twig' %}
+  </body>
+</html>

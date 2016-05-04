@@ -20,6 +20,7 @@ if (app.get('env') === 'development') {
 
 // Routing.
 app.get('/', function (req, res) {res.render('home.twig');});
+app.get('/kalabox-pro', function (req, res) {res.render('kalabox-pro.twig');});
 app.use('/nimble-crm', nimble);
 app.use('/download', download);
 app.use('/support', support)

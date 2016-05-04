@@ -22,38 +22,56 @@ div.container #mc_embed_signup div.mce_inline_error {
 
 body.gateway {
   background-color: #34495e;
-  h1 {
-    margin-top: 2em;
-  }
   h2 {
     padding-bottom: 1em;
   }
 
-  #keycode-gateway {
-    height: 80vh;
-    min-height: 750px;
-    text-align: center;
-    padding-top: 0px;
-    .subhead {
-      font-size: 1.25em;
-    }
-  }
-
   form.form-inline {
     margin: 1em auto 2em auto;
-    width: 503px;
     input.input-lg {
       display: inline-block;
       border: 2px solid #ccc;
-      width: 250px;
-      margin: 10px 0px;
+      width: auto;
     }
     input#email {
       display: block;
-      width: 503px;
+      width: 100%;
     }
     button {
       margin-bottom: 1em;
+      width: 100%;
+    }
+  }
+  p {
+    text-align: left;
+  }
+  .form-description {
+    margin: 2em 0em;
+    p {
+      font-size: 2em;
+      font-weight: 100;
+      line-height: 1.2em;
+    }
+  }
+  .kalabox-pro-brief {
+    padding-bottom: 4em;
+    .pro-image {
+      img {
+       height: 200px;
+       display: block;
+      }
+    }
+    .pro-features {
+      ul {
+        margin: auto;
+        display: block;
+        width: 400px;
+      }
+      .btn {
+        margin: 1em auto;
+        display: block;
+        width: 400px;
+      }
     }
   }
 }

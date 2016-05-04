@@ -5,20 +5,47 @@
     {% include 'header.twig' %}
     <section id="keycode-gateway">
       <div class="container wow animated fadeInDown">
-        <h1>Begin your journey to faster local development...</h1>
-        <h2>This is your first step into a larger world. Speak your name to reveal the treasures within the box.</h2>
-        <form class="form-inline" action="/download/form" method="post" enctype="multipart/form-data">
-          <input type="text" id="firstName" name="firstName" placeholder="First Name" class="input-lg">
-          <input type="text" id="lastName" name="lastName" placeholder="Last Name" class="input-lg">
-          <input type="text" id="email" name="email" placeholder="Email" class="input-lg">
-          <button type="submit" class="btn btn-primary">Get Kalabox</button>
-          <p>
-            We will only use your email for notifications on new releases and communications regarding
-            Kalabox.
-          </p>
-        </form>
-      </div>
-    </section>
+        <div class="row">
+          <div class="col-xs-12">
+            <h1>Download Kalabox Beta1</h1>
+          </div>
+          <div class="col-md-6">
+            <form class="form-inline" action="/download/form" method="post" enctype="multipart/form-data">
+              <input type="text" id="firstName" name="firstName" placeholder="First Name" class="input-lg">
+              <input type="text" id="lastName" name="lastName" placeholder="Last Name" class="input-lg">
+              <input type="text" id="email" name="email" placeholder="Email" class="input-lg">
+              <button type="submit" class="btn btn-primary">Get Kalabox</button>
+              <p>
+                We will only use your email for notifications on new releases and communications regarding
+                Kalabox.
+              </p>
+            </form>
+          </div>
+          <div class="col-md-6 form-description">
+            <p>This is your first step into a larger world. Speak your name to reveal the treasures within the box.</p>
+          </div>
+        </div>
+      </section>
+      <section class="kalabox-pro-brief">
+        <div class="container">
+          <h2 class="primary-header">Kalabox Pro</h2>
+          <div class="row">
+            <div class="pro-features col-md-6">
+              <ul>
+                <li>Automatic Browser Reload</li>
+                <li>Local mailserver</li>
+                <li>Performance Profiling</li>
+                <li>Customizable Endpoints</li>
+                <li>And More...</li>
+              </ul>
+              <a class="btn btn-primary" href="/kalabox-pro">Learn More</a>
+            </div>
+            <div class="pro-image col-md-6">
+              <img src="/img/kalabox-tag.png" />
+            </div>
+          </div>
+        </div>
+      </section>
     {% include 'footer.twig' %}
   </body>
 </html>
