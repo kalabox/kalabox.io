@@ -6,6 +6,7 @@ var nimble = require('./controllers/nimble');
 var download = require('./controllers/download');
 var support = require('./controllers/support');
 var contact = require('./controllers/contact');
+var stripe = require('./controllers/stripe');
 var port = 80;
 
 // App configuration.
@@ -25,6 +26,7 @@ app.use('/nimble-crm', nimble);
 app.use('/download', download);
 app.use('/support', support)
 app.use('/contact', contact)
+app.use('/stripe', stripe)
 
 // Redirects.
 app.get('/download.html', function (req, res) {res.redirect(301, '/download');});
