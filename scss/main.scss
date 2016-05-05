@@ -33,3 +33,17 @@ li {
   font-size: 1.5em;
   font-weight: 100;
 }
+
+button {
+  a {
+    color: #333;
+  }
+  a:hover {
+    color: #333;
+    text-decoration: none;
+  }
+}
+
+.btn:hover {
+  cursor: pointer;
+}

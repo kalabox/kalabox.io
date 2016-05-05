@@ -46,6 +46,10 @@ footer {
   }
   ul {
     padding-left: 0px;
+    li {
+      list-style-type: none;
+      font-size: 1em;
+    }
   }
   .footer-logo {
     max-height: 80px;

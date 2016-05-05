@@ -1,48 +1,81 @@
 <!DOCTYPE html>
 <html lang="en"> 
-  {% include 'head.twig' %}
-  <body class="support">
-    {% include 'header.twig' %}
-    {% if msg %}
-      <div class="alert alert-success" role="alert">{{ msg }}</div>
-    {% endif %}
-    <section id="support">
-      <div class="section">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 col-xs-12">
-              <div class="well">
-                <h1>Community Support</h1>
-                <h2>The Github issue queue is where the Kalabox community participates by creating bug reports, feature requests, and submitting code to the project.</h2>
+{% include 'head.twig' %}
+<body class="support-disambig">
+  {% include 'header.twig' %}
+  {% if msg %}
+  <div class="alert alert-success" role="alert">{{ msg }}</div>
+  {% endif %}
+  <section id="support">
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="divider4"></div>
+          <div class="col-xs-12 col-md-6">
+            <div class="pricing plain z-depth-1 hoverable">
+              <div class="price-attrs purple">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <div class="price-plan">Community Support</div>
+                  </div>
+                  <div class="col-xs-6">
+                    <div class="price-number"></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12">The Github issue queue is where the Kalabox community participates by creating bug reports, feature requests, and submitting code to the project.</div>
+                </div>
+              </div>
+              <div class="price-features">
                 <ul>
-                  <li>Submit bug reports and feature requests</li>
+                  <li>Contribute issues and code</li>
                   <li>Get help from fellow users</li>
                   <li>Help improve Kalabox</li>
                 </ul>
-                <a href="https://github.com/kalabox/kalabox/issues" class="btn btn-info center">
-                  Community Issue Queue
-                </a>
+                <button type="button" class="waves-effect waves-light btn blue-grey darken-2 center">
+                  <a href="https://github.com/kalabox/kalabox/issues">
+                    Community Issue Queue
+                  </a>
+                </button>
               </div>
             </div>
-            <div class="col-md-6 col-xs-12">
-              <div class="well">
-                <h1>Professional Support</h1>
-                <h2>Get dedicated support direct from the Kalabox team to make sure your organization's development workflow is as efficient as possible.</h2>
+            <div class="divider4"></div>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <div class="pricing plain z-depth-1 hoverable">
+              <div class="price-attrs red">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <div class="price-plan">Professional Support</div>
+                  </div>
+                  <div class="col-xs-6">
+                    <div class="price-number"></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12">Get dedicated support direct from the Kalabox team to make sure your organization's development workflow is as efficient as possible.</div>
+                </div>
+              </div>
+              <div class="price-features">
                 <ul>
                   <li>Get help from the Kalabox team</li>
                   <li>Dedicated ticketing system</li>
                   <li>Help support Kalabox development</li>
                 </ul>
-                <a href="/support/professional" class="btn btn-primary center">
-                  Dedicated Support
-                </a>
+                <button type="button" class="waves-effect waves-light btn blue-grey darken-2 center">
+                  <a href="/support/professional" >
+                    Dedicated Support
+                  </a>
+                </button>
               </div>
             </div>
+            <div class="divider4"></div>
           </div>
         </div>
       </div>
-    </section>
-    {% include 'footer.twig' %}
-    {% include 'email-modal.twig' %}
-  </body>
+    </div>
+  </section>
+  {% include 'footer.twig' %}
+  {% include 'email-modal.twig' %}
+</body>
 </html>

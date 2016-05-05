@@ -4,20 +4,19 @@
   }
 }
 
-section#pricing, section#buy-pro {
+section#pricing, section#buy-pro, section#support {
   padding: 80px 0 90px 0;
   .plain {
     background: #f2f2f2;
     color: #333;
   }
   .pricing {
-    padding: 20px 20px 30px 20px;
     min-height: 300px;
     /* width: 262px; */
-    text-align: center;
     box-sizing: border-box;
     border: 1px solid #f2f2f2;
-    font-size: 13px;
+    font-size: 1em;
+    font-weight: 100;
     transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
     -webkit-transition: all 0.35s ease-in-out;
@@ -25,33 +24,59 @@ section#pricing, section#buy-pro {
     -ms-transition: all 0.35s ease-in-out;
     ul {
       text-align: center;
-      margin: 36px 0 36px 0;
+      margin: 3em 0em;
       padding: 0;
+      height: 250px;
       li {
         list-style: none;
         border-top: 1px solid #ccc;
-        line-height: 2.5em;
+        line-height: 1.25em;
+        padding: 1em 0em;
         &:last-child {
           border-bottom: 1px solid #ccc;
         }
       }
     }
   }
+  .price-attrs {
+    background-color: #E9005C;
+    color: #fff;
+    padding: 2em;
+  }
+  .price-features {
+    padding: 0em 2em 3em 2em;
+    height: 370px;
+  }
+  .purple {
+    background-color: #8739C4;
+  }
+  .pink {
+    background-color: #A4366B;
+  }
+  .red {
+    background-color: #C62C48;
+  }
   .proposal {
     background: #fff;
     color: #de3627;
   }
   .price-number {
-    font-size: 60px;
-    font-weight: 700;
+    font-size: 2em;
   }
   .price-plan {
-    font-size: 24px;
+    font-size: 2em;
+    text-transform: uppercase;
   }
   h2 {
     margin-top: 0;
     margin-right: 0;
     padding-left: 20px;
+  }
+  .button-wrapper {
+    height: 100%;
+    button {
+      vertical-align: bottom;
+    }
   }
 }
 

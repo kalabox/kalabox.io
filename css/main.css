@@ -10777,6 +10777,10 @@ footer img.img-responsive {
 footer ul {
   padding-left: 0px;
 }
+footer ul li {
+  list-style-type: none;
+  font-size: 1em;
+}
 footer .footer-logo {
   max-height: 80px;
   margin-top: 15px;
@@ -10804,6 +10808,12 @@ footer .footer-copyright {
 #support ul li {
   border-bottom: 1px solid #555555;
   padding: 5px 0px;
+}
+#support .price-attrs {
+  height: 14em;
+}
+#support .price-features {
+  height: 29em;
 }
 
 .support h2 {
@@ -10893,55 +10903,80 @@ footer .footer-copyright {
   text-align: center;
 }
 
-section#pricing, section#buy-pro {
+section#pricing, section#buy-pro, section#support {
   padding: 80px 0 90px 0;
 }
-section#pricing .plain, section#buy-pro .plain {
+section#pricing .plain, section#buy-pro .plain, section#support .plain {
   background: #f2f2f2;
   color: #333;
 }
-section#pricing .pricing, section#buy-pro .pricing {
-  padding: 20px 20px 30px 20px;
+section#pricing .pricing, section#buy-pro .pricing, section#support .pricing {
   min-height: 300px;
   /* width: 262px; */
-  text-align: center;
   box-sizing: border-box;
   border: 1px solid #f2f2f2;
-  font-size: 13px;
+  font-size: 1em;
+  font-weight: 100;
   transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
   -webkit-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
   -ms-transition: all 0.35s ease-in-out;
 }
-section#pricing .pricing ul, section#buy-pro .pricing ul {
+section#pricing .pricing ul, section#buy-pro .pricing ul, section#support .pricing ul {
   text-align: center;
-  margin: 36px 0 36px 0;
+  margin: 3em 0em;
   padding: 0;
+  height: 250px;
 }
-section#pricing .pricing ul li, section#buy-pro .pricing ul li {
+section#pricing .pricing ul li, section#buy-pro .pricing ul li, section#support .pricing ul li {
   list-style: none;
   border-top: 1px solid #ccc;
-  line-height: 2.5em;
+  line-height: 1.25em;
+  padding: 1em 0em;
 }
-section#pricing .pricing ul li:last-child, section#buy-pro .pricing ul li:last-child {
+section#pricing .pricing ul li:last-child, section#buy-pro .pricing ul li:last-child, section#support .pricing ul li:last-child {
   border-bottom: 1px solid #ccc;
 }
-section#pricing .proposal, section#buy-pro .proposal {
+section#pricing .price-attrs, section#buy-pro .price-attrs, section#support .price-attrs {
+  background-color: #E9005C;
+  color: #fff;
+  padding: 2em;
+}
+section#pricing .price-features, section#buy-pro .price-features, section#support .price-features {
+  padding: 0em 2em 3em 2em;
+  height: 370px;
+}
+section#pricing .purple, section#buy-pro .purple, section#support .purple {
+  background-color: #8739C4;
+}
+section#pricing .pink, section#buy-pro .pink, section#support .pink {
+  background-color: #A4366B;
+}
+section#pricing .red, section#buy-pro .red, section#support .red {
+  background-color: #C62C48;
+}
+section#pricing .proposal, section#buy-pro .proposal, section#support .proposal {
   background: #fff;
   color: #de3627;
 }
-section#pricing .price-number, section#buy-pro .price-number {
-  font-size: 60px;
-  font-weight: 700;
+section#pricing .price-number, section#buy-pro .price-number, section#support .price-number {
+  font-size: 2em;
 }
-section#pricing .price-plan, section#buy-pro .price-plan {
-  font-size: 24px;
+section#pricing .price-plan, section#buy-pro .price-plan, section#support .price-plan {
+  font-size: 2em;
+  text-transform: uppercase;
 }
-section#pricing h2, section#buy-pro h2 {
+section#pricing h2, section#buy-pro h2, section#support h2 {
   margin-top: 0;
   margin-right: 0;
   padding-left: 20px;
+}
+section#pricing .button-wrapper, section#buy-pro .button-wrapper, section#support .button-wrapper {
+  height: 100%;
+}
+section#pricing .button-wrapper button, section#buy-pro .button-wrapper button, section#support .button-wrapper button {
+  vertical-align: bottom;
 }
 
 #emailModal {
@@ -10960,6 +10995,26 @@ body.kalabox-pro #intro, body.kalabox-pro #header {
   background: linear-gradient(to left, #7b4397, #dc2430);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+body.kalabox-pro #intro h2, body.kalabox-pro #header h2 {
+  margin-bottom: 2em;
+  padding: 0em;
+}
+body.kalabox-pro #intro h3, body.kalabox-pro #header h3 {
+  color: white;
+  font-weight: 100;
+}
+body.kalabox-pro .screenshot img {
+  width: 100%;
+  margin: auto;
+  vertical-align: middle;
+  height: 20em;
+}
+body.kalabox-pro .screenshot-description {
+  margin-top: 0em;
+}
+body.kalabox-pro .row.screenshot-left, body.kalabox-pro .row.screenshot-right {
+  margin-bottom: 8em;
+}
 
 section h1, section .primary-header {
   font-size: 3em;
@@ -10972,4 +11027,16 @@ li {
   list-style-type: square;
   font-size: 1.5em;
   font-weight: 100;
+}
+
+button a {
+  color: #333;
+}
+button a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.btn:hover {
+  cursor: pointer;
 }
