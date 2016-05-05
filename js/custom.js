@@ -33,7 +33,7 @@ $(document).ready(function() {
     autoplayHoverPause:true
   });
 
-  var key = window.location.hostname === 'localhost' ? 'pk_test_zlxUkZiPbjTuamJTAFWCBfeR' : ' pk_live_jQsRbu10GbKq3m84WK6pPEQw';
+  var key = window.location.hostname === 'localhost' ? 'pk_test_zlxUkZiPbjTuamJTAFWCBfeR' : 'pk_live_jQsRbu10GbKq3m84WK6pPEQw';
   var handler = function(type) {
     return StripeCheckout.configure({
       key: key,
