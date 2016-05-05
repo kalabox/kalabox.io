@@ -11,8 +11,8 @@ section#pricing, section#buy-pro, section#support {
     color: #333;
   }
   .pricing {
-    min-height: 300px;
     /* width: 262px; */
+    margin: 2em 0em;
     box-sizing: border-box;
     border: 1px solid #f2f2f2;
     font-size: 1em;
@@ -78,6 +78,10 @@ section#pricing, section#buy-pro, section#support {
       vertical-align: bottom;
     }
   }
+}
+
+section#buy-pro .price-features {
+  height: inherit;
 }
 
 #emailModal {

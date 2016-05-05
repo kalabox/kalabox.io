@@ -10911,8 +10911,8 @@ section#pricing .plain, section#buy-pro .plain, section#support .plain {
   color: #333;
 }
 section#pricing .pricing, section#buy-pro .pricing, section#support .pricing {
-  min-height: 300px;
   /* width: 262px; */
+  margin: 2em 0em;
   box-sizing: border-box;
   border: 1px solid #f2f2f2;
   font-size: 1em;
@@ -10977,6 +10977,10 @@ section#pricing .button-wrapper, section#buy-pro .button-wrapper, section#suppor
 }
 section#pricing .button-wrapper button, section#buy-pro .button-wrapper button, section#support .button-wrapper button {
   vertical-align: bottom;
+}
+
+section#buy-pro .price-features {
+  height: inherit;
 }
 
 #emailModal {
