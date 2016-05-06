@@ -42,7 +42,6 @@ $(document).ready(function() {
       token: function(token) {
         // You can access the token ID with `token.id`.
         // Get the token ID to your server-side code for use.
-        console.log(token, type);
         if (type === 'year') {
           $.get('/stripe/charge/kalabox-pro-year', token);
         }

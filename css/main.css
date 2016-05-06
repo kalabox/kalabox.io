@@ -10112,6 +10112,10 @@ header {
   display: block;
 }
 
+.home #header img.logo {
+  display: none;
+}
+
 #header .logo {
   height: 4em;
 }
@@ -10703,9 +10707,11 @@ body.download h3 {
   padding: 0px;
 }
 body.download .alt-downloads {
-  list-style: none;
   margin: 5px 0px 0px 0px;
   padding: 0px;
+}
+body.download .alt-downloads li {
+  list-style: none;
 }
 body.download .alt-downloads a:hover {
   text-decoration: none;
@@ -10885,18 +10891,8 @@ footer .footer-copyright {
 }
 .support .solutions-home .articles ul li, .support .search-results .articles ul li {
   text-indent: 5px;
-}
-.support footer {
-  text-align: center;
-}
-.support footer h2 {
-  text-align: center;
-}
-.support footer ul {
-  list-style: none;
-}
-.support footer ul a {
-  color: #eee;
+  font-size: 1em;
+  font-weight: normal;
 }
 
 .support-pricing .alert {

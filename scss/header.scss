@@ -12,6 +12,7 @@ a.navbar-brand {
   background-image: url('../img/kalabox-logo.png');
 }
 
+
 header {
   z-index: 1000;
   position: relative;
@@ -34,6 +35,14 @@ header {
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+
+.home {
+  #header {
+    img.logo {
+      display: none;
+    }
+  }
 }
 
 #header {
