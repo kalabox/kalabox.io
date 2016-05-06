@@ -1,67 +1,86 @@
+var express = require('express');
+var app = express();
+var Promise = require("bluebird");
 var Nimble = require('node-nimble-api');
-var jsonfile = require('jsonfile');
-var nimble = false;
-var timer = setInterval(function() {
-
-  var tokens = require('../nimbletoken.json');
-  console.log(tokens, nimble);
-  return getNimble().doRefreshToken(tokens.refreshToken, function(err, access_token, refresh_token, result) {
-    console.log(access_token, refresh_token);
-    saveTokens(access_token, refresh_token);
-  });
-}, 5 * 1000);
+var jsonfile = Promise.promisifyAll(require('jsonfile'));
+var tokenStore = app.get('env') === 'development' ? '../nimbletoken.json' : '/nimble/nimbletoken.json';
 
 var getNimble = function() {
-  if (!nimble) {
-    var tokens = require('../nimbletoken.json');
-    var properties = {
+  var tokens = require(tokenStore);
+  try {
+    var nimble = Promise.promisifyAll(new Nimble({
       appId: '59fhxr68p7ydnpux2yz35ko7awbx2fv52dzq4',
-      appSecret: '6syf4joh6vtpzv013ur'
-    };
-    if (tokens.accessToken) {
-      properties.accessToken = tokens.accessToken;
-    }
-    var nimble = new Nimble(properties);
+      appSecret: '6syf4joh6vtpzv013ur',
+      accessToken: tokens.accessToken
+    }), {multiArgs: true});
+  } catch(error) {
+    console.log(error);
+    return error;
   }
-  return nimble;
+  return nimble.doRefreshTokenAsync(tokens.refreshToken).then(function(result) {
+    return saveTokens(result[0], result[1]);
+  }).then(function() {
+    return nimble;
+  }).catch(function(error) {
+    console.log(error);
+    return error;
+  });
 }
 
+// @todo: remove error and response, add catch statements.
 var createContact = function(body) {
   console.log('create');
-  return getNimble().createContact(body, handleResponse);
+  return getNimble().then(function(nimble) {
+    return nimble.createContactAsync(body);
+  }).then(function(result) {
+    return result[0];
+  }).catch(function(error) {
+    return handleNimbleError(error);
+  });
 }
 
 var findContacts = function(email) {
-  console.log('find');
-  return getNimble().findByEmail(email, true, handleResponse);
+  console.log('findContacts', email);
+  return getNimble().then(function(nimble) {
+    console.log('nimble', nimble);
+    return nimble.findByEmailAsync(email, true);
+  }).then(function(result) {
+    console.log('findContacts', result);
+    return result[0];
+  }).catch(function(error) {
+    return handleNimbleError(error);
+  });
 }
 
 var updateContact = function(id, body) {
-  console.log('update');
-  return getNimble().updateContact(searchParameters, handleResponse);
+  return getNimble().then(function(nimble) {
+    return nimble.updateContactAsync(id, body);
+  }).then(function(result) {
+    return result[0];
+  }).catch(function(error) {
+    return handleNimbleError(error);
+  });
 }
 
-var handleResponse = function(error, result, response) {
-  if (error) {
-    if (error.statusCode === '401' && error.data.error === 'invalid_token') {
-      return 'Invalid Token.';
-    } else {
-      return error;
-    }
+var handleNimbleError = function(error) {
+  if (error.statusCode === '401' && error.data.error === 'invalid_token') {
+    console.log('Invalid Token');
+    return 'Invalid Token.';
   } else {
-    return result;
+    console.log(error);
+    return error;
   }
 }
 
 var saveTokens = function(accessToken, refreshToken) {
+  var tokenPath = app.get('env') === 'development' ? 'nimbletoken.json' : '/nimble/nimbletoken.json';
   var tokens = {accessToken: accessToken, refreshToken: refreshToken};
-  console.log(tokens);
-  jsonfile.writeFile('nimbletoken.json', tokens, function(error) {
-    if (error) {
-      return 'Nimble token couldn\t be written';
-    } else {
-      return 'You are now authenticated! -> ' + tokens;
-    }
+  console.log(tokenPath, tokens);
+  return jsonfile.writeFileAsync(tokenPath, tokens).then(function() {
+    return 'You are now authenticated! -> ' + tokens;
+  }).catch(function(error) {
+    console.log(error);
+    return 'Nimble token couldn\t be written';
   });
 }
 

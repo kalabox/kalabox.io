@@ -71,10 +71,11 @@ gulp.task('server', function () {
  
     // Restart the server when file changes 
     gulp.watch(['views/**/*.twig'], [server.run]);
-    gulp.watch('js/**/*.js', ['jsMin']);
+    gulp.watch('js/**/*.js', ['js', 'jsMin']);
+    gulp.watch('public/**/*.js', [server.run]);
     gulp.watch('scss/**/*.scss', ['cssMin']);
     gulp.watch(['images/**/*'], server.notify);
-    gulp.watch(['server.js'], [server.run]);
+    gulp.watch(['server.js', 'controllers/*.js', 'models/*.js'], [server.run]);
 });
 
 gulp.task('build', ['cssMin', 'jsMin']);

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include 'head.twig' %}
+  <body class="gateway">
+    {% include 'header.twig' %}
+    <section id="keycode-gateway">
+      <div class="container wow animated fadeInDown">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1>Download Kalabox Beta1</h1>
+          </div>
+          <div class="col-md-6">
+            <form class="form-inline" action="/download/form" method="post" enctype="multipart/form-data">
+              <input type="text" id="firstName" name="firstName" placeholder="First Name" class="input-lg">
+              <input type="text" id="lastName" name="lastName" placeholder="Last Name" class="input-lg">
+              <input type="text" id="email" name="email" placeholder="Email" class="input-lg">
+              <button type="submit" class="btn btn-primary">Get Kalabox</button>
+              <p>
+                We will only use your email for notifications on new releases and communications regarding
+                Kalabox.
+              </p>
+            </form>
+          </div>
+          <div class="col-md-6 form-description">
+            <p>This is your first step into a larger world. Speak your name to reveal the treasures within the box.</p>
+          </div>
+        </div>
+      </section>
+    {% include 'pro-comparison.twig' %}
+    {% include 'footer.twig' %}
+  </body>
+</html>

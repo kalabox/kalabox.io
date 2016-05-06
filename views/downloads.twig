@@ -3,49 +3,52 @@
   {% include 'head.twig' %}
   <body class="download">
     {% include 'header.twig' %}
+    {% if msg %}
+      <div class="alert alert-danger" role="alert">{{ msg }}</div>
+    {% endif %}
     <section id="downloads">
       <div class="container wow animated fadeInDown">
         <h1>Begin your journey to faster local development...</h1>
         <div class="row">
           <div class="col-xs-12">
             {% if 'Mac' in platform %}
-              <a class="btn btn-primary" href="http://installer.kalabox.io/kalabox-v0.12.0-alpha.3.dmg">
-                <h3>Download Kalabox</h3>
+              <a class="btn btn-primary" href="/download/latest?email={{ email }}&extension=dmg">
+                <h3>Download Kalabox Beta1</h3>
                 <div class="os-desc">
                   <i class="fa fa-apple"></i> <span>Mac OS X 10.10+</span>
                 </div>
               </a>
             {% endif %}
             {% if 'Windows' in platform %}
-              <a class="btn btn-primary" href="http://installer.kalabox.io/kalabox-v0.12.0-alpha.3.exe">
+              <a class="btn btn-primary" href="/download/latest?email={{ email }}&extension=exe">
                 <div>Download Kalabox</div>
                 <i class="fa fa-windows"></i> <span>Windows 8+</span>
               </a>
             {% endif %}
             {% if 'Ubuntu' in platform %}
-              <a class="btn btn-primary" href="http://installer.kalabox.io/kalabox-v0.12.0-alpha.3.deb">
+              <a class="btn btn-primary" href="/download/latest?email={{ email }}&extension=deb">
                 <div>Download Kalabox</div>
                 <i class="fa fa-windows"></i> <span>Windows 8+</span>
               </a>
             {% endif %}
               <ul class="alt-downloads">
                 <li>
-                  <a href="http://installer.kalabox.io/kalabox-v0.12.0-alpha.3.dmg">
+                  <a href="/download/latest?email={{ email }}&extension=dmg">
                     <i class="fa fa-apple"></i> <span>Mac OS X 10.10+</span>
                   </a>
                 </li>
                 <li>
-                  <a href="http://installer.kalabox.io/kalabox-v0.12.0-alpha.3.exe">
+                  <a href="/download/latest?email={{ email }}&extension=exe">
                     <i class="fa fa-windows"></i> <span>Windows 8+</span>
                   </a>
                 </li>
                 <li>
-                  <a href="http://installer.kalabox.io/kalabox-v0.12.0-alpha.3.deb">
+                  <a href="/download/latest?email={{ email }}&extension=deb">
                     <i class="fa fa-linux"></i> <span>Ubuntu 14.04+</span>
                   </a>
                 </li>
                 <li>
-                  <a href="http://installer.kalabox.io/kalabox-v0.12.0-alpha.3.rpm">
+                  <a href="/download/latest?email={{ email }}&extension=rpm">
                     <i class="fa fa-linux"></i> <span>Fedora 20+</span>
                   </a>
                 </li>
@@ -59,7 +62,7 @@
           </div>
           <div class="col-xs-4">
             <h2>2. Follow Install Instructions</h2>
-            <p>See install directions <a href="https://kalabox.freshdesk.com/support/solutions/folders/14000043906">in the knowledge base</a>.</p>
+            <p>See install directions <a href="http://support.kalabox.io/solution/articles/14000006360">in the knowledge base</a>.</p>
 
           </div>
           <div class="col-xs-4">

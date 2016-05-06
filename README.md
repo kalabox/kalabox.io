@@ -30,6 +30,15 @@ docker push reynoldsalec/kalabox.io
 
 3. Log in to Docker Cloud and redeploy the kalaboxio containers.
 
+You MAY need to reactivate the Nimble integration (and will certainly want to do
+this on your local environment for testing):
+
+1. Got to /nimble-crm/authorization and enter in creds when asked.
+
+2. This will redirect to /nimble-crm/authorized. IF you are on local, you'll probably need to copy
+the parameters provided and manually redirect yourself to your localhost domain.
+
+
 To test locally...
 
 ```

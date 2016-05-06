@@ -1,10 +1,17 @@
 var express = require('express');
 var router = express.Router();
-var nimble = require('../models/nimble').getNimble();
+var Promise = require("bluebird");
+var Nimble = require('node-nimble-api');
+var nimble = Promise.promisifyAll(new Nimble({
+  appId: '59fhxr68p7ydnpux2yz35ko7awbx2fv52dzq4',
+  appSecret: '6syf4joh6vtpzv013ur',
+  redirect_uri: 'http://www.kalabox.io/nimble-crm/authorized'
+}), {multiArgs: true});
+var nimbleModel = require('../models/nimble');
 
 router.get('/authorization', function(req, res) {
   var redirectURI = 'http://www.kalabox.io/nimble-crm/authorized';
-  res.redirect(nimble.api.getAuthorizationUrl({redirect_uri: redirectURI}));
+  res.redirect(nimble.getAuthorizationUrl({redirect_uri: redirectURI}));
 });
 
 
@@ -14,13 +21,21 @@ router.get('/authorization', function(req, res) {
 
 router.get('/authorized', function(req, res) {
   if(!req.query.error) {
-    nimble.api.requestToken(req.query.code, function(err, access_token, refresh_token, result) {
-      var result = nimble.saveTokens(access_token, refresh_token);
+    nimble.requestTokenAsync(req.query.code).then(function(result) {
+      console.log('requestToken', result);
+      return nimbleModel.saveTokens(result[0], result[1]);
+    }).then(function(result) {
+      console.log('save token', result);
       res.send(result);
+    }).catch(function(error) {
+      console.log(error);
+      res.send('Error authenticating!!! -> ' + error);
     });
-  } else {
-    res.send('Error authenticating!!! -> ' + err);
   }
+});
+
+router.get('/refresh', function(req, res) {
+  res.send(nimbleModel.getNimble());
 });
 
 module.exports = router;

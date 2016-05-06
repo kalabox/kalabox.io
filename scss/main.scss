@@ -1,3 +1,5 @@
+$brand-primary: #3CD3AD;
+
 @import '../bower_components/font-awesome/scss/font-awesome.scss';
 @import '../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
 @import 'forms.scss';
@@ -11,8 +13,37 @@
 @import 'misc.scss';
 @import 'support.scss';
 @import 'pricing.scss';
+@import 'kalabox-pro.scss';
 
 
 @import url("http://fonts.googleapis.com/css?family=Pacifico");
 @import url("http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic");
 
+section {
+  h1, .primary-header {
+    font-size: 3em;
+    margin: 0em 0em .5em 0em;
+    padding: 0em;
+    line-height: 1.5em;
+  }
+}
+
+li {
+  list-style-type: square;
+  font-size: 1.5em;
+  font-weight: 100;
+}
+
+button {
+  a {
+    color: #333;
+  }
+  a:hover {
+    color: #333;
+    text-decoration: none;
+  }
+}
+
+.btn:hover {
+  cursor: pointer;
+}

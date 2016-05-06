@@ -4,6 +4,7 @@ var formidable = require("formidable");
 var nodemailer = require('nodemailer');
 
 router.get('/', function (req, res) {res.render('support.twig', req.query);});
+router.get('/professional', function (req, res) {res.render('professional-support.twig', req.query);});
 router.post('/email', emailSubmission);
 
 function emailSubmission(req, res) {

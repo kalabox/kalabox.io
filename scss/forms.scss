@@ -1,6 +1,6 @@
 form {
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-top: 2em;
+  margin-bottom: 1em;
   input, input.input-lg {
     width: 400px;
     height: 52px;
@@ -8,9 +8,10 @@ form {
     border: 0;
     color: $gray-light;
     vertical-align: middle;
+    margin: 1em 0em 0em 0em;
   }
   button {
-    height: 52px;
-    margin-bottom: 6px;
+    height: 3em;
+    margin: 1em 0em;
   }
 }

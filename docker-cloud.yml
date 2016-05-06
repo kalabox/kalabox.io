@@ -1,0 +1,25 @@
+haproxy:
+  image: 'haproxy:latest'
+  links:
+    - node
+  ports:
+    - '80:80'
+  restart: always
+  roles:
+    - global
+node:
+  image: 'reynoldsalec/kalabox.io:latest'
+  deployment_strategy: high_availability
+  environment:
+    - APP_PORT=80
+    - MONGO_IP=mongodb
+    - MONGO_PORT=6379
+  links:
+    - mongodb 
+  ports:
+    - '80'
+  target_num_containers: 3
+mongodb:
+  image: 'mongodb:latest'
+  expose:
+    - '6379'

@@ -1,84 +1,81 @@
 <!DOCTYPE html>
 <html lang="en"> 
-  {% include 'head.twig' %}
-  <body class="support-pricing">
-    {% include 'header.twig' %}
-    {% if msg %}
-      <div class="alert alert-success" role="alert">{{ msg }}</div>
-    {% endif %}
-    <section id="pricing" class="blue-grey darken-3">
-      <div class="section pt-section" data-name="Pricing">
-        <div class="container">
-          <div class="row">
-
-            <h1>Professional Support</h1>
-            <h2>Get dedicated support to make sure your development workflow is as efficient as possible.</h2>
+{% include 'head.twig' %}
+<body class="support-disambig">
+  {% include 'header.twig' %}
+  {% if msg %}
+  <div class="alert alert-success" role="alert">{{ msg }}</div>
+  {% endif %}
+  <section id="support">
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="divider4"></div>
+          <div class="col-xs-12 col-md-6">
+            <div class="pricing plain z-depth-1 hoverable">
+              <div class="price-attrs purple">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <div class="price-plan">Community Support</div>
+                  </div>
+                  <div class="col-xs-6">
+                    <div class="price-number"></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12">The Github issue queue is where the Kalabox community participates by creating bug reports, feature requests, and submitting code to the project.</div>
+                </div>
+              </div>
+              <div class="price-features">
+                <ul>
+                  <li>Contribute issues and code</li>
+                  <li>Get help from fellow users</li>
+                  <li>Help improve Kalabox</li>
+                </ul>
+                <button type="button" class="waves-effect waves-light btn blue-grey darken-2 center">
+                  <a href="https://github.com/kalabox/kalabox/issues">
+                    Community Issue Queue
+                  </a>
+                </button>
+              </div>
+            </div>
             <div class="divider4"></div>
-
-            <div class="col-xs-12 col-md-4">
-              <div class="pricing plain z-depth-1 hoverable">
-                <div class="price-attrs">
-                  <div class="price-number blue-grey-text text-darken-3">01</div>
-                  <div class="price-plan"><strong>Individuals</strong></div>
-                  <div class="price-descr"><strong>$25+</strong> per month</div>
-                  <div class="price-conclusion">Up Your Game</div>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <div class="pricing plain z-depth-1 hoverable">
+              <div class="price-attrs red">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <div class="price-plan">Professional Support</div>
+                  </div>
+                  <div class="col-xs-6">
+                    <div class="price-number"></div>
+                  </div>
                 </div>
-
-                <ul>
-                  <li>Submit tickets to Kalabox team</li>
-                  <li>Receive updates faster</li>
-                  <li>Workflow enhancements saving hours</li>
-                </ul>
-
-                <button type="button" class="waves-effect waves-light btn blue-grey darken-2 center" data-toggle="modal" data-target="#emailModal">Sign Up</button>
-
-              </div>
-              <div class="divider4"></div>
-            </div>
-            <div class="col-xs-12 col-md-4">
-              <div class="pricing plain z-depth-1 hoverable">
-                <div class="price-attrs">
-                  <div class="price-number blue-grey-text text-darken-3">02</div>
-                  <div class="price-plan"><strong>Teams</strong></div>
-                  <div class="price-descr"><strong>$125+</strong> per month</div>
-                  <div class="price-conclusion">Onboard in minutes, not days</div>
+                <div class="row">
+                  <div class="col-xs-12">Get dedicated support direct from the Kalabox team to make sure your organization's development workflow is as efficient as possible.</div>
                 </div>
-
-                <ul>
-                  <li>Faster responses for busy teams</li>
-                  <li>Specialized team tooling</li>
-                  <li>Team onboarding and training</li>
-                </ul>
-
-                <button type="button" class="waves-effect waves-light btn blue-grey darken-2 center" data-toggle="modal" data-target="#emailModal">Sign Up</button>
-
               </div>
-              <div class="divider4"></div>
-            </div>
-            <div class="col-xs-12 col-md-4">
-              <div class="pricing plain z-depth-2 hoverable">
-                <div class="price-attrs">
-                  <div class="price-number">03</div>
-                  <div class="price-plan"><strong>Enterprise</strong></div>
-                  <div class="price-descr"><strong>Let's talk!</strong></div>
-                  <div class="price-conclusion">Automate for success!</div>
-                </div>
+              <div class="price-features">
                 <ul>
-                  <li>Custom hosting integrations</li>
-                  <li>Emergency responses</li>
-                  <li>Real-time support</li>
+                  <li>Get help from the Kalabox team</li>
+                  <li>Dedicated ticketing system</li>
+                  <li>Help support Kalabox development</li>
                 </ul>
-
-                <button type="button" class="waves-effect waves-light btn blue-grey darken-2 center" data-toggle="modal" data-target="#emailModal">Sign Up</button>
-
+                <button type="button" class="waves-effect waves-light btn blue-grey darken-2 center">
+                  <a href="/support/professional" >
+                    Dedicated Support
+                  </a>
+                </button>
               </div>
-              <div class="divider4"></div>
             </div>
+            <div class="divider4"></div>
           </div>
         </div>
       </div>
-    </section>
-    {% include 'footer.twig' %}
-    {% include 'email-modal.twig' %}
-  </body>
+    </div>
+  </section>
+  {% include 'footer.twig' %}
+  {% include 'email-modal.twig' %}
+</body>
 </html>

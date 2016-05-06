@@ -4,6 +4,26 @@
   }
 }
 
+#support {
+  ul {
+    font-size: 1.25em;
+    font-weight: 100;
+    text-align: center;
+    padding: 10px;
+    li {
+      border-bottom: 1px solid $gray;
+      padding: 5px 0px;
+    }
+  }
+
+  .price-attrs {
+    height: 14em;
+  }
+  .price-features {
+    height: 29em;
+  }
+}
+
 .support {
   h2 {
     text-align: left;
@@ -74,17 +94,9 @@
         list-style: none;
         li {
           text-indent: 5px;
+          font-size: 1em;
+          font-weight: normal;
         }
-      }
-    }
-  }
-  footer {
-    text-align: center;
-    h2 { text-align: center; }
-    ul {
-      list-style: none;
-      a {
-        color: #eee;
       }
     }
   }
