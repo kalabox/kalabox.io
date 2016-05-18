@@ -7,6 +7,7 @@ var download = require('./controllers/download');
 var support = require('./controllers/support');
 var contact = require('./controllers/contact');
 var stripe = require('./controllers/stripe');
+var pro = require('./controllers/pro');
 var port = 80;
 
 // App configuration.
@@ -21,7 +22,7 @@ if (app.get('env') === 'development') {
 
 // Routing.
 app.get('/', function (req, res) {res.render('home.twig');});
-app.get('/kalabox-pro', function (req, res) {res.render('kalabox-pro.twig');});
+app.use('/kalabox-pro', pro);
 app.use('/nimble-crm', nimble);
 app.use('/download', download);
 app.use('/support', support)
