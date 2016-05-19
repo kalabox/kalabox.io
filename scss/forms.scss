@@ -2,10 +2,10 @@ form {
   margin-top: 2em;
   margin-bottom: 1em;
   input, input.input-lg {
-    width: 400px;
+    width: auto;
     height: 52px;
     border-radius: 0;
-    border: 0;
+    border: solid 2px #ddd;
     color: $gray-light;
     vertical-align: middle;
     margin: 1em 0em 0em 0em;
@@ -13,5 +13,17 @@ form {
   button {
     height: 3em;
     margin: 1em 0em;
+  }
+  input#email {
+    width: 100%;
+  }
+}
+
+.modal {
+  form {
+    width: 455px;
+  }
+  .btn {
+    display: block;
   }
 }

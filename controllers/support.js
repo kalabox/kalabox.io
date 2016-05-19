@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var formidable = require("formidable");
 var nodemailer = require('nodemailer');
+var mail = require('../models/mail');
 
 router.get('/', function (req, res) {res.render('support.twig', req.query);});
 router.get('/professional', function (req, res) {res.render('professional-support.twig', req.query);});
@@ -17,14 +18,6 @@ function emailSubmission(req, res) {
     sender = fields.email;
     name = fields.name;
     if (sender) {
-      var transporter = nodemailer.createTransport({
-        service: 'Mailgun',
-        auth: {
-            user: 'postmaster@mg.kalabox.io',
-            pass: 'f2c2273097eada5c3875966b2d89ea99'
-        }
-      });
-
       var mailOptions = {
         from: sender,
         to: 'alec@kalabox.io',
@@ -32,16 +25,14 @@ function emailSubmission(req, res) {
         text: name + ' is interested in Kalabox!',
         html : '<b>test message form mailgun</b>'
       };
-      transporter.sendMail(mailOptions, function(error, info){
-        if (error) {
-          console.log(error);
-        } else {
-          msg = 'Email sent successfully.';
-        };
-        res.redirect('/support?msg=' + msg);
+      mail.sendMail(mailOptions).then(function(info) {
+        msg = 'Email sent successfully.';
+        res.redirect('/support/professional?msg=' + msg);
+      }).catch(function(error) {
+        console.log(error);
       });
     } else {
-      res.redirect('/support?msg=Enter your name and email.');
+      res.redirect('/support/professional?msg=Enter your name and email.');
     }
   });
 }

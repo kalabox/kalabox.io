@@ -33,5 +33,15 @@ $(document).ready(function() {
     autoplayHoverPause:true
   });
 
+  $('#proYear').on('click', function(e) {
+    // change interval to year.
+    $('#interval').val('year');
+  });
+
+  $('#proMonth').on('click', function(e) {
+    // change interval to year.
+    $('#interval').val('month');
+  });
+
 });
 

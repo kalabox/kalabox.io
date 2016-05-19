@@ -10065,10 +10065,10 @@ form {
 form input, form input.input-lg, form .input-group-lg > input.form-control,
 form .input-group-lg > input.input-group-addon,
 form .input-group-lg > .input-group-btn > input.btn {
-  width: 400px;
+  width: auto;
   height: 52px;
   border-radius: 0;
-  border: 0;
+  border: solid 2px #ddd;
   color: #777777;
   vertical-align: middle;
   margin: 1em 0em 0em 0em;
@@ -10076,6 +10076,16 @@ form .input-group-lg > .input-group-btn > input.btn {
 form button {
   height: 3em;
   margin: 1em 0em;
+}
+form input#email {
+  width: 100%;
+}
+
+.modal form {
+  width: 455px;
+}
+.modal .btn {
+  display: block;
 }
 
 body {
@@ -10983,7 +10993,6 @@ section#buy-pro .price-features {
   text-align: center;
 }
 #emailModal input {
-  border: solid #eee 1px;
   margin-bottom: 10px;
 }
 
