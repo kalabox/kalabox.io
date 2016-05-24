@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include 'head.twig' %}
+  <body class="sponsor">
+  {% include 'header.twig' %}
+  {% if msg %}
+    <div class="alert alert-success" role="alert">{{ msg }}</div>
+  {% endif %}
+  <section id="services" class="blue-grey darken-3">
+    <h1>Services</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <div class="">
+            <h3><a href="/services/sponsor">Sponsorship</a></h3>
+            <p>Sponsor the development of integrations, apps, and other extensions of Kalabox's core feature set.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="">
+            <h3>Whitelabeling</h3>
+            <p>Create a version of Kalabox tailored for your organization and its needs, including custom branding.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="">
+            <h3>DevOps Consulting</h3>
+            <p>Use the power of containers to achieve faster and more frequent deployments. Automated testing, CI, deployment of custom apps, and more. </p>
+          </div>
+        </div>
+        <div class="divider4"></div>
+      </div>
+    </div>
+  </section>
+  {% include 'footer.twig' %}
+  </body>
+</html>

@@ -8,6 +8,7 @@ var support = require('./controllers/support');
 var contact = require('./controllers/contact');
 var stripe = require('./controllers/stripe');
 var pro = require('./controllers/pro');
+var services = require('./controllers/services');
 var port = 80;
 
 // App configuration.
@@ -28,6 +29,7 @@ app.use('/download', download);
 app.use('/support', support)
 app.use('/contact', contact)
 app.use('/stripe', stripe)
+app.use('/services', services)
 
 // Redirects.
 app.get('/download.html', function (req, res) {res.redirect(301, '/download');});

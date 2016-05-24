@@ -10379,6 +10379,19 @@ div.dark a {
   margin: 10px 0 40px 25px;
 }
 
+.features .screenshot img {
+  width: 100%;
+  margin: auto;
+  vertical-align: middle;
+  height: 20em;
+}
+.features .screenshot-description {
+  margin-top: 0em;
+}
+.features .row.screenshot-left, .features .row.screenshot-right {
+  margin-bottom: 8em;
+}
+
 #testimonials {
   padding-bottom: 100px;
 }
@@ -10905,6 +10918,15 @@ footer .footer-copyright {
   font-weight: normal;
 }
 
+.sponsor #header, .sponsor #intro {
+  background: #00c6ff;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #00c6ff, #0072ff);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #00c6ff, #0072ff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 .support-pricing .alert {
   text-align: center;
 }
@@ -11011,18 +11033,6 @@ body.kalabox-pro #intro h2, body.kalabox-pro #header h2 {
 body.kalabox-pro #intro h3, body.kalabox-pro #header h3 {
   color: white;
   font-weight: 100;
-}
-body.kalabox-pro .screenshot img {
-  width: 100%;
-  margin: auto;
-  vertical-align: middle;
-  height: 20em;
-}
-body.kalabox-pro .screenshot-description {
-  margin-top: 0em;
-}
-body.kalabox-pro .row.screenshot-left, body.kalabox-pro .row.screenshot-right {
-  margin-bottom: 8em;
 }
 
 section h1, section .primary-header {

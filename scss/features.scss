@@ -149,3 +149,20 @@ div.dark a {
   float: right;
   margin: 10px 0 40px 25px;
 }
+
+.features {
+  .screenshot {
+    img {
+      width: 100%;
+      margin: auto;
+      vertical-align: middle;
+      height: 20em;
+    }
+  }
+  .screenshot-description {
+    margin-top: 0em;
+  }
+  .row.screenshot-left, .row.screenshot-right {
+    margin-bottom: 8em;
+  }
+}
