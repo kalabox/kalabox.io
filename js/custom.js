@@ -43,5 +43,20 @@ $(document).ready(function() {
     $('#interval').val('month');
   });
 
+  $('#emailModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget);
+    var modal = $(this);
+
+    var title = button.data('title');
+    if (title) {
+      modal.find('.modal-title').text(title);
+    }
+
+    var action = button.data('action');
+    if (action) {
+      modal.find('button.btn-primary').text(action);
+    }
+  })
+
 });
 
