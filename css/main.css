@@ -10383,7 +10383,7 @@ div.dark a {
   width: 100%;
   margin: auto;
   vertical-align: middle;
-  height: 20em;
+  max-height: 20em;
 }
 .features .screenshot-description {
   margin-top: 0em;
@@ -10925,6 +10925,9 @@ footer .footer-copyright {
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #00c6ff, #0072ff);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.sponsor .features h3.icntitle {
+  margin-top: 0px;
 }
 
 .support-pricing .alert {
