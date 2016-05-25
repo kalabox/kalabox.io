@@ -17,4 +17,25 @@
     line-height: 48px;
     font-weight: 300;
   }
+  .mc-field-group {
+    margin: 10px;
+    input {
+      padding: 10px;
+      margin-bottom: 10px;
+      width: 300px;
+    }
+  }
+  #mce-success-response {
+    width: 350px;
+    font-size: 1.25em;
+    margin: 15px auto;
+  }
+
+  div.container #mc_embed_signup div.mce_inline_error {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    background-color: #d9534f;
+  }
 }
