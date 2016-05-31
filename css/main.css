@@ -10763,7 +10763,7 @@ ul {
 
 /* ========== SPONSORS ========== */
 #sponsors {
-  padding: 80px 40px;
+  padding: 40px 80px 40px 0px;
 }
 #sponsors h3 {
   padding-bottom: 30px;
@@ -10938,7 +10938,7 @@ footer .footer-copyright {
 }
 
 section#pricing, section#buy-pro, section#support {
-  padding: 80px 0 90px 0;
+  padding-top: 6em;
 }
 section#pricing .plain, section#buy-pro .plain, section#support .plain {
   background: #f2f2f2;
@@ -11064,4 +11064,12 @@ button a:hover {
 
 .btn:hover {
   cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}
+
+section:last-of-type {
+  padding-bottom: 4em;
 }
