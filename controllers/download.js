@@ -7,7 +7,7 @@ var my_sheet = new GoogleSpreadsheet('10VBH9y5Y8y5jpJmxjny_RQ8IVRyReHlDcIKmT1pDb
 var creds = require('../KalaboxKeycodes-ae31acf55c9a.json');
 var _ = require('lodash');
 var request = require('request');
-var release = 'v0.12.0-beta.1';
+var release = 'v0.13.0-beta.2';
 var contact = require('../models/contact');
 
 router.get('/', function (req, res) {res.render('download-form.twig', req.query);});
