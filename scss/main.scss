@@ -35,14 +35,20 @@ li {
   font-weight: 100;
 }
 
-button {
-  a {
-    color: #333;
-  }
-  a:hover {
-    color: #333;
+a {
+  text-decoration: none;
+  &:hover {
     text-decoration: none;
   }
+}
+
+button {
+  color: #333;
+  background-color: #C0C0C0;
+}
+button:hover {
+  color: #333;
+  text-decoration: none;
 }
 
 .btn:hover {

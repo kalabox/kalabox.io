@@ -6,6 +6,7 @@ var jsonfile = Promise.promisifyAll(require('jsonfile'));
 var tokenStore = app.get('env') === 'development' ? '../nimbletoken.json' : '/nimble/nimbletoken.json';
 
 var getNimble = function() {
+  console.log(app.get('env'));
   var tokens = require(tokenStore);
   try {
     var nimble = Promise.promisifyAll(new Nimble({
