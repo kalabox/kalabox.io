@@ -11041,6 +11041,11 @@ body.kalabox-pro #intro h3, body.kalabox-pro #header h3 {
   font-weight: 100;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 section h1, section .primary-header {
   font-size: 3em;
   margin: 0em 0em .5em 0em;
