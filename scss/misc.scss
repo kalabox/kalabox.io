@@ -14,9 +14,16 @@ ul {
   }
   img {
     position: relative;
+    display: block;
+    margin: auto;
   }
   img.kalamuna {
     width: 190px;
+  }
+  img.tandem {
+    height: 4em;
+    margin-bottom: .25em;
+    display: inline-block;
   }
   a.tandem-link {
     font-family: Lato;

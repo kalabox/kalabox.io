@@ -10773,9 +10773,16 @@ ul {
 }
 #sponsors img {
   position: relative;
+  display: block;
+  margin: auto;
 }
 #sponsors img.kalamuna {
   width: 190px;
+}
+#sponsors img.tandem {
+  height: 4em;
+  margin-bottom: .25em;
+  display: inline-block;
 }
 #sponsors a.tandem-link {
   font-family: Lato;
