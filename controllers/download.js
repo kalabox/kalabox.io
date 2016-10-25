@@ -8,6 +8,7 @@ var creds = require('../KalaboxKeycodes-ae31acf55c9a.json');
 var _ = require('lodash');
 var request = require('request');
 var release = '2.0.1';
+var unstable = '2.1.0-rc.2';
 var contact = require('../models/contact');
 
 router.get('/', function (req, res) {res.render('download-form.twig', req.query);});
@@ -50,10 +51,10 @@ router.post('/form', function (req, res) {
 
 });
 
-router.get('/latest', function(req, res) {
+router.get('/kalabox', function(req, res) {
   var email = req.query.email;
   var extension = req.query.extension;
-  var release = 'v' + release;
+  var release = 'v' + req.query.release;
   var request = {
     fields: {
       'Latest Version Downloaded': [{
@@ -70,7 +71,6 @@ router.get('/latest', function(req, res) {
   })
 });
 
-
 function downloads(req, res) {
   var page = '';
   var os = '';
@@ -86,11 +86,17 @@ function downloads(req, res) {
     page = 'keycode-invalid.twig';
   }
 
-  res.render(page, {
+  var pageVariables = {
     platform: os,
     release: release,
     email: email
-  });
+  };
+
+  if (os.indexOf('Mac') !== -1) {
+    pageVariables.unstable = unstable;
+  }
+
+  res.render(page, pageVariables);
 };
 
 function saveSpreadsheet(keycode) {

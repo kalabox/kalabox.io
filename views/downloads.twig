@@ -12,12 +12,22 @@
         <div class="row">
           <div class="col-xs-12">
             {% if 'Mac' in platform %}
-              <a class="btn btn-primary" href="/download/latest?email={{ email }}&extension=dmg">
+              <a class="btn btn-primary" href="/download/kalabox?email={{ email }}&extension=dmg&version={{release}}">
                 <h3>Download Kalabox {{release}}</h3>
+                <small>Recommended</small>
                 <div class="os-desc">
                   <i class="fa fa-apple"></i> <span>Mac OS X 10.10+</span>
                 </div>
               </a>
+              {% if unstable %}
+                <a class="btn btn-secondary" href="/download/kalabox?email={{ email }}&extension=dmg&version={{unstable}}">
+                  <h3>Download Kalabox {{unstable}}</h3>
+                  <small>Experimental</small>
+                  <div class="os-desc">
+                    <i class="fa fa-apple"></i> <span>Mac OS X 10.10+</span>
+                  </div>
+                </a>
+              {% endif %}
             {% endif %}
             {% if 'Windows' in platform %}
               <a class="btn btn-primary" href="/download/latest?email={{ email }}&extension=exe">
