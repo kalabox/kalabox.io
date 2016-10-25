@@ -11106,8 +11106,3 @@ button:hover {
 section:last-of-type {
   padding-bottom: 4em;
 }
-
-.btn-secondary {
-  background-color: #c0c0c0;
-  color: #333;
-}
