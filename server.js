@@ -17,7 +17,9 @@ app.set('views', './views');
 app.use(express.static(path.join(__dirname, 'public')));
 if (app.get('env') === 'development') {
   port = 8080;
-} else {
+}
+
+if (app.get('env') === 'production') {
   app.use( require('express-force-domain')('http://www.kalabox.io') );
 }
 

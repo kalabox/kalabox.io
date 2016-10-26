@@ -42,7 +42,7 @@ the parameters provided and manually redirect yourself to your localhost domain.
 To test locally...
 
 ```
-docker run -p 8080:80 reynoldsalec/kalabox.io
+docker run -e "NODE_ENV=docker_local" -p 8080:80 reynoldsalec/kalabox.io
 ```
 
 

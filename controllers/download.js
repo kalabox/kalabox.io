@@ -7,8 +7,8 @@ var my_sheet = new GoogleSpreadsheet('10VBH9y5Y8y5jpJmxjny_RQ8IVRyReHlDcIKmT1pDb
 var creds = require('../KalaboxKeycodes-ae31acf55c9a.json');
 var _ = require('lodash');
 var request = require('request');
-var release = '2.0.1';
-var unstable = '2.1.0-rc.2';
+var release = '2.1.0';
+var legacy = '2.0.2';
 var contact = require('../models/contact');
 
 router.get('/', function (req, res) {res.render('download-form.twig', req.query);});
@@ -54,7 +54,7 @@ router.post('/form', function (req, res) {
 router.get('/kalabox', function(req, res) {
   var email = req.query.email;
   var extension = req.query.extension;
-  var release = 'v' + req.query.release;
+  var release = 'v' + req.query.version;
   var request = {
     fields: {
       'Latest Version Downloaded': [{
@@ -68,7 +68,7 @@ router.get('/kalabox', function(req, res) {
     var githubUrl = 'https://github.com/kalabox/kalabox/releases/download/' + release
     + '/kalabox-' + release + '.' + extension;
     res.redirect(githubUrl);
-  })
+  });
 });
 
 function downloads(req, res) {
@@ -93,7 +93,7 @@ function downloads(req, res) {
   };
 
   if (os.indexOf('Mac') !== -1) {
-    pageVariables.unstable = unstable;
+    pageVariables.legacy = legacy;
   }
 
   res.render(page, pageVariables);

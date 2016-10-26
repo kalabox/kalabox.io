@@ -14,15 +14,15 @@
             {% if 'Mac' in platform %}
               <a class="btn btn-primary" href="/download/kalabox?email={{ email }}&extension=dmg&version={{release}}">
                 <h3>Download Kalabox {{release}}</h3>
-                <small>Recommended</small>
+                <small>Latest and Greatest</small>
                 <div class="os-desc">
                   <i class="fa fa-apple"></i> <span>Mac OS X 10.10+</span>
                 </div>
               </a>
-              {% if unstable %}
-                <a class="btn btn-secondary" href="/download/kalabox?email={{ email }}&extension=dmg&version={{unstable}}">
-                  <h3>Download Kalabox {{unstable}}</h3>
-                  <small>Experimental</small>
+              {% if legacy %}
+                <a class="btn btn-secondary" href="/download/kalabox?email={{ email }}&extension=dmg&version={{legacy}}">
+                  <h3>Download Kalabox {{legacy}}</h3>
+                  <small>Legacy Virtualbox Version</small>
                   <div class="os-desc">
                     <i class="fa fa-apple"></i> <span>Mac OS X 10.10+</span>
                   </div>
@@ -30,36 +30,55 @@
               {% endif %}
             {% endif %}
             {% if 'Windows' in platform %}
-              <a class="btn btn-primary" href="/download/latest?email={{ email }}&extension=exe">
+              <a class="btn btn-primary" href="/download/kalabox?email={{ email }}&extension=exe&version={{release}}">
                 <h3>Download Kalabox {{release}}</h3>
-                <i class="fa fa-windows"></i> <span>Windows 7+</span>
+                <i class="fa fa-windows"></i> <span>Windows 10 Pro+</span>
               </a>
+              {% if legacy %}
+                <a class="btn btn-secondary" href="/download/kalabox?email={{ email }}&extension=exe&version={{legacy}}">
+                  <h3>Download Kalabox {{legacy}}</h3>
+                  <small>Legacy Virtualbox Version</small>
+                  <div class="os-desc">
+                    <i class="fa fa-windows"></i> <span>Windows 7+</span>
+                  </div>
+                </a>
+              {% endif %}
             {% endif %}
             {% if 'Ubuntu' in platform %}
-              <a class="btn btn-primary" href="/download/latest?email={{ email }}&extension=deb">
+              <a class="btn btn-primary" href="/download/kalabox?email={{ email }}&extension=deb&version={{release}}">
                 <h3>Download Kalabox {{release}}</h3>
                 <i class="fa fa-windows"></i> <span>Windows 7+</span>
               </a>
             {% endif %}
               <ul class="alt-downloads">
                 <li>
-                  <a href="/download/latest?email={{ email }}&extension=dmg">
-                    <i class="fa fa-apple"></i> <span>Mac OS X 10.10+</span>
+                  <i class="fa fa-apple"></i> <span>Mac OS X 10.10+</span>
+                  <a href="/download/kalabox?email={{ email }}&extension=dmg&version={{release}}">
+                    2.1.0
+                  </a>/
+                  <a href="/download/kalabox?email={{ email }}&extension=dmg&version={{legacy}}">
+                    2.0.2
                   </a>
                 </li>
                 <li>
-                  <a href="/download/latest?email={{ email }}&extension=exe">
-                    <i class="fa fa-windows"></i> <span>Windows 7+</span>
+                  <i class="fa fa-windows"></i> <span>Windows 10 Pro+</span>
+                  <a href="/download/kalabox?email={{ email }}&extension=exe&version={{release}}">
+                    2.1.0
+                  </a>/
+                  <a href="/download/kalabox?email={{ email }}&extension=exe&version={{legacy}}">
+                    2.0.2
                   </a>
                 </li>
                 <li>
-                  <a href="/download/latest?email={{ email }}&extension=deb">
-                    <i class="fa fa-linux"></i> <span>Ubuntu 14.04+</span>
+                  <i class="fa fa-linux"></i> <span>Ubuntu 14.04+</span>
+                  <a href="/download/kalabox?email={{ email }}&extension=deb&version={{release}}">
+                    2.1.0
                   </a>
                 </li>
                 <li>
-                  <a href="/download/latest?email={{ email }}&extension=rpm">
-                    <i class="fa fa-linux"></i> <span>Fedora 20+</span>
+                  <i class="fa fa-linux"></i> <span>Fedora 20+</span>
+                  <a href="/download/kalabox?email={{ email }}&extension=rpm&version={{release}}">
+                    2.1.0
                   </a>
                 </li>
               </ul>
