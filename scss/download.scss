@@ -59,11 +59,11 @@ body.download {
   #downloads {
     padding-top: 50px;
   }
-  a.btn-primary:active, a.btn-primary:visited {
+  a.btn-primary:active, a.btn-primary:visited, a.btn-primary {
+    &.purple {
+      background-color: #8739C4;
+    }
     background-color: #d9534f;
-  }
-  h1 {
-    padding-bottom: 40px;
   }
   h3 {
     font-size: 1em;
@@ -91,13 +91,26 @@ body.download {
     display: block;
   }
   .install-steps {
-    margin: 80px 0px;
     img {
       margin-bottom: 5px;
       height: 90px;
     }
     h2 {
-      padding-bottom: 5px;
+      padding-bottom: 0em;
+      margin: 1.5em 0em .5em 0em;
     }
+  }
+  .circle {
+    border-radius: 50%;
+    width: 100px;
+    background: linear-gradient(to right,#3CD3AD,#4CB8C4);
+    height: 100px;
+    color: white;
+    font-size: 5em;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0em auto;
+    font-family: Helvetica Neue;
+    font-weight: 200;
   }
 }

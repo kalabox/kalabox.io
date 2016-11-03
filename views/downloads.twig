@@ -9,8 +9,13 @@
     <section id="downloads">
       <div class="container wow animated fadeInDown">
         <h1>Begin your journey to faster local development...</h1>
-        <div class="row">
-          <div class="col-xs-12">
+        <div class="row install-steps">
+          <div class="col-xs-4">
+            <div class="circle">
+              1
+            </div>
+            <h2>Download</h2>
+            <div class="col-xs-12">
             {% if 'Mac' in platform %}
               <a class="btn btn-primary" href="/download/kalabox?email={{ email }}&extension=dmg&version={{release}}">
                 <h3>Download Kalabox {{release}}</h3>
@@ -20,13 +25,12 @@
                 </div>
               </a>
               {% if legacy %}
-                <a class="btn btn-secondary" href="/download/kalabox?email={{ email }}&extension=dmg&version={{legacy}}">
-                  <h3>Download Kalabox {{legacy}}</h3>
-                  <small>Legacy Virtualbox Version</small>
-                  <div class="os-desc">
-                    <i class="fa fa-apple"></i> <span>Mac OS X 10.10+</span>
-                  </div>
-                </a>
+                <div>
+                  or
+                  <a href="/download/kalabox?email={{ email }}&extension=dmg&version={{legacy}}">
+                    <small>Download the Legacy Virtualbox Version {{legacy}}</small>
+                  </a>
+                </div>
               {% endif %}
             {% endif %}
             {% if 'Windows' in platform %}
@@ -35,19 +39,18 @@
                 <i class="fa fa-windows"></i> <span>Windows 10 Pro+</span>
               </a>
               {% if legacy %}
-                <a class="btn btn-secondary" href="/download/kalabox?email={{ email }}&extension=exe&version={{legacy}}">
-                  <h3>Download Kalabox {{legacy}}</h3>
-                  <small>Legacy Virtualbox Version</small>
-                  <div class="os-desc">
-                    <i class="fa fa-windows"></i> <span>Windows 7+</span>
-                  </div>
-                </a>
+                <div>
+                  or
+                  <a href="/download/kalabox?email={{ email }}&extension=exe&version={{legacy}}">
+                    <small>Download the Legacy Virtualbox Version {{legacy}}</small>
+                  </a>
+                </div>
               {% endif %}
             {% endif %}
             {% if 'Ubuntu' in platform %}
               <a class="btn btn-primary" href="/download/kalabox?email={{ email }}&extension=deb&version={{release}}">
                 <h3>Download Kalabox {{release}}</h3>
-                <i class="fa fa-windows"></i> <span>Windows 7+</span>
+                <i class="fa fa-linux"></i> <span>Ubuntu 14.04+</span>
               </a>
             {% endif %}
               <ul class="alt-downloads">
@@ -55,18 +58,12 @@
                   <i class="fa fa-apple"></i> <span>Mac OS X 10.10+</span>
                   <a href="/download/kalabox?email={{ email }}&extension=dmg&version={{release}}">
                     2.1.0
-                  </a>/
-                  <a href="/download/kalabox?email={{ email }}&extension=dmg&version={{legacy}}">
-                    2.0.2
                   </a>
                 </li>
                 <li>
                   <i class="fa fa-windows"></i> <span>Windows 10 Pro+</span>
                   <a href="/download/kalabox?email={{ email }}&extension=exe&version={{release}}">
                     2.1.0
-                  </a>/
-                  <a href="/download/kalabox?email={{ email }}&extension=exe&version={{legacy}}">
-                    2.0.2
                   </a>
                 </li>
                 <li>
@@ -82,20 +79,21 @@
                   </a>
                 </li>
               </ul>
-          </div>
-        </div>
-        <div class="row install-steps">
-          <div class="col-xs-4">
-            <h2>1. Download</h2>
-            <p>Pick the correct version of Kalabox above. Uncompress the download.</p>
+            </div>
           </div>
           <div class="col-xs-4">
-            <h2>2. Follow Install Instructions</h2>
-            <p>See install directions <a href="http://support.kalabox.io/en/stable/users/install">in the docs</a>.</p>
+            <div class="circle">
+              2
+            </div>
+            <h2>Follow Install Instructions</h2>
+            <a class="btn btn-primary purple" href="http://support.kalabox.io/en/stable/users/install">See Install Instructions</a>
 
           </div>
           <div class="col-xs-4">
-            <h2>3. Run Installer</h2>
+            <div class="circle">
+              3
+            </div>
+            <h2>Run Installer</h2>
             <p>Run the installer. Once complete, Kalabox will be in your normal applications directory.</p>
           </div>
         </div>
