@@ -19,13 +19,13 @@ To deploy...
 1. Build the image
 
 ```
-docker build -t reynoldsalec/kalabox.io .
+docker build -t reynoldsalec/kalabox.io:TAG .
 ```
 
 2. Push to Docker Hub
 
 ```
-docker push reynoldsalec/kalabox.io
+docker push reynoldsalec/kalabox.io:TAG
 ```
 
 3. Log in to Docker Cloud and redeploy the kalaboxio containers.
