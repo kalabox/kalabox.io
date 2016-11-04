@@ -1,91 +1,110 @@
 <!DOCTYPE html>
 <html lang="en"> 
-{% include 'head.twig' %}
-<body class="support-disambig">
-  {% include 'header.twig' %}
-  {% if msg %}
-  <div class="alert alert-success" role="alert">{{ msg }}</div>
-  {% endif %}
-  <section id="support">
-    <div class="section">
-      <div class="container">
+  {% include 'head.twig' %}
+  <body class="support-pricing">
+    {% include 'header.twig' %}
+    {% if msg %}
+      <div class="alert alert-success" role="alert">{{ msg }}</div>
+    {% endif %}
+    <section id="pricing" class="blue-grey darken-3">
+      <div class="section pt-section" data-name="Pricing">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <h1>Kalabox Support</h1>
+              <h2>Get help to improve your team's development workflow.</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="divider4"></div>
+
+            <div class="col-xs-12 col-md-4">
+              <div class="pricing plain z-depth-1 hoverable">
+                <div class="price-attrs purple">
+                  <div class="price-number blue-grey-text text-darken-3">01</div>
+                  <div class="price-plan"><strong>Free</strong></div>
+                  <div class="price-descr"><strong>$0</strong> per month</div>
+                  <div class="price-conclusion">Community-provided support</div>
+                </div>
+                <div class="price-features">
+                  <ul>
+                    <li>Get help from fellow users</li>
+                    <li>Provide debugging assistance to improve Kalabox</li>
+                    <li>Give back to the community</li>
+                  </ul>
+                  <div class="price-cta">
+                    <a href="https://github.com/kalabox/kalabox/issues">
+                      <button type="button" class="waves-effect waves-light btn blue-grey darken-2 center">
+                        Github
+                      </button>
+                    </a>
+                    <a href="https://slackpass.io/kalabox">
+                      <button type="button" class="waves-effect waves-light btn blue-grey darken-2 center">
+                        Slack
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="divider4"></div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+              <div class="pricing plain z-depth-1 hoverable">
+                <div class="price-attrs pink">
+                  <div class="price-number blue-grey-text text-darken-3">02</div>
+                  <div class="price-plan"><strong>Individual</strong></div>
+                  <div class="price-descr"><strong>$25+</strong> per month</div>
+                  <div class="price-conclusion">Up your game and support Kalabox</div>
+                </div>
+                <div class="price-features">
+                  <ul>
+                    <li>Real-time Slack with Kalabox team</li>
+                    <li>Support Kalabox development</li>
+                    <li>Workflow enhancements saving hours</li>
+                  </ul>
+                  <div class="button-wrapper">
+                    <button type="button" class="waves-effect waves-light btn blue-grey darken-2 center" data-toggle="modal" data-target="#emailModal">Sign Up</button>
+                  </div>
+                </div>
+              </div>
+              <div class="divider4"></div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+              <div class="pricing plain z-depth-1 hoverable">
+                <div class="price-attrs red">
+                  <div class="price-number blue-grey-text text-darken-3">03</div>
+                  <div class="price-plan"><strong>Teams</strong></div>
+                  <div class="price-descr"><strong>$125+</strong> per month</div>
+                  <div class="price-conclusion">Onboard in minutes, not days</div>
+                </div>
+                <div class="price-features">
+                  <ul>
+                    <li>Faster responses for busy teams</li>
+                    <li>Specialized team tooling</li>
+                    <li>Team onboarding and training</li>
+                  </ul>
+                  <div class="button-wrapper">
+                    <button type="button" class="waves-effect waves-light btn blue-grey darken-2 center" data-toggle="modal" data-target="#emailModal">Sign Up</button>
+                  </div>
+                </div>
+              </div>
+              <div class="divider4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="sponsors">
+      <div class="container wow fadeIn animated">
         <div class="row">
-          <div class="divider4"></div>
-          <div class="col-xs-12 col-md-6">
-            <div class="pricing plain z-depth-1 hoverable">
-              <div class="price-attrs purple">
-                <div class="row">
-                  <div class="col-xs-6">
-                    <div class="price-plan">Community Support</div>
-                  </div>
-                  <div class="col-xs-6">
-                    <div class="price-number"></div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-xs-12">The Github issue queue is where the Kalabox community participates by creating bug reports, feature requests, and submitting code to the project.</div>
-                </div>
-              </div>
-              <div class="price-features">
-                <ul>
-                  <li>Contribute issues and code</li>
-                  <li>Get help from fellow users</li>
-                  <li>Help improve Kalabox</li>
-                </ul>
-                <a href="https://github.com/kalabox/kalabox/issues">
-                  <button type="button" class="waves-effect waves-light btn blue-grey darken-2 center">
-                    Community Issue Queue
-                  </button>
-                </a>
-              </div>
-            </div>
-            <div class="divider4"></div>
-          </div>
-          <div class="col-xs-12 col-md-6">
-            <div class="pricing plain z-depth-1 hoverable">
-              <div class="price-attrs red">
-                <div class="row">
-                  <div class="col-xs-6">
-                    <div class="price-plan">Professional Support</div>
-                  </div>
-                  <div class="col-xs-6">
-                    <div class="price-number"></div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-xs-12">Get dedicated support direct from the Kalabox team to make sure your organization's development workflow is as efficient as possible.</div>
-                </div>
-              </div>
-              <div class="price-features">
-                <ul>
-                  <li>Get help from the Kalabox team</li>
-                  <li>Dedicated ticketing system</li>
-                  <li>Help support Kalabox development</li>
-                </ul>
-                <a href="/support/professional" >
-                  <button type="button" class="waves-effect waves-light btn blue-grey darken-2 center">
-                    Dedicated Support
-                  </button>
-                </a>
-              </div>
-            </div>
-            <div class="divider4"></div>
+          <div class="col-md-12">
+            <h3 class="text-center">Have a feature or integration you'd like to sponsor? Get in touch!</h3>
+            <button type="button" class="btn btn-primary center" data-toggle="modal" data-target="#emailModal" data-title="Sponsor Kalabox customizations" data-action="Let's Talk">Sponsor Kalabox</button>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section id="sponsors">
-    <div class="container wow fadeIn animated">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="text-center">Have a feature or integration you'd like to sponsor? Get in touch!</h3>
-          <button type="button" class="btn btn-primary center" data-toggle="modal" data-target="#emailModal" data-title="Sponsor Kalabox customizations" data-action="Let's Talk">Sponsor Kalabox</button>
-        </div>
-      </div>
-    </div>
-  </section>
-  {% include 'footer.twig' %}
-  {% include 'email-modal.twig' %}
-</body>
+    </section>
+    {% include 'footer.twig' %}
+    {% include 'email-modal.twig' %}
+  </body>
 </html>

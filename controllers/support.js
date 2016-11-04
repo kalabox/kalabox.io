@@ -5,7 +5,7 @@ var nodemailer = require('nodemailer');
 var mail = require('../models/mail');
 
 router.get('/', function (req, res) {res.render('support.twig', req.query);});
-router.get('/professional', function (req, res) {res.render('professional-support.twig', req.query);});
+router.get('/professional', function (req, res) {res.redirect(301, '/support');});
 router.post('/email', emailSubmission);
 
 function emailSubmission(req, res) {
