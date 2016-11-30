@@ -7,7 +7,7 @@ var my_sheet = new GoogleSpreadsheet('10VBH9y5Y8y5jpJmxjny_RQ8IVRyReHlDcIKmT1pDb
 var creds = require('../KalaboxKeycodes-ae31acf55c9a.json');
 var _ = require('lodash');
 var request = require('request');
-var release = '2.1.2';
+var release = '2.1.3';
 var legacy = '2.0.2';
 var contact = require('../models/contact');
 
