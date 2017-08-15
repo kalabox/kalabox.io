@@ -14,6 +14,10 @@ app.set('view engine', 'twig');
 app.set('views', './views');
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Load in .env
+// This will not replace current process.env eg you wont have to use this on Platform
+require('dotenv').config();
+
 if (app.get('env') === 'development') {
   port = 80;
 }

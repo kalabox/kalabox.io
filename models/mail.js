@@ -5,8 +5,8 @@ var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
   service: 'Mailgun',
   auth: {
-    user: 'postmaster@mg.kalabox.io',
-    pass: 'f2c2273097eada5c3875966b2d89ea99'
+    user: process.env.MAILGUN_USER,
+    pass: process.env.MAILGUN_PASSWORD
   }
 });
 transporter = Promise.promisifyAll(transporter);

@@ -6,4 +6,4 @@ dist
 public/css
 public/js
 nimbletoken*
-
+.env

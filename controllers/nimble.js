@@ -5,8 +5,8 @@ var router = express.Router();
 var Promise = require('bluebird');
 var Nimble = require('node-nimble-api');
 var nimble = Promise.promisifyAll(new Nimble({
-  appId: '59fhxr68p7ydnpux2yz35ko7awbx2fv52dzq4',
-  appSecret: '6syf4joh6vtpzv013ur',
+  appId: process.env.NIMBLE_KEY,
+  appSecret: process.env.NIMBLE_SECRET,
   'redirect_uri': 'http://www.kalabox.io/nimble-crm/authorized'
 }), {multiArgs: true});
 var nimbleModel = require('../models/nimble');
