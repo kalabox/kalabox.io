@@ -1,0 +1,20 @@
+name: kalabox
+recipe: mean
+config:
+  node: '6.10'
+  command: npm start
+  globals:
+    gulp-cli: latest
+    bower: latest
+events:
+  pre-push:
+    - appserver: gulp test
+tooling:
+  bower:
+    service: appserver
+  gulp:
+    service: appserver
+  push:
+    description: Push new code into QA
+    cmd: git push origin
+    service: appserver

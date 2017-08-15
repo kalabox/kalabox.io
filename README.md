@@ -1,48 +1,45 @@
-# kalabox.io
+kalabox.io
+==========
 
-Right now this is a hot-mess which is gaining some order.
+Development
+-----------
 
-We're using...
+```bash
+# Clone the site
+git clone git@github.com:kalabox/kalabox.io.git kalaboxio
+cd kalaboxio
 
-- Express to server files
-- Twig as templating engine
-- SASS as css precompiler
-- Gulp to concat/minify
-
-To run...
-1. Clone repo
-2. npm install && bower install
-3. npm start
-
-
-To deploy...
-1. Build the image
-
-```
-docker build -t reynoldsalec/kalabox.io:TAG .
+# Boot up with lando
+# NOTE: order is weird here because of bower
+lando npm install
+lando start
+lando bower install
+lando gulp build
 ```
 
-2. Push to Docker Hub
-
-```
-docker push reynoldsalec/kalabox.io:TAG
-```
-
-3. Log in to Docker Cloud and redeploy the kalaboxio containers.
+### Nimble integration
 
 You MAY need to reactivate the Nimble integration (and will certainly want to do
 this on your local environment for testing):
 
-1. Got to /nimble-crm/authorization and enter in creds when asked.
+1.  Got to /nimble-crm/authorization and enter in creds when asked.
+2.  This will redirect to /nimble-crm/authorized. IF you are on local, you'll probably need to copy the parameters provided and manually redirect yourself to your localhost domain.
 
-2. This will redirect to /nimble-crm/authorized. IF you are on local, you'll probably need to copy
-the parameters provided and manually redirect yourself to your localhost domain.
+Test
+----
 
-
-To test locally...
-
-```
-docker run -e "NODE_ENV=docker_local" -p 8080:80 reynoldsalec/kalabox.io
+```bash
+lando gulp test
 ```
 
+Deploy
+------
 
+Using [GitHub Flow](https://guides.github.com/introduction/flow/) push a branch to this project and open a pull request. If tests pass and the pull request is accepted the change is automatically deployed.
+
+```bash
+git checkout -b ISSUESNUMBER-ISSUEDESCRIPITON
+git add -A
+git commit -m "#ISSUENUMBER: COMMIT DESCRIPTION"
+git push origin ISSUESNUMBER-ISSUEDESCRIPITON
+```

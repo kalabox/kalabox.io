@@ -1,0 +1,82 @@
+body.gateway {
+  background-color: #34495e; }
+  body.gateway h2 {
+    padding-bottom: 1em; }
+  body.gateway form.form-inline {
+    margin: 1em auto 2em auto; }
+    body.gateway form.form-inline input.input-lg {
+      display: inline-block;
+      border: 2px solid #ccc;
+      width: auto; }
+    body.gateway form.form-inline input#email {
+      display: block;
+      width: 100%; }
+    body.gateway form.form-inline button {
+      margin-bottom: 1em;
+      width: 100%; }
+  body.gateway p {
+    text-align: left; }
+  body.gateway .form-description {
+    margin: 2em 0em; }
+    body.gateway .form-description p {
+      font-size: 2em;
+      font-weight: 100;
+      line-height: 1.2em; }
+  body.gateway .kalabox-pro-brief {
+    padding-bottom: 4em; }
+    body.gateway .kalabox-pro-brief .pro-image img {
+      height: 200px;
+      display: block; }
+    body.gateway .kalabox-pro-brief .pro-features ul {
+      margin: auto;
+      display: block;
+      width: 400px; }
+    body.gateway .kalabox-pro-brief .pro-features .btn {
+      margin: 1em auto;
+      display: block;
+      width: 400px; }
+
+body.download {
+  text-align: center; }
+  body.download #downloads {
+    padding-top: 50px; }
+  body.download a.btn-primary:active, body.download a.btn-primary:visited, body.download a.btn-primary {
+    background-color: #d9534f; }
+    body.download a.btn-primary:active.purple, body.download a.btn-primary:visited.purple, body.download a.btn-primary.purple {
+      background-color: #8739C4; }
+  body.download h3 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px; }
+  body.download .alt-downloads {
+    margin: 5px 0px 0px 0px;
+    padding: 0px; }
+    body.download .alt-downloads li {
+      list-style: none; }
+    body.download .alt-downloads a:hover {
+      text-decoration: none;
+      font-weight: bold; }
+  body.download .os-desc {
+    font-size: .9em; }
+  body.download .fa.primary {
+    font-size: 6em;
+    text-align: center;
+    display: block; }
+  body.download .install-steps img {
+    margin-bottom: 5px;
+    height: 90px; }
+  body.download .install-steps h2 {
+    padding-bottom: 0em;
+    margin: 1.5em 0em .5em 0em; }
+  body.download .circle {
+    border-radius: 50%;
+    width: 100px;
+    background: linear-gradient(to right, #3CD3AD, #4CB8C4);
+    height: 100px;
+    color: white;
+    font-size: 5em;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0em auto;
+    font-weight: 200; }

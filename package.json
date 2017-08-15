@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp build && nodemon server.js"
+    "start": "./node_modules/nodemon/bin/nodemon.js server.js"
   },
   "author": "Kalabox, Inc",
   "license": "ISC",
@@ -15,12 +15,12 @@
     "express": "^4.13.4",
     "express-force-domain": "0.0.6",
     "formidable": "^1.0.17",
-    "google-spreadsheet": "^1.1.4",
     "jsonfile": "^2.3.0",
     "lodash": "^4.6.1",
     "node-nimble-api": "0.0.6",
+    "nodemailer": "^4.0.1",
+    "nodemon": "^1.11.0",
     "request": "^2.69.0",
-    "stripe": "^4.6.0",
     "twig": "^0.8.8",
     "useragent": "^2.1.8"
   },
@@ -30,9 +30,10 @@
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
     "gulp-express": "^0.3.5",
+    "gulp-jscs": "^4.0.0",
+    "gulp-jslint": "^1.0.10",
     "gulp-minify-css": "^1.2.4",
-    "gulp-rename": "^1.2.2",
-    "gulp-ruby-sass": "^2.0.6",
+    "gulp-sass": "^2.0.6",
     "gulp-uglify": "^1.5.3",
     "reload": "^0.7.0"
   }
