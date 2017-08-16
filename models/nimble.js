@@ -5,8 +5,7 @@ var app = express();
 var Promise = require('bluebird');
 var Nimble = require('node-nimble-api');
 var jsonfile = Promise.promisifyAll(require('jsonfile'));
-var tokenStore = app.get('env') === 'development' ?
-  '../nimbletoken.json' : '/nimble/nimbletoken.json';
+var tokenStore = '/app/nimble/nimbletoken.json';
 
 var handleNimbleError = function(error) {
   if (error.statusCode === '401' && error.data.error === 'invalid_token') {
@@ -23,13 +22,11 @@ var handleNimbleError = function(error) {
 
 var saveTokens = function(accessToken, refreshToken) {
 
-  var tokenPath = app.get('env') === 'development' ?
-    'nimbletoken.json' : '/nimble/nimbletoken.json';
   var tokens = {accessToken: accessToken, refreshToken: refreshToken};
 
-  console.log(tokenPath, tokens);
+  console.log(tokenStore, tokens);
 
-  return jsonfile.writeFileAsync(tokenPath, tokens)
+  return jsonfile.writeFileAsync(tokenStore, tokens)
 
   .then(function() {
     return 'You are now authenticated! -> ' + tokens;
