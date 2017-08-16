@@ -32,8 +32,9 @@ if (!_.isEmpty(process.env.PLATFORM_ENVIRONMENT)) {
   }
 
   // Force app usages
+  // @todo: this might be dumb now?
   if (config.branch === 'master') {
-    app.use(require('express-force-domain')('http://www.kalabox.io'));
+    //app.use(require('express-force-domain')('http://www.kalabox.io'));
   }
 
 }
