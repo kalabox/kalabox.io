@@ -21,6 +21,8 @@ require('dotenv').config();
 
 // Load platform vars into the env if needed
 if (!_.isEmpty(process.env.PLATFORM_VARIABLES)) {
+  console.log(process.env);
+  console.log(require('platformsh').config());
   _.forEach(require('platformsh').config().variables, function(value, key) {
     process.env[key] = value;
   });
