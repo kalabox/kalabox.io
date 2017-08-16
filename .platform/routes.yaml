@@ -17,3 +17,9 @@ https://www.{default}/:
 https://{default}/:
   type: redirect
   to: https://www.{default}/
+https://kalabox.me/:
+  type: redirect
+  to: https://www.{default}/
+https://www.kalabox.me/:
+  type: redirect
+  to: https://www.{default}/
