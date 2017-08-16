@@ -31,7 +31,7 @@ router.get('/authorized', function(req, res) {
 
     .then(function(result) {
       console.log('requestToken', result);
-      return nimbleModel.saveTokens(result[0], result[1]);
+      return nimbleModel.saveTokens(result, null);
     })
 
     .then(function(result) {

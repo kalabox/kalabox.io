@@ -34,7 +34,7 @@ var saveTokens = function(accessToken, refreshToken) {
 
   .catch(function(error) {
     console.log(error);
-    return 'Nimble token couldn\t be written';
+    return 'Nimble token couldn\'t be written';
   });
 
 };
@@ -61,7 +61,7 @@ var getNimble = function() {
   return nimble.doRefreshTokenAsync(tokens.refreshToken)
 
   .then(function(result) {
-    return saveTokens(result[0], result[1]);
+    return saveTokens(result);
   })
 
   .then(function() {
