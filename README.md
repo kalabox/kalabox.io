@@ -44,8 +44,8 @@ You MAY need to reactivate the Nimble integration (and will certainly want to do
 # Boot up with lando
 # NOTE: order is weird here because of bower
 lando start
-lando gulp build
 lando bower install
+lando gulp build
 ```
 
 Testing
