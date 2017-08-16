@@ -11,7 +11,7 @@ var sendMail = function(mailOptions) {
       user: process.env.MAILGUN_USER,
       pass: process.env.MAILGUN_PASSWORD
     }
-  });
+  }));
 
   return transporter.sendMail(mailOptions);
 };
