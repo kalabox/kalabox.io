@@ -18,6 +18,7 @@ var css = [
   vendorDir + 'nivo-lightbox/nivo-lightbox.css',
   vendorDir + 'owl/owl-carousel/owl.carousel.css',
   vendorDir + 'owl/owl-carousel/owl.theme.css',
+  vendorDir + 'balloon-css/balloon.min.css',
   'css/animate.css',
   'css/main.css',
   'css/bootstrap-theme.css'

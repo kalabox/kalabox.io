@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
   {% include 'head.twig' %}
   <body class="support-pricing">
     {% include 'header.twig' %}
@@ -85,9 +85,11 @@
                     <li>Specialized team tooling</li>
                     <li>Team onboarding and training</li>
                   </ul>
-                  <div class="button-wrapper">
-                    <button type="button" class="waves-effect waves-light btn blue-grey darken-2 center" data-toggle="modal" data-target="#emailModal">Sign Up</button>
-                  </div>
+                  <a href="https://thinktandem.io/contact">
+                    <button type="button" class="waves-effect waves-light btn blue-grey darken-2 center">
+                      Contact Us
+                    </button>
+                  </a>
                 </div>
               </div>
               <div class="divider4"></div>
@@ -96,16 +98,7 @@
         </div>
       </div>
     </section>
-    <section id="sponsors">
-      <div class="container wow fadeIn animated">
-        <div class="row">
-          <div class="col-md-12">
-            <h3 class="text-center">Have a feature or integration you'd like to sponsor? Get in touch!</h3>
-            <button type="button" class="btn btn-primary center" data-toggle="modal" data-target="#emailModal" data-title="Sponsor Kalabox customizations" data-action="Let's Talk">Sponsor Kalabox</button>
-          </div>
-        </div>
-      </div>
-    </section>
+    {% include 'sponsor.twig' %}
     {% include 'footer.twig' %}
     {% include 'email-modal.twig' %}
   </body>

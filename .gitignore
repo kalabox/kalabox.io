@@ -7,3 +7,4 @@ public/css
 public/js
 nimbletoken*
 .env
+.DS_Store

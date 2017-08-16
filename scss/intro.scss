@@ -44,6 +44,13 @@
   header {
     padding-top: 50px;
   }
+  [data-balloon][data-balloon-pos=up]:after {
+    color: #ffffff;
+    background-color: #34495e;
+  }
+  [data-balloon][data-balloon-pos=up]:before {
+    color: #34495e;
+  }
 }
 
 .intro-well {

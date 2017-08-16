@@ -2,12 +2,12 @@
 $(document).ready(function() {
 
 	// ==================== LOADER ==================== //
-	
+
      $(window).load(function(){
         $('.doc-loader').fadeOut('slow');
      });
-	
-	
+
+
 	// ==================== WOW ANIMATION DELAY ==================== //
     wow = new WOW(
     {
@@ -21,8 +21,8 @@ $(document).ready(function() {
   // ==================== NIVO LIGHTBOX ==================== //
 
   $('.thumbnail').nivoLightbox();
-  
-  	  
+
+
   $('.owl-carousel').owlCarousel({
     center: true,
     loop:true,
@@ -59,4 +59,3 @@ $(document).ready(function() {
   })
 
 });
-
