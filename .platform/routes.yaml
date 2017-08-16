@@ -1,10 +1,19 @@
-"https://www.{default}/":
+https://www.{default}/:
   type: upstream
-  upstream: "kalabox:http"
+  redirects:
+    expires: -1s
+    paths: {}
   cache:
-    enabled: true
+    enabled: false
+    default_ttl: 0
+    cookies:
+    - '*'
+    headers:
+    - Accept
+    - Accept-Language
   ssi:
     enabled: false
-"https://{default}/":
+  upstream: kalabox:http
+https://{default}/:
   type: redirect
-  to: "https://www.{default}/"
+  to: https://www.{default}/
