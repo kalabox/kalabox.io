@@ -15,17 +15,13 @@ app.set('view engine', 'twig');
 app.set('views', './views');
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Load in .env
-// This will not replace current process.env eg you wont have to use this on Platform
-require('dotenv').config();
-
 // Load platform vars into the env if needed
 if (!_.isEmpty(process.env.PLATFORM_VARIABLES)) {
-  console.log(process.env);
-  console.log(require('platformsh').config());
   _.forEach(require('platformsh').config().variables, function(value, key) {
     process.env[key] = value;
   });
+  console.log(process.env);
+  console.log(require('platformsh').config());
 }
 
 // Do prod things
@@ -36,6 +32,10 @@ if (app.get('env') === 'production') {
   console.log(require('platformsh').config());
   app.use(require('express-force-domain')('http://www.kalabox.io'));
 }
+
+// Load in .env if applicable
+// This will not replace current process.env eg you wont have to use this on Platform
+require('dotenv').config();
 
 // Routing.
 app.get('/', function(req, res) {
