@@ -4,7 +4,7 @@ https://www.{default}/:
     expires: -1s
     paths: {}
   cache:
-    enabled: false
+    enabled: true
     default_ttl: 0
     cookies:
     - '*'
