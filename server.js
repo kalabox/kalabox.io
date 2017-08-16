@@ -21,6 +21,8 @@ require('dotenv').config();
 // Do prod things
 if (app.get('env') === 'production') {
   port = require('platformsh').config().port;
+  console.log(process.env);
+  console.log(require('platformsh').config());
   app.use(require('express-force-domain')('http://www.kalabox.io'));
 }
 
