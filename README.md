@@ -1,48 +1,68 @@
-# kalabox.io
+kalabox.io
+==========
 
-Right now this is a hot-mess which is gaining some order.
+Local Development
+-----------------
 
-We're using...
+### Installing
 
-- Express to server files
-- Twig as templating engine
-- SASS as css precompiler
-- Gulp to concat/minify
+Local development requires [lando](https://docs.lndo.io).
 
-To run...
-1. Clone repo
-2. npm install && bower install
-3. npm start
-
-
-To deploy...
-1. Build the image
-
-```
-docker build -t reynoldsalec/kalabox.io:TAG .
+```bash
+# Clone the site
+git clone git@github.com:kalabox/kalabox.io.git kalaboxio
+cd kalaboxio
+lando npm install
 ```
 
-2. Push to Docker Hub
+### Configuration
 
-```
-docker push reynoldsalec/kalabox.io:TAG
-```
+You'll want to drop a `.env` file in the root of this repo with the relevant creds.
 
-3. Log in to Docker Cloud and redeploy the kalaboxio containers.
-
-You MAY need to reactivate the Nimble integration (and will certainly want to do
-this on your local environment for testing):
-
-1. Got to /nimble-crm/authorization and enter in creds when asked.
-
-2. This will redirect to /nimble-crm/authorized. IF you are on local, you'll probably need to copy
-the parameters provided and manually redirect yourself to your localhost domain.
-
-
-To test locally...
-
-```
-docker run -e "NODE_ENV=docker_local" -p 8080:80 reynoldsalec/kalabox.io
+```bash
+NIMBLE_KEY=SOMEKEY
+NIMBLE_SECRET=SOMESECRET
+MAILGUN_USER=SOMEUSER
+MAILGUN_PASSWORD=SOMEPASSWORD
 ```
 
+### Nimble Integration
 
+You MAY need to reactivate the Nimble integration (and will certainly want to do this on your local environment for testing). That said this step is not required unless you plan on working on the nimble integration.
+
+1.  Go to `/nimble-crm/authorization` and enter in creds when asked.
+2.  This will redirect to `/nimble-crm/authorized`.
+
+**NOTES:**
+
+*   If you are on local, you'll probably need to copy the parameters provided and manually redirect yourself to your localhost domain.
+*   You also may need to email nimble to get your local redirect URL whitelisted.
+
+### Running Site Locally
+
+```
+# Boot up with lando
+# NOTE: order is weird here because of bower
+lando start
+lando gulp build
+lando bower install
+```
+
+Testing
+-------
+
+```bash
+lando gulp test
+```
+
+Deploying
+---------
+
+Using [GitHub Flow](https://guides.github.com/introduction/flow/) push a branch to this project and open a pull request. If tests pass and the pull request is accepted the change is automatically deployed.
+
+```bash
+git checkout -b ISSUESNUMBER-ISSUEDESCRIPITON
+git add -A
+git commit -m "#ISSUENUMBER: COMMIT DESCRIPTION"
+lando push origin ISSUESNUMBER-ISSUEDESCRIPITON
+```

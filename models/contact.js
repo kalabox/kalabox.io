@@ -1,56 +1,86 @@
-var fs = require('fs');
+'use strict';
+
 var nimble = require('./nimble');
 var contact = this;
 
 /**
  * Given a user's email, update an existing record with that email if it
  * exists OR create a new record.
- * 
- * @param  string email 
- * @param  json   body  Request details.
- * @return response      
+ *
+ * @param {String} email email
+ * @param {Object} body Request details.
+ * @return {String}
  */
 exports.updateByEmail = function(email, body) {
-  return contact.find(email).then(function(existingContact) {
+
+  return contact.find(email)
+
+  .then(function(existingContact) {
+
     console.log(existingContact);
+
     if (existingContact && existingContact.id) {
       var id = existingContact.id;
       return contact.update(id, body);
-    } else {
+    }
+
+    // Else
+    else {
       return contact.create(body);
     }
-  }).catch(function(error) {
+
+  })
+
+  .catch(function(error) {
     console.log(error);
-    return "ERROR" + JSON.stringify(error);
+    return 'ERROR' + JSON.stringify(error);
   });
-}
+
+};
 
 exports.create = function(body) {
-  return nimble.createContact(body).then(function(result) {
+
+  return nimble.createContact(body)
+
+  .then(function(result) {
     console.log('This is the new contact \n', result);
     return result;
-  }).catch(function(error) {
+  })
+
+  .catch(function(error) {
     console.log(error);
-    return "ERROR" + JSON.stringify(error);
+    return 'ERROR' + JSON.stringify(error);
   });
-}
+
+};
 
 exports.find = function(email) {
-  return nimble.findContacts(email).then(function(result) {
+
+  return nimble.findContacts(email)
+
+  .then(function(result) {
     console.log('These are your contacts \n', result.resources[0].fields);
     return result.resources[0];
-  }).catch(function(error) {
+  })
+
+  .catch(function(error) {
     console.log(error);
-    return "ERROR" + JSON.stringify(error);
+    return 'ERROR' + JSON.stringify(error);
   });
-}
+
+};
 
 exports.update = function(id, body) {
-  return nimble.updateContact(id, body).then(function(result) {
+  return nimble.updateContact(id, body)
+
+  .then(function(result) {
     console.log('update', result);
     return result;
-  }).catch(function(error) {
+  })
+
+  .catch(function(error) {
     console.log(error);
-    return "ERROR" + JSON.stringify(error);
+    return 'ERROR' + JSON.stringify(error);
   });
-}
+
+};
