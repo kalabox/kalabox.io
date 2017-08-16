@@ -4,11 +4,6 @@ var express = require('express');
 var router = express.Router();
 var Promise = require('bluebird');
 var Nimble = require('node-nimble-api');
-var nimble = Promise.promisifyAll(new Nimble({
-  appId: process.env.NIMBLE_KEY,
-  appSecret: process.env.NIMBLE_SECRET,
-  'redirect_uri': 'http://www.kalabox.io/nimble-crm/authorized'
-}), {multiArgs: true});
 var nimbleModel = require('../models/nimble');
 
 router.get('/authorization', function(req, res) {
@@ -22,6 +17,13 @@ router.get('/authorization', function(req, res) {
 // providing the redirect_uri in the wrapper constructor if you are using a new object for requestToken.
 
 router.get('/authorized', function(req, res) {
+
+  var nimble = Promise.promisifyAll(new Nimble({
+    appId: process.env.NIMBLE_KEY,
+    appSecret: process.env.NIMBLE_SECRET,
+    'redirect_uri': 'http://www.kalabox.io/nimble-crm/authorized'
+  }), {multiArgs: true});
+
   if (!req.query.error) {
 
     nimble.requestTokenAsync(req.query.code)
