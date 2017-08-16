@@ -1,7 +1,0 @@
-node:
-  image: 'reynoldsalec/kalabox.io:latest'
-  deployment_strategy: high_availability
-  environment:
-    - APP_PORT=80
-  ports:
-    - '80'
