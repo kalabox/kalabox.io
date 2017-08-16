@@ -15,26 +15,31 @@ app.set('view engine', 'twig');
 app.set('views', './views');
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Load platform vars into the env if needed
-if (!_.isEmpty(process.env.PLATFORM_VARIABLES)) {
-  _.forEach(require('platformsh').config().variables, function(value, key) {
-    process.env[key] = value;
-  });
-  console.log(process.env);
-  console.log(require('platformsh').config());
-}
+// Do platform things
+if (!_.isEmpty(process.env.PLATFORM_ENVIRONMENT)) {
 
-// Do prod things
-console.log(app.get('env'));
-if (app.get('env') === 'production') {
-  port = require('platformsh').config().port;
-  console.log(process.env);
-  console.log(require('platformsh').config());
-  app.use(require('express-force-domain')('http://www.kalabox.io'));
+  // Get platform config
+  var config = require('platformsh').config();
+
+  // Set port
+  port = config.port;
+
+  // Load in platform vars
+  if (!_.isEmpty(config.variables)) {
+    _.forEach(require('platformsh').config().variables, function(value, key) {
+      process.env[key] = value;
+    });
+  }
+
+  // Force app usages
+  if (config.branch === 'master') {
+    app.use(require('express-force-domain')('http://www.kalabox.io'));
+  }
+
 }
 
 // Load in .env if applicable
-// This will not replace current process.env eg you wont have to use this on Platform
+// This will not replace current process.env if set eg you wont have to use this on Platform
 require('dotenv').config();
 
 // Routing.
