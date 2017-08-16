@@ -1,10 +1,10 @@
-http://{default}/:
-  type: redirect
-  to: https://{default}/
-https://{default}/:
+"https://www.{default}/":
   type: upstream
-  upstream: app:http
+  upstream: "kalabox:http"
   cache:
     enabled: true
   ssi:
     enabled: false
+"https://{default}/":
+  type: redirect
+  to: "https://www.{default}/"
