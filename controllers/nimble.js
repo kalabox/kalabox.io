@@ -5,19 +5,19 @@ var router = express.Router();
 var Promise = require('bluebird');
 var Nimble = require('node-nimble-api');
 var nimbleModel = require('../models/nimble');
+var redirectUri = 'http://www.kalabox.io/nimble-crm/authorized';
 
 var getNimble = function() {
   return Promise.promisifyAll(new Nimble({
     appId: process.env.NIMBLE_KEY,
     appSecret: process.env.NIMBLE_SECRET,
-    'redirect_uri': 'http://www.kalabox.io/nimble-crm/authorized'
+    'redirect_uri': redirectUri
   }, {multiArgs: true}));
 };
 
 router.get('/authorization', function(req, res) {
   req = req;
-  var redirectURI = 'http://kalaboxio.lndo.site/nimble-crm/authorized';
-  res.redirect(getNimble().getAuthorizationUrl({'redirect_uri': redirectURI}));
+  res.redirect(getNimble().getAuthorizationUrl({'redirect_uri': redirectUri}));
 });
 
 // You must make sure that the wrapper is using for requesting the access token the SAME
