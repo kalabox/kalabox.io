@@ -18,11 +18,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 // This will not replace current process.env eg you wont have to use this on Platform
 require('dotenv').config();
 
-if (app.get('env') === 'development') {
-  port = 80;
-}
-
+// Do prod things
 if (app.get('env') === 'production') {
+  port = require('platformsh').config().port;
   app.use(require('express-force-domain')('http://www.kalabox.io'));
 }
 
