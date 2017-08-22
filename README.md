@@ -32,6 +32,7 @@ You MAY need to reactivate the Nimble integration (and will certainly want to do
 
 1.  Go to `/nimble-crm/authorization` and enter in creds when asked.
 2.  This will redirect to `/nimble-crm/authorized`.
+3.  This page is intentionally left blank
 
 **NOTES:**
 
