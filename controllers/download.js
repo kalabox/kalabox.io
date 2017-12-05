@@ -7,7 +7,7 @@ var formidable = Promise.promisifyAll(require('formidable'), {multiArgs: true});
 var contact = require('../models/contact');
 
 router.get('/', function(req, res) {
-  res.render('download-form.twig', req.query);
+  res.redirect(301, 'https://github.com/kalabox/kalabox/releases/latest');
 });
 
 router.post('/form', function(req, res) {
