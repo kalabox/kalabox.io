@@ -1,8 +1,6 @@
-Kalabox Site
-============
+# Kalabox Site
 
-Local Development
------------------
+## Local Development
 
 ### Configuration
 
@@ -39,15 +37,13 @@ You MAY need to reactivate the Nimble integration (and will certainly want to do
 *   If you are on local, you'll probably need to copy the parameters provided and manually redirect yourself to your localhost domain.
 *   You also may need to email nimble to get your local redirect URL whitelisted.
 
-Testing
--------
+## Testing
 
 ```bash
 lando gulp test
 ```
 
-Deploying
----------
+## Deploying
 
 Using [GitHub Flow](https://guides.github.com/introduction/flow/) push a branch to this project and open a pull request. If tests pass and the pull request is accepted the change is automatically deployed.
 

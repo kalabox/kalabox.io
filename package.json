@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs -d _book",
-    "test": "markdownlint README.md docs/**/*.md docs/*.md"
+    "test": "markdownlint README.md docs/*.md"
   },
   "author": "Kalabox, Inc",
   "license": "ISC",
