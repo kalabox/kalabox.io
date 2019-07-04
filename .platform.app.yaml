@@ -1,9 +1,5 @@
 name: kalabox
 type: nodejs:10
-
-# Core config
-name: kalabox
-type: nodejs:10
 build:
   flavor: none
 web:
