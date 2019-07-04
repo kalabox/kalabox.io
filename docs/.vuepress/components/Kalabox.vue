@@ -39,8 +39,19 @@
       <div
         class="thanks">
         <div class="thanks-item thanks-message">
-          <p>Kalabox and Lando are open-source projects developed by Tandem, a software strategy company that gets your stuff done.</p>
-          <p>It is also made posssible with generous contributions from our Kickstarter backers, Pantheon, and countless other individuals.</p>
+          <p>When we started the Kalabox project in 2012 with <a href="https://github.com/kalamuna/kalaboxv1">Kalabox 1.0</a> we were just trying to solve local development for Drupal developers.
+
+          <p>A year later and after tons of support from the community we decided to launch a <a href="https://www.kickstarter.com/projects/kalabox/kalabox-advanced-web-tools-for-the-people">Kickstarter</a> to continue development. The culmination of that campaign resulted in <a href="https://github.com/kalabox/kalabox">Kalabox 2.0.</a></p>
+
+          <p>
+            Building Kalabox 2.0 was a <a href="https://thinktandem.io/blog/2017/10/24/journey-to-lando-mistakes-pivots-and-vindication/">massive undertaking and was super hard to support!</a></p>
+          </p>
+
+          <p>As a consequence we built <a href="https://deviwthlando.io">Lando.</a> The only dev tool you need for all your projects and the new standard in dev tooling.</p>
+
+          <p>We'd like to thank all the organizations, agencies and people who contibuted Kalabox and by extension Lando.</p>
+
+          <p>We could not have done it without you!</p>
         </div>
         <div class="thanks-item thanks-sponsors">
           <div
@@ -68,20 +79,53 @@
       v-if="data.footer">
       <div class="footer-cols"s>
         <div class="footer-col footer-col1">
-          stuffwefwefwefwefwefweffwfwfwefwefwefewweffwefewwefwefw
+          <img class="footer-logo" src="/img/kalabox-white-name.png">
         </div>
         <div class="footer-col footer-col2">
-          COLUMN 1 - Resources
-          GitHub
-          Kalabox Docs
-          Pantheon Docs
-          Community Support
-          Downloads?wefwefwefwefwefwefwefwefwefwefwefwefwefwefwefwef
-          Kickstarterfwefwefwefwef
+          <h2>Resources</h2>
+          <a
+            class="footer-link" href="https://github.com/kalabox/kalabox">
+            GitHub
+          </a>
+          <a
+            class="footer-link" href="https://github.com/kalabox/kalabox/tree/v2.1/docs">
+            Kalabox Docs
+          </a>
+          <a
+            class="footer-link" href="https://github.com/kalabox/kalabox-app-pantheon/tree/v2.1/docs">
+            Pantheon Docs
+          </a>
+          <a
+            class="footer-link" href="https://launchpass.com/kalabox">
+            Community Support
+          </a>
+          <a
+            class="footer-link" href="https://www.kickstarter.com/projects/kalabox/kalabox-advanced-web-tools-for-the-people">
+            Kickstarter
+          </a>
         </div>
         <div class="footer-col footer-col3">
-          COLUMN 2 - Services
-          TANDEM STUFFwefwefwefwefwefwefwefwewefwefwefwefwefwefwefwef
+          <h2>Services</h2>
+          <a
+            class="footer-link" href="https://thinktandem.io/contact/">
+            Kalabox Migrations
+          </a>
+          <a
+            class="footer-link" href="https://thinktandem.io/services/devops/">
+            DevOps Help
+          </a>
+          <a
+            class="footer-link" href="https://thinktandem.io/services/development/">
+            Development Services
+          </a>
+          <a
+            class="footer-link" href="https://thinktandem.io/services/training/">
+            Workflow Trainings
+          </a>
+          <a
+            class="footer-link" href="https://thinktandem.io/services/support/">
+            Application Support
+          </a>
         </div>
       </div>
       <div class="footer-copyright">
@@ -295,6 +339,15 @@ header img {
   background-color: #34495e;
 }
 
+.footer a {
+  color: #fff;
+  display: block;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
 .footer .footer-cols {
   display: flex;
   flex-wrap: wrap;
@@ -307,6 +360,28 @@ header img {
   flex-grow: 1;
   flex-basis: 33%;
   max-width: 33%;
+}
+
+.footer .footer-col h2 {
+  font-size: 1.65rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #eaecef;
+  margin-right: 60%;
+}
+
+.footer .footer-col2, .footer-col3  {
+  text-align: left;
+}
+
+.footer .footer-copyright {
+  border-top: 1px solid #eaecef;
+  color: #fff;
+  text-align: center;
+  opacity: .75;
+  margin: 2em 4rem;
+  padding: 2em 4rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 @media (max-width: 967px) {
