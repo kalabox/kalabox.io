@@ -1,19 +1,6 @@
-kalabox.io
-==========
+# Kalabox Site
 
-Local Development
------------------
-
-### Installing
-
-Local development requires [lando](https://docs.lndo.io).
-
-```bash
-# Clone the site
-git clone git@github.com:kalabox/kalabox.io.git kalaboxio
-cd kalaboxio
-lando npm install
-```
+## Local Development
 
 ### Configuration
 
@@ -24,6 +11,17 @@ NIMBLE_KEY=SOMEKEY
 NIMBLE_SECRET=SOMESECRET
 MAILGUN_USER=SOMEUSER
 MAILGUN_PASSWORD=SOMEPASSWORD
+```
+
+### Installing
+
+Local development requires [Lando](https://docs.lndo.io).
+
+```bash
+# Clone the site
+git clone git@github.com:kalabox/kalabox.io.git
+cd kalabox.io
+lando start
 ```
 
 ### Nimble Integration
@@ -39,25 +37,13 @@ You MAY need to reactivate the Nimble integration (and will certainly want to do
 *   If you are on local, you'll probably need to copy the parameters provided and manually redirect yourself to your localhost domain.
 *   You also may need to email nimble to get your local redirect URL whitelisted.
 
-### Running Site Locally
-
-```
-# Boot up with lando
-# NOTE: order is weird here because of bower
-lando start
-lando bower install
-lando gulp build
-```
-
-Testing
--------
+## Testing
 
 ```bash
 lando gulp test
 ```
 
-Deploying
----------
+## Deploying
 
 Using [GitHub Flow](https://guides.github.com/introduction/flow/) push a branch to this project and open a pull request. If tests pass and the pull request is accepted the change is automatically deployed.
 

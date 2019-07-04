@@ -4,38 +4,14 @@
   "description": "Main kalabox site.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/nodemon/bin/nodemon.js server.js"
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs -d _book",
+    "test": "markdownlint README.md docs/*.md"
   },
   "author": "Kalabox, Inc",
   "license": "ISC",
-  "dependencies": {
-    "bluebird": "^3.3.5",
-    "bower": "^1.7.7",
-    "dotenv": "^4.0.0",
-    "express": "^4.13.4",
-    "formidable": "^1.0.17",
-    "jsonfile": "^2.3.0",
-    "lodash": "^4.6.1",
-    "platformsh": "^1.0.0",
-    "node-nimble-api": "0.0.6",
-    "nodemailer": "^4.0.1",
-    "nodemon": "^1.11.0",
-    "request": "^2.69.0",
-    "twig": "^0.8.8",
-    "useragent": "^2.1.8"
-  },
   "devDependencies": {
-    "body-parser": "^1.15.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-express": "^0.3.5",
-    "gulp-jscs": "^4.0.0",
-    "gulp-jslint": "^1.0.10",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-sass": "^2.0.6",
-    "gulp-uglify": "^1.5.3",
-    "reload": "^0.7.0"
+    "markdownlint-cli": "^0.3.1",
+    "vuepress": "^0.14.11"
   }
 }
