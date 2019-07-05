@@ -2,17 +2,6 @@
 
 ## Local Development
 
-### Configuration
-
-You'll want to drop a `.env` file in the root of this repo with the relevant creds.
-
-```bash
-NIMBLE_KEY=SOMEKEY
-NIMBLE_SECRET=SOMESECRET
-MAILGUN_USER=SOMEUSER
-MAILGUN_PASSWORD=SOMEPASSWORD
-```
-
 ### Installing
 
 Local development requires [Lando](https://docs.lndo.io).
@@ -24,23 +13,30 @@ cd kalabox.io
 lando start
 ```
 
-### Nimble Integration
+### Structure
 
-You MAY need to reactivate the Nimble integration (and will certainly want to do this on your local environment for testing). That said this step is not required unless you plan on working on the nimble integration.
-
-1.  Go to `/nimble-crm/authorization` and enter in creds when asked.
-2.  This will redirect to `/nimble-crm/authorized`.
-3.  This page is intentionally left blank
-
-**NOTES:**
-
-*   If you are on local, you'll probably need to copy the parameters provided and manually redirect yourself to your localhost domain.
-*   You also may need to email nimble to get your local redirect URL whitelisted.
-
-## Testing
+The project follows the [normal Vuepress](https://vuepress.vuejs.org/guide/) structure but the most important things are in the `docs` directory and are non-exhaustively detailed below:
 
 ```bash
-lando gulp test
+./
+|-- docs
+  |-- .vuepress
+    |-- components
+      |-- Kalabox.vue                 This is basically all you need
+    |-- public
+      |-- styles
+        |-- overrides.css             You can put site-wide css overrides here
+    |-- config.js                     Vuepress config file
+    |-- enhanceApp.js                 App level customization
+    |-- override.styl                 Stylus constant overrides
+    |-- style.styl                    Extra styles
+  |-- README.md                       This contains metadata for Kalabox.vue
+```
+
+### Testing
+
+```bash
+lando test
 ```
 
 ## Deploying
