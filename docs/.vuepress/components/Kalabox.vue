@@ -95,7 +95,7 @@
             Pantheon Docs
           </a>
           <a
-            class="footer-link" href="https://launchpass.com/kalabox">
+            class="footer-link" href="https://launchpass.com/devwithlando">
             Community Support
           </a>
           <a
