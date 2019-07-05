@@ -27,9 +27,8 @@
           :key="index">
           <h2>{{ option.title }}</h2>
           <p>{{ option.details }}</p>
-          <a
-            class="btn btn-large"
-            :href="option.actionLink">{{option.actionText}}
+          <a :href="option.actionLink">
+            <div class="btn btn-large">{{option.actionText}}</div>
           </a>
         </div>
       </div>
@@ -49,9 +48,9 @@
 
           <p>As a consequence we built <a href="https://deviwthlando.io">Lando.</a> The only dev tool you need for all your projects and the new standard in dev tooling.</p>
 
-          <p>We'd like to thank all the organizations, agencies and people who contibuted Kalabox and by extension Lando.</p>
+          <p>We'd like to thank all the organizations, agencies and people who contibuted to Kalabox and by extension Lando.</p>
 
-          <p>We could not have done it without you!</p>
+          <p><strong>We could not have done it without you!</strong></p>
         </div>
         <div class="thanks-item thanks-sponsors">
           <div
@@ -205,6 +204,16 @@ header img {
   text-align: center;
 }
 
+@media (max-width: 570px) {
+  .hero .options {
+    padding: 0;
+    margin: 1rem auto 1.2rem;
+  }
+  .hero .option .btn {
+    max-width: 75%;
+  }
+}
+
 .hero .option h2 {
   font-size: 2.4rem;
   font-weight: 500;
@@ -256,7 +265,6 @@ header img {
   touch-action: manipulation;
   cursor: pointer;
   border: 1px solid transparent;
-  white-space: nowrap;
   padding: 6px 12px;
   line-height: 1.42857;
   -webkit-user-select: none;
@@ -327,6 +335,15 @@ header img {
 }
 
 @media (max-width: 967px) {
+  .thanks .thanks-message {
+    max-width: 100%;
+  }
+  .thanks .thanks-sponsor img {
+    width: 250px;
+  }
+}
+
+@media (max-width: 967px) {
   .thanks .thanks-sponsors {
     max-width: 100%;
   }
@@ -385,6 +402,9 @@ header img {
 }
 
 @media (max-width: 967px) {
+  .footer .footer-cols {
+    display: block;
+  }
   .footer .footer-col {
     max-width: 100%;
   }
