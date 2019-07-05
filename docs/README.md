@@ -25,5 +25,5 @@ sponsors:
 - title: Kalamuna
   img: /img/kalamuna-logo.png
   src: https://kalamuna.com
-footer: Copyright ©2014-present Kalamuna/Tandem
+footer: Copyright ©2014-2019 Tandem
 ---
