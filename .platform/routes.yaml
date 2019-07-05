@@ -23,3 +23,15 @@ https://kalabox.me/:
 https://www.kalabox.me/:
   type: redirect
   to: https://www.{default}/
+https://docs.kalabox.io/:
+  type: redirect
+  to: https://www.{default}/
+https://pantheon.kalabox.io/:
+  type: redirect
+  to: https://www.{default}/
+https://php.kalabox.io/:
+  type: redirect
+  to: https://www.{default}/
+https://support.kalabox.io/:
+  type: redirect
+  to: https://www.{default}/
