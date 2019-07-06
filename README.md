@@ -15,7 +15,7 @@ lando start
 
 ### Known Issues
 
-* If you are getting a WSOD while trying to load the site in Lando check out https://github.com/thinktandem/tandem/issues/15.
+* If you are getting a WSOD while trying to load the site in Lando check out [this issue](https://github.com/thinktandem/tandem/issues/15).
 
 ### Structure
 
