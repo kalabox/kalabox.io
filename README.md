@@ -13,6 +13,10 @@ cd kalabox.io
 lando start
 ```
 
+### Known Issues
+
+* If you are getting a WSOD while trying to load the site in Lando check out https://github.com/thinktandem/tandem/issues/15.
+
 ### Structure
 
 The project follows the [normal Vuepress](https://vuepress.vuejs.org/guide/) structure but the most important things are in the `docs` directory and are non-exhaustively detailed below:

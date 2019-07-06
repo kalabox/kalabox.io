@@ -38,17 +38,24 @@
       <div
         class="thanks">
         <div class="thanks-item thanks-message">
-          <p>When we started the Kalabox project in 2012 with <a href="https://github.com/kalamuna/kalaboxv1">Kalabox 1.0</a> we were just trying to solve local development for Drupal developers.
-
-          <p>A year later and after tons of support from the community we decided to launch a <a href="https://www.kickstarter.com/projects/kalabox/kalabox-advanced-web-tools-for-the-people">Kickstarter</a> to continue development. The culmination of that campaign resulted in <a href="https://github.com/kalabox/kalabox">Kalabox 2.0.</a></p>
-
+          <h3>A brief history of Kalabox</h3>
           <p>
-            Building Kalabox 2.0 was a <a href="https://thinktandem.io/blog/2017/10/24/journey-to-lando-mistakes-pivots-and-vindication/">massive undertaking and was super hard to support!</a></p>
+            When we started the Kalabox project in 2012 with <a href="https://github.com/kalamuna/kalaboxv1">Kalabox 1.0</a> we were just trying to solve local development for our own Drupal team.
           </p>
 
-          <p>As a consequence we built <a href="https://deviwthlando.io">Lando.</a> The only dev tool you need for all your projects and the new standard in dev tooling.</p>
+          <p>
+            However, other people liked it too! So we decided to take things to the next level by launching a <a href="https://www.kickstarter.com/projects/kalabox/kalabox-advanced-web-tools-for-the-people">Kickstarter</a> campaign. The culmination of that effort, after much blood, sweat, whiskey and tears was <a href="https://github.com/kalabox/kalabox">Kalabox 2.0.</a>
+          </p>
 
-          <p>We'd like to thank all the organizations, agencies and people who contibuted to Kalabox and by extension Lando.</p>
+          <p>
+            <em>Building it was a massive undertaking and we <a href="https://thinktandem.io/blog/2017/10/24/journey-to-lando-mistakes-pivots-and-vindication/">learned a ton.</a></em>
+          </p>
+
+          <p>
+            Over the last year or so we've channeled those trials, tribulations and lessons into <a href="https://deviwthlando.io">Lando.</a> Not only is it the <em>only</em> dev tool you need for all your projects it is also the culimination of almost 8 years of experience making these kinds of things. We hope you like it and that it was worth the wait :)
+          </p>
+
+          <p>We'd also like to thank all the organizations, agencies and people who contibuted to Kalabox and by extension Lando.</p>
 
           <p><strong>We could not have done it without you!</strong></p>
         </div>
