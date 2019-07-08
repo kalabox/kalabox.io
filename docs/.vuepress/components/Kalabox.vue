@@ -55,7 +55,7 @@
             Over the last year or so we've channeled those trials, tribulations and lessons into <a href="https://deviwthlando.io">Lando.</a> Not only is it the <em>only</em> dev tool you need for all your projects it is also the culimination of almost 8 years of experience making these kinds of things. We hope you like it and that it was worth the wait :)
           </p>
 
-          <p>We'd also like to thank all the organizations, agencies and people who contibuted to Kalabox and by extension Lando.</p>
+          <p>We'd also like to thank all the organizations, agencies and people who contributed to Kalabox and by extension Lando.</p>
 
           <p><strong>We could not have done it without you!</strong></p>
         </div>
