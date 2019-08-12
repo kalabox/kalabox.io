@@ -14,7 +14,7 @@ options:
 - title: Lando
   details: I love the power of a robust CLI tool that lets me control and customize all my projects
   actionText: Get the best dev power tool in the Galaxy
-  actionLink: https://devwithlando.io
+  actionLink: https://lando.dev
 sponsors:
 - title: Tandem
   img: /img/tandem-pink.png
