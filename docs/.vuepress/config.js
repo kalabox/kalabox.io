@@ -5,7 +5,7 @@ module.exports = {
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['link', { rel: 'stylesheet', href: '/styles/overrides.css'}],
   ],
-  ga: 'UA-74237404-3',
+  ga: 'UA-74237404-1',
   themeConfig: {
     docsDir: 'docs',
     docsBranch: 'master',
