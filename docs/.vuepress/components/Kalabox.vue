@@ -83,7 +83,7 @@
     <div
       class="footer"
       v-if="data.footer">
-      <div class="footer-cols"s>
+      <div class="footer-cols">
         <div class="footer-col footer-col1">
           <img class="footer-logo" src="/img/kalabox-white-name.png">
         </div>
@@ -144,20 +144,23 @@
 <script>
 
 export default {
-
+  data() {
+    return {
+      data: {},
+    };
+  },
+  mounted() {
+    this.data = this.$page.frontmatter;
+  },
   computed: {
-    data () {
-      return this.$page.frontmatter
-    },
-
-    actionLink () {
+    actionLink() {
       return {
         link: this.data.actionLink,
-        text: this.data.actionText
-      }
-    }
-  }
-}
+        text: this.data.actionText,
+      };
+    },
+  },
+};
 </script>
 
 <style lang="css">

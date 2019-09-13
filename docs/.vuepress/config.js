@@ -2,10 +2,21 @@ module.exports = {
   title: 'Kalabox',
   description: 'One click local development for Drupal and WordPress.',
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['link', { rel: 'stylesheet', href: '/styles/overrides.css'}],
+    ['link', {rel: 'icon', href: '/favicon.ico'}],
+    ['link', {rel: 'stylesheet', href: '/styles/overrides.css'}],
   ],
-  ga: 'UA-74237404-1',
+  plugins: {
+    '@vuepress/google-analytics': {
+      ga: 'UA-74237404-1',
+    },
+    'autometa': {
+      site: {
+        name: 'Kalabox',
+        twitter: 'devwithlando',
+      },
+      canonical_base: 'https://kalabox.io',
+    },
+  },
   themeConfig: {
     docsDir: 'docs',
     docsBranch: 'master',
@@ -14,4 +25,4 @@ module.exports = {
     repoLabel: 'GitHub',
     search: false,
   },
-}
+};

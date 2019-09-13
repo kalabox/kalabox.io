@@ -2,6 +2,8 @@ name: kalabox
 proxy:
   node:
     - kalabox.lndo.site:8080
+excludes:
+  - node_modules
 services:
   platform:
     type: php:7.3
@@ -34,3 +36,7 @@ tooling:
     service: node
     cmd: yarn run test
     description: Run tests
+  lint:
+    service: node
+    cmd: yarn run lint
+    description: Run linting

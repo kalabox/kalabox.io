@@ -30,16 +30,18 @@ The project follows the [normal Vuepress](https://vuepress.vuejs.org/guide/) str
     |-- public
       |-- styles
         |-- overrides.css             You can put site-wide css overrides here
+    |- styles
+      |-- pallete.styl                Stylus constant overrides
+      |-- index.styl                  Extra styles
     |-- config.js                     Vuepress config file
     |-- enhanceApp.js                 App level customization
-    |-- override.styl                 Stylus constant overrides
-    |-- style.styl                    Extra styles
   |-- README.md                       This contains metadata for Kalabox.vue
 ```
 
 ### Testing
 
 ```bash
+lando lint
 lando test
 ```
 
