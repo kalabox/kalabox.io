@@ -8,10 +8,6 @@ meta:
 home: true
 layout: Kalabox
 navbar: false
-heroImage: /img/kalabox-white.png
-heroTagline: All good things must come to an end...
-heroByline: Kalabox is now officially deprecated and will END OF LIFE later in 2019.
-heroCall: Chose a successor project below that best fits your needs...
 options:
 - title: Pantheon Localdev
   details: I love the convenience of a GUI tool that connects to and integrates with my Pantheon sites

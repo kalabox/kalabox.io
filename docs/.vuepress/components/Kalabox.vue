@@ -1,21 +1,18 @@
 <template>
   <div>
     <header class="hero kalabox-background">
-      <img
-        v-if="data.heroImage"
-        :src="$withBase(data.heroImage)"
-        :alt="data.heroAlt || 'hero'">
+      <img :src="$withBase('/img/kalabox-white.png')" alt="Kalabox">
 
-      <h1 class="hide" v-if="data.heroText !== null" id="main-title">{{ data.heroText || $title || 'Hello' }}</h1>
+      <h1 class="hide" v-if="$title !== null" id="main-title">{{ $title || 'Hello' }}</h1>
 
       <p class="tagline">
-        {{ data.heroTagline }}
+        All good things must come to an end...
       </p>
       <p class="byline">
-        {{ data.heroByline }}
+        Kalabox is now officially deprecated and will END OF LIFE later in 2019.
       </p>
       <p class="call">
-        {{ data.heroCall }}
+        Chose a successor project below that best fits your needs...
       </p>
 
       <div
