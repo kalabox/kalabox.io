@@ -1,4 +1,25 @@
 https://www.{default}/:
+  type: redirect
+  to: https://{default}/
+https://kalabox.me/:
+  type: redirect
+  to: https://{default}/
+https://www.kalabox.me/:
+  type: redirect
+  to: https://{default}/
+https://docs.{default}/:
+  type: redirect
+  to: https://{default}/
+https://pantheon.{default}/:
+  type: redirect
+  to: https://{default}/
+https://php.{default}/:
+  type: redirect
+  to: https://{default}/
+https://support.{default}/:
+  type: redirect
+  to: https://{default}/
+https://{default}/:
   type: upstream
   redirects:
     expires: -1s
@@ -14,24 +35,3 @@ https://www.{default}/:
   ssi:
     enabled: false
   upstream: kalabox:http
-https://{default}/:
-  type: redirect
-  to: https://www.{default}/
-https://kalabox.me/:
-  type: redirect
-  to: https://www.{default}/
-https://www.kalabox.me/:
-  type: redirect
-  to: https://www.{default}/
-https://docs.kalabox.io/:
-  type: redirect
-  to: https://www.{default}/
-https://pantheon.kalabox.io/:
-  type: redirect
-  to: https://www.{default}/
-https://php.kalabox.io/:
-  type: redirect
-  to: https://www.{default}/
-https://support.kalabox.io/:
-  type: redirect
-  to: https://www.{default}/
