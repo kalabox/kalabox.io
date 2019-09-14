@@ -16,6 +16,9 @@ module.exports = {
       },
       canonical_base: 'https://kalabox.io',
     },
+    'canonical': {
+      baseURL: 'https://kalabox.io',
+    },
     'robots': {
       host: 'https://kalabox.io',
     },
