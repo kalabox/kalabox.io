@@ -16,6 +16,13 @@ module.exports = {
       },
       canonical_base: 'https://kalabox.io',
     },
+    'robots': {
+      host: 'https://kalabox.io',
+    },
+    'sitemap': {
+      hostname: 'https://kalabox.io',
+      exclude: ['/404.html'],
+    },
   },
   themeConfig: {
     docsDir: 'docs',
