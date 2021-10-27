@@ -1,0 +1,6 @@
+# Redirect old subdomains to primary one
+https://docs.kalabox.io/* https://www.kalabox.io/:splat 301!
+https://pantheon.kalabox.io/* https://www.kalabox.io/:splat 301!
+https://php.kalabox.io/* https://www.kalabox.io/:splat 301!
+https://support.kalabox.io/* https://www.kalabox.io/:splat 301!
+https://stats-v2.kalabox.io/* https://www.kalabox.io/:splat 301!

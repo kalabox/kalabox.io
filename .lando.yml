@@ -5,24 +5,13 @@ proxy:
 excludes:
   - node_modules
 services:
-  platform:
-    type: php:7.3
-    via: cli
-    build:
-      - mkdir -p /var/www/.platformsh/bin
-      - curl -fsSL -o /var/www/.platformsh/bin/platform https://github.com/platformsh/platformsh-cli/releases/download/v3.40.4/platform.phar
-      - chmod ug+x /var/www/.platformsh/bin/platform
   node:
-    type: node:10
+    type: node:14
     build:
       - yarn install
     command: "su - node -c 'cd /app && yarn dev'"
     port: 8080
 tooling:
-  platform:
-    service: platform
-    description: Run Platform CLI commands
-    cmd: /var/www/.platformsh/bin/platform
   node:
     service: node
   yarn:

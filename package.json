@@ -2,7 +2,6 @@
   "name": "kalabox.io",
   "version": "1.0.0",
   "description": "Main kalabox site.",
-  "main": "server.js",
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs -d _book",
