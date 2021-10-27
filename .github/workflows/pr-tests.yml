@@ -32,7 +32,7 @@ jobs:
       # Unit tests
       - name: Run unit tests
         run: yarn test
-      # Try to build the site successfull
+      # Try to build the site
       - name: Test Build
         run: yarn build
 
