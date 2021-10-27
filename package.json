@@ -4,7 +4,7 @@
   "description": "Main kalabox site.",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs -d _book",
+    "build": "cp _redirects docs/.vuepress/public/_redirects && vuepress build docs -d _book",
     "lint": "eslint  --quiet --ext .js,.vue --no-ignore --config .eslintrc.json docs/.vuepress docs/.vuepress/components/**",
     "test": "markdownlint README.md docs/*.md"
   },

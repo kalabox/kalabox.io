@@ -24,3 +24,6 @@ tmp-*
 # gitbooks
 _books
 _book
+
+# redirects
+docs/.vuepress/public/_redirects
