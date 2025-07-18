@@ -27,5 +27,5 @@ sponsors:
 - title: Kalamuna
   img: /img/kalamuna-logo.png
   src: https://kalamuna.com
-footer: Copyright ©2014-2019 Tandem
+footer: Copyright ©2025 Lando Alliance
 ---
